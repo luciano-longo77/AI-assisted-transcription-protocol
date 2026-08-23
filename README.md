@@ -35,7 +35,3 @@ An operational editorial model to make **interpretive transcription scalable** f
 ## Licenza / License
 
 **Doppia licenza**: documenti, schema e paper sotto **CC-BY-4.0**; i prompt in `prompts/` sotto **MIT** (vedi `prompts/LICENSE`). Dettagli in `LICENSE`.
-
-## Stato / Status
-
-Fase di **setup** completata (protocollo, prompt, log, parametri). Prossimo: Fase 1 (A 31) — vedi `docs/CRONOPROGRAMMA.md`.
