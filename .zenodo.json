@@ -1,0 +1,13 @@
+{
+  "title": "Protocollo di trascrizione interpretativa AI-assistita",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "description": "Modello editoriale operativo per scalare la trascrizione interpretativa di manoscritti omogenei sotto controllo umano. Doppia licenza: documenti/schema CC-BY-4.0; prompt MIT. NOTA: deposito solo alla pubblicazione (repository attualmente privato).",
+  "access_right": "closed",
+  "license": "CC-BY-4.0",
+  "creators": [
+    { "name": "Longo, Luciano", "orcid": "0000-0000-0000-0000", "affiliation": "DA COMPLETARE" }
+  ],
+  "keywords": ["filologia digitale", "Digital Humanities", "trascrizione interpretativa", "TEI", "LLM", "manoscritti"],
+  "language": "ita"
+}

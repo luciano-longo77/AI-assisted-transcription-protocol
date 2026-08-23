@@ -1,0 +1,25 @@
+Copyright (c) 2026 Luciano Longo
+
+DOCUMENTI, SCHEMA E PAPER — Creative Commons Attribution 4.0 International (CC-BY-4.0)
+====================================================================================
+Tutto il contenuto di questo repository, ECCETTO la cartella `prompts/`, è
+rilasciato sotto licenza Creative Commons Attribution 4.0 International.
+
+Sei libero di: condividere e adattare il materiale per qualsiasi scopo, anche
+commerciale, alle seguenti condizioni: ATTRIBUZIONE — devi riconoscere una
+menzione di paternità adeguata, fornire un link alla licenza e indicare se
+sono state effettuate modifiche.
+
+Testo completo della licenza (legal code):
+https://creativecommons.org/licenses/by/4.0/legalcode
+Sintesi (deed): https://creativecommons.org/licenses/by/4.0/
+
+Identificatore SPDX: CC-BY-4.0
+
+PROMPT (`prompts/`) — MIT License
+=================================
+La cartella `prompts/` è rilasciata sotto licenza MIT: vedi `prompts/LICENSE`.
+
+Nota: al momento del deposito pubblico, sostituire questo file con il testo
+integrale del legal code CC-BY-4.0 per il riconoscimento automatico su
+GitHub/Zenodo.

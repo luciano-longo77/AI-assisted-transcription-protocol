@@ -1,0 +1,21 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporanei / cache
+*~
+*.tmp
+*.bak
+.ipynb_checkpoints/
+__pycache__/
+
+# Rendering intermedi
+*.pdf.tmp
+*-pg-*.jpg
+
+# IMMAGINI DEI MANOSCRITTI (diritti della biblioteca) — non versionare
+# Rimuovere questa riga solo se si ottiene l'autorizzazione al rilascio.
+data/immagini/
+*.tif
+*.tiff
