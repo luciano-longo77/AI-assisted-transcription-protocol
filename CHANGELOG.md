@@ -5,7 +5,11 @@
 - Protocollo v1.0 (congelato): documento in `protocollo/` (`Protocollo_v1.0.md`).
 - Prompt A e B v1.2 (pronti-skill) in `prompts/` (licenza MIT).
 - Schema del log: `schema/data-dictionary.md`.
-- Template del log a 5 fogli (`data/`), template CSV, esempio sintetico (`examples/`).
+- Log editoriale **live** in `data/LOG_editoriale_AI.xlsx` (popolato, aggiornato durante la sperimentazione); template vuoto `data/LOG_editoriale_AI_template.xlsx` e template CSV; esempio sintetico in `examples/`.
 - Parametri dichiarati a priori (θ=5/1000, N=10, K=3): `docs/PARAMETRI.md`.
-- Esempio di codifica TEI leggera (unità 1: frontespizio + c. 1r), livello A: `tei/A31_u1_diplomatica.xml`.
+- Codifica TEI dell'unità 1 in `tei/`: livello A (`A31_u1_diplomatica.xml`) e livello B con modulo degli interventi (`A31_u1_interpretativa.xml`).
 - Metadati: `CITATION.cff`, `.zenodo.json` (da completare al deposito).
+
+### Note
+- Repository **live/aperto**: il log editoriale viene aggiornato nel repo man mano che la sperimentazione procede. Restano escluse le immagini dei manoscritti (diritti della biblioteca; vedi `.gitignore`).
+- Repository pubblico. Deposito Zenodo/DOI (con completamento di ORCID e affiliazione nei metadati) al termine del lavoro.
