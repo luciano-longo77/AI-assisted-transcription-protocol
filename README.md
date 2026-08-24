@@ -24,7 +24,7 @@ An operational editorial model to make **interpretive transcription scalable** f
 ├── data/            log editoriale live (xlsx popolato) + template e csv
 ├── docs/            parametri dichiarati a priori (PARAMETRI.md)
 ├── examples/        esempi sintetici (non dati reali)
-├── tei/             codifica TEI, unità 1: livelli A e B
+├── tei/             edizione TEI (frontespizio–c.6r): livelli A e B
 ├── CITATION.cff     metadati di citazione (da completare)
 └── .zenodo.json     metadati di deposito (solo alla pubblicazione)
 ```
