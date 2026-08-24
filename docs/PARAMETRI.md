@@ -39,3 +39,9 @@ Gemini e Claude, ai livelli A (diplomatico) e B (interpretativo), con gli stessi
 ## Regola di modifica
 
 I parametri sono **congelati**. Qualsiasi cambiamento di θ, N o K non è una modifica silenziosa: si apre una nuova versione del protocollo (es. v1.1), si annota nel CHANGELOG la motivazione e la data, e si dichiara da quale unità la nuova soglia si applica.
+
+## Stato operativo — rodaggio u.1–5 (2026-08-24)
+
+Il rodaggio di **BCP 2 Qq A 31**, unità 1–5 (carte 1–5, oltre a frontespizio e c. 6r), è stato eseguito con **una passata per modello (K=1)**: Prompt A e Prompt B su Gemini e Claude, con validazione umana ai due livelli e log popolato (49 eventi, 9 norme emergenti). I denominatori sono registrati nel foglio COPERTURA.
+
+Il **loop K=3** — ripetizioni per modello per misurare il non-determinismo e assumere la forma di consenso — è **rinviato (backlog)** e sarà eseguito in una fase successiva. Poiché **K=3 resta il valore dichiarato** del protocollo, questo è uno **scostamento operativo tracciato**, non una modifica del parametro.
