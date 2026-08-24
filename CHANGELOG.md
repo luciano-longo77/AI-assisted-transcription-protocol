@@ -7,7 +7,7 @@
 - Schema del log: `schema/data-dictionary.md`.
 - Log editoriale **live** in `data/LOG_editoriale_AI.xlsx` (popolato, aggiornato durante la sperimentazione); template vuoto `data/LOG_editoriale_AI_template.xlsx` e template CSV; esempio sintetico in `examples/`.
 - Parametri dichiarati a priori (θ=5/1000, N=10, K=3): `docs/PARAMETRI.md`.
-- Codifica TEI dell'unità 1 in `tei/`: livello A (`A31_u1_diplomatica.xml`) e livello B con modulo degli interventi (`A31_u1_interpretativa.xml`).
+- Edizione TEI (frontespizio–c. 6r) in `tei/`: diplomatica (`A31_diplomatica.xml`) e interpretativa con modulo delle norme (`A31_interpretativa.xml`); validata contro `tei_all.rng`.
 - Metadati: `CITATION.cff`, `.zenodo.json` (da completare al deposito).
 
 ### Note
