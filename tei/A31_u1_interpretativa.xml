@@ -32,7 +32,7 @@
     </fileDesc>
     <encodingDesc>
       <editorialDecl>
-        <p>Trascrizione interpretativa (livello B) ricavata dalla trascrizione diplomatica validata. Scioglimento tacito delle abbreviazioni; normalizzazione di grafia, diacritici, maiuscole/minuscole e unione/separazione delle parole secondo l'uso moderno; lingua, lessico e sintassi storici conservati; punteggiatura ritoccata al minimo. Cambio carta con pb. I fenomeni genetici e le letture dubbie restano fuori dal testo e sono registrati nel modulo degli interventi (elemento back).</p>
+        <p>Trascrizione interpretativa (livello B) ricavata dalla trascrizione diplomatica validata. Scioglimento tacito delle abbreviazioni; normalizzazione di grafia, diacritici, maiuscole/minuscole e unione/separazione delle parole secondo l'uso moderno; lingua, lessico e sintassi storici conservati; punteggiatura ritoccata al minimo. Cambio carta con pb. I fenomeni genetici, le letture dubbie e i dispositivi materiali (segno di chiusura, richiamo) restano fuori dal testo e sono registrati nel modulo degli interventi (elemento back).</p>
       </editorialDecl>
       <appInfo>
         <application ident="workflow-AI" version="protocollo-v1.0">
@@ -41,7 +41,7 @@
       </appInfo>
     </encodingDesc>
     <revisionDesc>
-      <change when="2026-08-24">Livello B validato dall'editore; codifica TEI con modulo degli interventi (unità 1).</change>
+      <change when="2026-08-24">Livello B validato dall'editore; codifica TEI con modulo degli interventi (unità 1). Aggiornato col confronto a due modelli (Gemini/Claude) e con i dispositivi materiali confermati (÷, richiamo «si»); carta 1r.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -51,7 +51,7 @@
         <p>La vita della venerabil madre suor Benedetta Riggio, fondatrice e prima abbadessa del venerabile monastero dell'Immacolata Concettione<anchor xml:id="int-b001"/> di Nostra Signora nella città di Palermo. Scritta da suor Francesca Benedetta Corvino, monaca del detto monastero; corretta et<anchor xml:id="int-b002a"/> emendata dal reverendo padre Ludovico Florio della Compagnia di Gesù, et<anchor xml:id="int-b002b"/> ampliata da<anchor xml:id="int-a005"/> quello che il detto padre trovò scritto dal reverendo padre Francesco Aiata della Compagnia di Gesù, nelle scritte della casa professa di essa Compagnia di Gesù.</p>
         <p rend="nota-di-possesso">Numero 10. Ex Libris Sebastiani Basso.</p>
       </div>
-      <pb n="1"/>
+      <pb n="1r"/>
       <div type="capitolo" n="1">
         <head>Vita della madre suor Benedetta Riggio.</head>
         <head type="rubrica">Capitolo primo. Della nascita della madre suor Benedetta, delli suoi parenti e virtù, e come entrò a fondare il monastero di San Giovanni del Giglione.</head>
@@ -61,7 +61,7 @@
     <back>
       <div type="interventi">
         <head>Modulo degli interventi editoriali — unità 1 (BCP 2 Qq A 31)</head>
-        <p>Registro degli interventi corrispondente al log editoriale. Ogni voce riporta: identificativo, livello, modello, tipo, forma prodotta dall'AI → forma accolta, azione ed esito. I riferimenti (ref) puntano ai luoghi del testo interpretativo.</p>
+        <p>Registro degli interventi corrispondente al log editoriale, per i due modelli confrontati (Claude e Gemini). Ogni voce riporta: identificativo, livello, modello, tipo, forma prodotta dall'AI → forma accolta, azione ed esito. I riferimenti (ref) puntano ai luoghi del testo interpretativo.</p>
         <list type="interventi">
           <item xml:id="ev-A-001"><label>A-001 · liv. A · Claude</label> — <term type="tipo">confusione_grafica</term>: «Scritta di» → «Scritta da»; azione: correzione; esito: stabilizzato.</item>
           <item xml:id="ev-A-002"><label>A-002 · liv. A · Claude</label> — <term type="tipo">maiuscola_minuscola_errata</term>: «francesca/francesco» → «Francesca/Francesco» (2 occ.); azione: correzione; esito: ricorrente.</item>
@@ -70,14 +70,27 @@
           <item xml:id="ev-A-005" corresp="#int-a005"><label>A-005 · liv. A · Claude</label> — <term type="tipo">stratificazione_genetica</term>: «da» corretto su «di» (-a sovrascritta su -i); azione: segnalazione; esito: non_delegabile. Forma a testo: «da»; fenomeno riservato all'apparato.</item>
           <item xml:id="ev-A-006" corresp="#int-a006"><label>A-006 · liv. A · Claude</label> — <term type="tipo">confusione_grafica</term>: lettura dubbia della cifra «15» (o «13»); azione: segnalazione; esito: non_delegabile.</item>
           <item xml:id="ev-A-007" corresp="#int-a007"><label>A-007 · liv. A · Claude</label> — <term type="tipo">stratificazione_genetica</term>: la cifra «4» di «1534» è corretta su un numero illeggibile; azione: segnalazione; esito: non_delegabile. Forma a testo: «1534»; fenomeno riservato all'apparato.</item>
-          <item xml:id="ev-B-001" corresp="#int-b001"><label>B-001 · liv. B · Claude</label> — <term type="tipo">normalizzazione_indebita</term>: «Concezione» (AI) → «Concettione» (accolta); azione: conservazione; esito: stabilizzato.</item>
-          <item xml:id="ev-B-002" corresp="#int-b002a #int-b002b"><label>B-002 · liv. B · Claude</label> — <term type="tipo">normalizzazione_indebita</term>: «e/ed» (AI) → «et» (accolta, 2 occ.); azione: conservazione; esito: stabilizzato.</item>
+          <item xml:id="ev-A-008"><label>A-008 · liv. A · Gemini</label> — <term type="tipo">maiuscola_minuscola_errata</term>: «francesca/francesco» → «Francesca/Francesco»; azione: correzione; esito: ricorrente. Errore condiviso con Claude.</item>
+          <item xml:id="ev-A-009"><label>A-009 · liv. A · Gemini</label> — <term type="tipo">scioglimento_abbreviazione_errato</term>: «P(at)re» → «P(ad)re»; azione: correzione; esito: stabilizzato. Errore proprio di Gemini.</item>
+          <item xml:id="ev-A-010"><label>A-010 · liv. A · Gemini</label> — <term type="tipo">confusione_grafica</term>: «Biglione» → «Giglione»; azione: correzione; esito: stabilizzato. Errore proprio di Gemini.</item>
+          <item xml:id="ev-A-011"><label>A-011 · liv. A · Claude</label> — <term type="tipo">omissione_testo</term>: omesso il segno di chiusura «÷» a fine frontespizio; azione: conservazione; esito: stabilizzato. Emerso dal confronto con Gemini.</item>
+          <item xml:id="ev-A-012"><label>A-012 · liv. A · Claude</label> — <term type="tipo">omissione_testo</term>: omesso il richiamo (custos) «si» a piè di c. 1r, ripreso a inizio pagina seguente; azione: conservazione; esito: stabilizzato. Emerso dal confronto con Gemini.</item>
+          <item xml:id="ev-B-001" corresp="#int-b001"><label>B-001 · liv. B · Claude</label> — <term type="tipo">normalizzazione_indebita</term>: «Concezione» → «Concettione»; azione: conservazione; esito: ricorrente.</item>
+          <item xml:id="ev-B-002" corresp="#int-b002a #int-b002b"><label>B-002 · liv. B · Claude</label> — <term type="tipo">normalizzazione_indebita</term>: «e/ed» → «et» (2 occ.); azione: conservazione; esito: ricorrente.</item>
+          <item xml:id="ev-B-003" corresp="#int-b001"><label>B-003 · liv. B · Gemini</label> — <term type="tipo">normalizzazione_indebita</term>: «Concezione» → «Concettione»; azione: conservazione; esito: ricorrente. Conferma B-001 sul secondo modello.</item>
+          <item xml:id="ev-B-004" corresp="#int-b002a #int-b002b"><label>B-004 · liv. B · Gemini</label> — <term type="tipo">normalizzazione_indebita</term>: «ed/e» → «et»; azione: conservazione; esito: ricorrente. Conferma B-002 sul secondo modello.</item>
+          <item xml:id="ev-B-005"><label>B-005 · liv. B · Gemini</label> — <term type="tipo">normalizzazione_indebita</term>: «degli» → «delli»; azione: conservazione; esito: ricorrente. Modernizzazione morfologica indebita.</item>
+          <item xml:id="ev-B-006"><label>B-006 · liv. B · Gemini</label> — <term type="tipo">scioglimento_abbreviazione_errato</term>: «Giovanni (Luigi)» → «Giovan (Luigi)»; azione: correzione; esito: stabilizzato.</item>
+          <item xml:id="ev-B-007"><label>B-007 · liv. B · Gemini</label> — <term type="tipo">normalizzazione_indebita</term>: «Venerabile» → «venerabil»; azione: conservazione; esito: ricorrente. Apocope storica risolta indebitamente.</item>
+          <item xml:id="ev-B-008"><label>B-008 · liv. B · Gemini</label> — <term type="tipo">confusione_grafica</term>: «Biglione» → «Giglione»; azione: correzione; esito: ricorrente. Errore di lettura propagato dal livello A.</item>
         </list>
         <div type="norme-emergenti">
           <head>Norme emergenti</head>
           <list>
-            <item><term type="area">grafia</term>: conservare il nesso storico -tti- (es. «Concettione»), senza ridurlo a -zi-. <ref target="#ev-B-001">← B-001</ref></item>
-            <item><term type="area">congiunzioni</term>: conservare la congiunzione latineggiante «et», senza ridurla a «e/ed». <ref target="#ev-B-002">← B-002</ref></item>
+            <item><term type="area">grafia</term>: conservare il nesso storico -tti- (es. «Concettione»), senza ridurlo a -zi-. <ref target="#ev-B-001">← B-001/B-003</ref></item>
+            <item><term type="area">congiunzioni</term>: conservare la congiunzione latineggiante «et», senza ridurla a «e/ed». <ref target="#ev-B-002">← B-002/B-004</ref></item>
+            <item><term type="area">morfologia</term>: conservare la forma storica dell'articolo «delli», senza modernizzarla in «degli». <ref target="#ev-B-005">← B-005</ref></item>
+            <item><term type="area">morfologia</term>: conservare l'apocope storica (es. «venerabil»), senza integrarla in «venerabile». <ref target="#ev-B-007">← B-007</ref></item>
           </list>
         </div>
       </div>
