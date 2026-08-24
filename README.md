@@ -21,10 +21,10 @@ An operational editorial model to make **interpretive transcription scalable** f
 ├── protocollo/      documento del protocollo (v1.0 congelato) + specifica
 ├── prompts/         Prompt A e B v1.2 (pronti-skill) — licenza MIT
 ├── schema/          data dictionary del log (campi + vocabolari controllati)
-├── data/            template del log (xlsx + csv) — SENZA dati sperimentali
+├── data/            log editoriale live (xlsx popolato) + template e csv
 ├── docs/            parametri dichiarati a priori (PARAMETRI.md)
 ├── examples/        esempi sintetici (non dati reali)
-├── tei/             esempio di codifica TEI leggera (unità 1, livello A)
+├── tei/             codifica TEI, unità 1: livelli A e B
 ├── CITATION.cff     metadati di citazione (da completare)
 └── .zenodo.json     metadati di deposito (solo alla pubblicazione)
 ```
@@ -32,6 +32,10 @@ An operational editorial model to make **interpretive transcription scalable** f
 ## Parametri dichiarati (a priori)
 
 θ = 5 interventi / 1000 parole · N = 10 carte consecutive · K = 3 ripetizioni (loop anti-RNG) · modelli: Gemini + Claude · protocollo **v1.0 (congelato)**.
+
+## Dati
+
+Repository **live**: il log editoriale (`data/LOG_editoriale_AI.xlsx`) è aggiornato man mano che la sperimentazione procede. Le immagini dei manoscritti non sono versionate (diritti della biblioteca; vedi `.gitignore`).
 
 ## Licenza / License
 
