@@ -13,3 +13,4 @@
 ### Note
 - Repository **live/aperto**: il log editoriale viene aggiornato nel repo man mano che la sperimentazione procede. Restano escluse le immagini dei manoscritti (diritti della biblioteca; vedi `.gitignore`).
 - Repository pubblico. Deposito Zenodo/DOI (con completamento di ORCID e affiliazione nei metadati) al termine del lavoro.
+- Rodaggio A 31, unità 1–5, eseguito a **K=1** (una passata per modello): A e B su Gemini e Claude, validazione umana, log popolato. Loop **K=3** (misura del non-determinismo e forma di consenso) rinviato — *backlog*.
