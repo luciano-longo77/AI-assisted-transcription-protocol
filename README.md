@@ -4,13 +4,13 @@
 
 ---
 
-## IT — Che cos'è
+## IT - Che cos'è
 
 Modello editoriale operativo per rendere **scalabile la trascrizione interpretativa** di manoscritti omogenei, mantenendo il controllo umano sulle decisioni normative. Un LLM opera come **acceleratore sotto supervisione**, non come decisore. Il protocollo distingue trascrizione **diplomatica (A)** e **interpretativa (B)**, registra ogni intervento in un **log** e ne astrae le **norme emergenti**.
 
 Perimetro sperimentale: campioni di **BCP 2 Qq A 31** e **BCP 3 Qq B 49** (Biblioteca Comunale di Palermo).
 
-## EN — What it is
+## EN - What it is
 
 An operational editorial model to make **interpretive transcription scalable** for homogeneous manuscript corpora, keeping human authority over normative decisions. An LLM acts as a **supervised accelerator**, not a decision-maker. The protocol separates **diplomatic (A)** and **interpretive (B)** transcription, logs every human intervention, and abstracts the **emerging norms**.
 
