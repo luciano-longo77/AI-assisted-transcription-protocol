@@ -1,5 +1,5 @@
 # AI-assisted-transcription-protocol
-## Protocollo di trascrizione interpretativa AI-assistita - 
+## Protocollo di trascrizione interpretativa AI-assistita
 ## AI-assisted interpretive transcription protocol
 
 ---
