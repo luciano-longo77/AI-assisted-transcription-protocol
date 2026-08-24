@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vita della venerabil madre suor Benedetta Riggio — trascrizione diplomatica (unità 1: frontespizio e c. 1r)</title>
+        <author>Suor Francesca Benedetta Corvino</author>
+        <respStmt>
+          <resp>Trascrizione diplomatica (livello A) e codifica TEI</resp>
+          <name>Luciano Longo</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Progetto «Dalla norma editoriale al workflow AI-assistito»</publisher>
+        <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</licence>
+        </availability>
+        <date when="2026-08-24"/>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Palermo</settlement>
+            <repository>Biblioteca Comunale di Palermo</repository>
+            <idno>BCP 2 Qq A 31</idno>
+          </msIdentifier>
+          <msContents>
+            <summary>Vita della ven. madre suor Benedetta Riggio, fondatrice e prima abbadessa del monastero dell'Immacolata Concezione di Nostra Signora in Palermo.</summary>
+          </msContents>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Trascrizione diplomatica (livello A). Convenzioni: cambio carta con l'elemento pb; cambio riga con lb; scioglimento delle abbreviazioni con choice (abbr + expan), le lettere integrate entro ex; correzioni scrittoie con subst (del/add); lacune con gap; letture dubbie con unclear. Grafia, punteggiatura, maiuscole e unione/separazione delle parole sono conservate come nell'originale.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc>
+      <change when="2026-08-24">Trascrizione A validata dall'editore; codifica TEI leggera dell'unità 1.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <pb n="frontespizio"/>
+      <div type="frontespizio">
+        <ab>La Vita della<lb/>Venerabil Madre Suoro Bene<lb/>detta Riggio, Fondatrice, e Prima<lb/>Abbadessa del Venerabile Monaste<lb/>rio dell'Immaculata Concettione<lb/>di Nostra Signora nella città di<lb/>Palermo.<lb/>Scritta da Suoro Francesca Benedetta<lb/>Coruino monaca del detto <choice><abbr>Mon.rio</abbr><expan>Mon<ex>aste</ex>rio</expan></choice><lb/>corretta et emendata dal <choice><abbr>Reu.do</abbr><expan>Reu<ex>eren</ex>do</expan></choice> <choice><abbr>P.re</abbr><expan>P<ex>ad</ex>re</expan></choice><lb/>Ludouico Florio della Compagnia<lb/>di Gesù, et ampliata <subst><del>di</del><add>da</add></subst> quello che<lb/>il detto Padre trouò scritto dal <choice><abbr>R.do</abbr><expan>R<ex>eueren</ex>do</expan></choice><lb/>Padre Francesco Aiata della Com<lb/>pagnia di Gesù, nelle scritte della<lb/>Casa professa di essa Compagnia<lb/>di Gesù.</ab>
+        <ab type="nota-di-possesso"><choice><abbr>N.o</abbr><expan>N<ex>umer</ex>o</expan></choice> 10<lb/>Ex Libris Sebastiani Basso<lb/>IV</ab>
+      </div>
+      <pb n="1"/>
+      <div type="capitolo" n="1">
+        <head>Vita<lb/>Della Madre Suoro Bene<lb/>detta Riggio.</head>
+        <head type="rubrica">Capitolo primo. Della nascita<lb/>della Madre Suoro Benedetta, delli<lb/>suoi parenti, e Virtù e come entrò<lb/>a fondare il Monasterio di <choice><abbr>S.</abbr><expan>S<ex>an</ex></expan></choice> <choice><abbr>Giou.</abbr><expan>Gio<ex>uanni</ex></expan></choice><lb/>del Giglione.</head>
+        <p>Nacque questa Venerabil Madre<lb/>nella Città di Palermo in giorno<lb/>di Vennerdì alli <unclear reason="ambiguous">15</unclear><note type="lettura">Lettura dubbia: 15 o 13.</note> di Maggio<lb/>festa di Santa Restituta l'Anno<lb/>153<subst><add>4</add><del><gap reason="illegible" quantity="1" unit="char"/></del></subst><note type="genetica">La cifra «4» è corretta su un numero precedente illeggibile.</note> suo Padre si chiamò <choice><abbr>Gio:</abbr><expan>Gio<ex>uan</ex></expan></choice><lb/>Luigi Riggio, e fù di nobil sangue,<lb/>come anche la Madre che si chiama<lb/>ua Giouanna d'Afflitto, nel Battesimo</p>
+      </div>
+    </body>
+  </text>
+</TEI>
