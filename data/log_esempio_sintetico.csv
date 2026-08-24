@@ -1,4 +1,0 @@
-ID_ERRORE,LIVELLO,TESTIMONE,SEGMENTO,TIPO_ERRORE,FORMA_AI,CORREZIONE_UMANA,AZIONE_UMANA,DECISIONE_EDITORIALE,ESITO,MODELLO,NOTE
-B-001,B,"BCP, 2Qq A31","c. 1r, r. 3",unione_separazione_errata,inalto,in alto,normalizzazione,Adeguare unione/separazione delle parole all'uso moderno quando non semanticamente rilevante,ricorrente,Gemini,ESEMPIO SINTETICO — non dato reale
-B-002,B,"BCP, 2Qq A31","c. 1r, r. 5",scioglimento_abbreviazione_mancato,total.te,totalmente,scioglimento,Sciogliere le abbreviazioni secondo la forma attestata dell'italiano di eta moderna,stabilizzato,Claude,ESEMPIO SINTETICO — non dato reale
-A-001,A,"BCP, 2Qq A31","c. 2v, r. 8",stratificazione_genetica,[passaggio stratificato],,blocco_intervento,Bloccare l'automazione in presenza di stratificazione genetica,non_delegabile,Claude,ESEMPIO SINTETICO — non dato reale
