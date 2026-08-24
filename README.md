@@ -22,7 +22,7 @@ An operational editorial model to make **interpretive transcription scalable** f
 ├── prompts/         Prompt A e B v1.2 (pronti-skill) — licenza MIT
 ├── schema/          data dictionary del log (campi + vocabolari controllati)
 ├── data/            template del log (xlsx + csv) — SENZA dati sperimentali
-├── docs/            cronoprogramma, piano attività, setup, decisioni
+├── docs/            parametri dichiarati a priori (PARAMETRI.md)
 ├── examples/        esempi sintetici (non dati reali)
 ├── CITATION.cff     metadati di citazione (da completare)
 └── .zenodo.json     metadati di deposito (solo alla pubblicazione)
