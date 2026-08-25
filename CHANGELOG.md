@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.0-rodaggio] — 2026-08-25
+### Aggiunto
+- Esperimento di rodaggio su **BCP 2 Qq A 31, frontespizio–c. 16r** chiuso: dataset simmetrico A/B × Gemini/Claude.
+- Edizione TEI estesa a **c. 16r** (diplomatica e interpretativa), validata contro `tei_all.rng`.
+- Log editoriale a **111 eventi**; COPERTURA con 4 passate (A/B × 2 modelli) per ogni blocco; **11 norme** in NORME_EMERGENTI.
+- Densità D calcolata per passata (θ=5/1000): a livello B, Claude D≈0–1 vs Gemini D≈6–14 (divario ~10×); a livello A entrambi sopra θ.
+
+### Note
+- Toponimo del monastero fissato in **«Riglione»** (iniziale R verificata) in tutto il repo; identificazione «San Giovanni dell'Origlione» solo in apparato.
+- Loop **K=3** ancora in *backlog* (rodaggio a K=1). Uniformazione del conteggio della densità (per occorrenza) e Prompt A **v1.3** rinviati.
+
 ## [0.1.0-setup] — 2026-08
 ### Aggiunto
 - Protocollo v1.0 (congelato): documento in `protocollo/` (`Protocollo_v1.0.md`).
@@ -7,7 +18,7 @@
 - Schema del log: `schema/data-dictionary.md`.
 - Log editoriale **live** in `data/LOG_editoriale_AI.xlsx` (popolato, aggiornato durante la sperimentazione); template vuoto `data/LOG_editoriale_AI_template.xlsx` e template CSV; esempio sintetico in `examples/`.
 - Parametri dichiarati a priori (θ=5/1000, N=10, K=3): `docs/PARAMETRI.md`.
-- Edizione TEI in `tei/`: diplomatica (`A31_diplomatica.xml`, frontespizio–c. 11r) e interpretativa con modulo delle norme (`A31_interpretativa.xml`, frontespizio–c. 6r); validate contro `tei_all.rng`.
+- Edizione TEI in `tei/`: diplomatica (`A31_diplomatica.xml`) e interpretativa con modulo delle norme (`A31_interpretativa.xml`), entrambe frontespizio–c. 16r; validate contro `tei_all.rng`.
 - Metadati: `CITATION.cff`, `.zenodo.json` (da completare al deposito).
 
 ### Note
