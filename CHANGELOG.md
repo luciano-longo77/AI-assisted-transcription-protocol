@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.0-protocolloB] — 2026-08-25
+### Aggiunto
+- Protocollo B (interpretativa) esteso su **cc. 16v–36r** (cap. II fine, capp. III–IV, inizio cap. V), confronto Claude/Gemini: `tei/A31_interpretativa.xml` ora **frontespizio–c. 36r**, validato. Livello B di Claude validato senza interventi.
+- Log a **135 eventi** (Gemini B B-040→B-048), COPERTURA a 22 righe.
+### Nota
+- Folio 22 (cc. 21v–22r) recuperato e integrato ai due livelli; toponimo sempre «Riglione»; data 1536.
+- Gemini B omette cc. 21v–22r (eseguito prima del recupero del folio 22) e aggiunge un meta-testo che scambia la sovrapposizione delle immagini per duplicazione del testimone (B-047, B-048).
+
+## [0.3.0-protocolloA] — 2026-08-25
+### Aggiunto
+- Protocollo A (diplomatica) esteso su **cc. 16v–36r** (cap. II fine, cap. III, cap. IV, inizio cap. V), confronto Claude/Gemini: `tei/A31_diplomatica.xml` ora **frontespizio–c. 36r**, validato.
+- Log a **126 eventi** (Claude A A-073→A-079; Gemini A A-080→A-087), COPERTURA a 20 righe.
+### Corretto
+- Data di fondazione della Concettione a **c. 10r** e c. 16v: **1536** (era 1556); nota cronologica in apparato (nascita 1534 + «anni 42» ⇒ 1576).
+- Toponimo sempre **«Riglione»**; letture validate: Zizo, accette, fortificò, riceuuta, poterono, corono, uolerle, trascoragine (non_delegabile, c. 29v), «braccia ⟨gap⟩ Croce» (c. 26r).
+### Nota
+- L'interpretativa (B) resta a **c. 16r**: il livello B su cc. 16v–36r sarà prodotto nella sessione Protocollo B.
+
 ## [0.2.0-rodaggio] — 2026-08-25
 ### Aggiunto
 - Esperimento di rodaggio su **BCP 2 Qq A 31, frontespizio–c. 16r** chiuso: dataset simmetrico A/B × Gemini/Claude.
