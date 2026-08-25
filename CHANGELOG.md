@@ -8,6 +8,7 @@
 - Densità D calcolata per passata (θ=5/1000): a livello B, Claude D≈0–1 vs Gemini D≈6–14 (divario ~10×); a livello A entrambi sopra θ.
 - Densità **normalizzata per occorrenza**: nuovo foglio `DENSITA` e colonna `OCCORRENZE` in `data/LOG_editoriale_AI.xlsx` (conteggio auditabile, non più per riga di log).
 - **Prompt A v1.3** in `prompts/prompt-A-diplomatica.md`: blocco «Regole rafforzate (anti-errori ricorrenti)» derivato dalle norme emerse (solo testo; nessuna aggiunta; accenti fedeli; oscillazioni conservate; «/» unico marcatore di riga; parola piena a inizio carta; lettere dubbie da segnalare, non indovinare). Valido per entrambi i modelli.
+- **Loop K (probe)**: foglio `LOOP_K` in `data/LOG_editoriale_AI.xlsx`. Claude ×3 su c. 16r, Gemini ×3 su cc. 9v–10r. Risultato: non-determinismo basso in entrambi, ma errori stabili non corretti dalla ripetizione (il consenso a maggioranza può perfino imporli). Il loop K misura la stabilità, non l'accuratezza. Riga Claude cc. 9v–10r (stessa unità di Gemini) da completare.
 
 ### Note
 - Toponimo del monastero fissato in **«Riglione»** (iniziale R verificata) in tutto il repo; identificazione «San Giovanni dell'Origlione» solo in apparato.
