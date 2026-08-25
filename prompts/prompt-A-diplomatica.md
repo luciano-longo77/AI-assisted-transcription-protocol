@@ -1,9 +1,8 @@
-# Prompt A — Trascrizione diplomatica
-Protocollo di trascrizione automatizzata AI-assistita · protocollo v1.0 · skill Prompt A v1.2
+# Prompt A — Trascrizione diplomatica (v1.3)
 
 **Scopo:** guidare l'AI nella trascrizione diplomatica pura, livello di base e verificabile su cui si fonda la successiva trascrizione interpretativa (Prompt B).
 
----
+**Versione:** 1.3 (2026-08-25). Aggiorna la v1.2 aggiungendo il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): l'unica variabile controllata è la versione del prompt.
 
 Stai assistendo una TRASCRIZIONE DIPLOMATICA PURA di un manoscritto italiano di età moderna.
 
@@ -44,6 +43,24 @@ Questa trascrizione diplomatica costituisce il livello di base e verificabile pe
 **7. Passaggi materiali**
 - Il passaggio da una riga alla successiva va segnalato con una barra obliqua: /
 - Il passaggio da una carta manoscritta all'altra va segnalato con una doppia barra: //
+
+## Regole rafforzate (anti-errori ricorrenti) — v1.3
+
+Derivate dalle classi d'errore registrate nel log durante il rodaggio. Hanno la stessa forza delle regole precedenti.
+
+**R1. Solo testo.** L'output è esclusivamente la trascrizione: nessun preambolo, scusa, commento, spiegazione o meta-nota.
+
+**R2. Nessuna aggiunta.** Trascrivi solo ciò che è scritto. Non inserire parole, sillabe o token assenti dal manoscritto (mai «me», mai «=», mai ripetizioni non presenti). Un segno che non è una lettera non va reso come parola.
+
+**R3. Accenti fedeli.** Riproduci esattamente gli accenti del testimone (à, é, fù, frà). Non aggiungerli dove mancano (cosi, accio) né toglierli dove ci sono.
+
+**R4. Grafia storica e oscillazioni.** Conserva u/v come nel manoscritto, i nessi ‑tt‑/‑tione (Concettione, habitattione, negotio), la h etimologica, e le oscillazioni del testimone (Immaculata/Immacolata, Giesù/Gesù, difficultà/difficoltà). Non uniformare, non modernizzare.
+
+**R5. Cambio riga = «/» soltanto.** Non riprodurre come marcatori i segni materiali di a-capo del manoscritto (due punti «:», uguale «=», trattini).
+
+**R6. Confine di carta.** Quando una parola è spezzata a fine carta, la carta successiva la ripete per intero: a inizio carta trascrivi la **parola piena**, non il solo compimento del richiamo. Riporta comunque il richiamo (custos) a fine carta.
+
+**R7. Lettere dubbie: segnala, non indovinare.** In caso di iniziale o lettera incerta, non risolvere e non normalizzare: segnala il punto come dubbio, es. Riglione[?] o [lettera incerta], e lascialo alla validazione umana. Nessuna identificazione storica va introdotta a testo (resta all'apparato).
 
 ## Istruzioni di output
 - Trascrivi SOLO il segmento fornito tramite immagine (jpg o png).
