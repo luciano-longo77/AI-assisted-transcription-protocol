@@ -1,6 +1,6 @@
 # AI-assisted-transcription-protocol
 ## Protocollo di trascrizione interpretativa AI-assistita
-## AI-assisted interpretive transcription protocol
+### AI-assisted interpretive transcription protocol
 
 ---
 
@@ -24,7 +24,7 @@ An operational editorial model to make **interpretive transcription scalable** f
 ├── data/            log editoriale live (xlsx popolato) + template e csv
 ├── docs/            parametri dichiarati a priori (PARAMETRI.md)
 ├── examples/        esempi sintetici (non dati reali)
-├── tei/             edizione TEI (frontespizio–c.6r): livelli A e B
+├── tei/             edizione TEI: diplomatica (A) frontespizio–c.11r · interpretativa (B) frontespizio–c.6r
 ├── CITATION.cff     metadati di citazione (da completare)
 └── .zenodo.json     metadati di deposito (solo alla pubblicazione)
 ```
