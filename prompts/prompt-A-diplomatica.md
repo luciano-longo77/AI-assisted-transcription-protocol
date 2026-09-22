@@ -60,7 +60,7 @@ Derivate dalle classi d'errore registrate nel log durante il rodaggio. Hanno la 
 
 **R6. Confine di carta.** Quando una parola è spezzata a fine carta, la carta successiva la ripete per intero: a inizio carta trascrivi la **parola piena**, non il solo compimento del richiamo. Riporta comunque il richiamo (custos) a fine carta.
 
-**R7. Lettere dubbie: segnala, non indovinare.** In caso di iniziale o lettera incerta, non risolvere e non normalizzare: segnala il punto come dubbio, es. Riglione[?] o [lettera incerta], e lascialo alla validazione umana. Nessuna identificazione storica va introdotta a testo (resta all'apparato).
+**R7. Lettere dubbie: segnala, non indovinare.** In caso di iniziale o lettera incerta, non risolvere e non normalizzare: segnala il punto come dubbio con [?] subito dopo il carattere o la parola incerta (es. l[?]ttera, parola[?]), oppure con [lettera incerta] quando il segno non è risolvibile; lascia il punto alla validazione umana. Nessuna identificazione storica, onomastica o toponomastica va introdotta a testo: resta all'apparato.
 
 ## Istruzioni di output
 - Trascrivi SOLO il segmento fornito tramite immagine (jpg o png).
