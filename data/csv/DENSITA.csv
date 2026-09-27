@@ -7,7 +7,7 @@ cc.1v-6r,A,Claude,8,1000,8,sì
 cc.1v-6r,A,Gemini,50,1000,50,sì
 cc.1v-6r,B,Claude,1,1010,1,no
 cc.1v-6r,B,Gemini,27,1005,26.9,sì
-cc.6v-11r,A,Claude,9,946,9.5,sì
+cc.6v-11r,A,Claude,10,946,10.57,sì
 cc.6v-11r,A,Gemini,13,946,13.7,sì
 cc.6v-11r,B,Claude,0,946,0,no
 cc.6v-11r,B,Gemini,38,946,40.2,sì
@@ -15,4 +15,9 @@ cc.11v-16r,A,Claude,5,980,5.1,sì
 cc.11v-16r,A,Gemini,43,980,43.9,sì
 cc.11v-16r,B,Claude,1,1000,1,no
 cc.11v-16r,B,Gemini,45,1000,45,sì
+cc.16v-36r,A,Claude,7,1950,3.59,no
+cc.16v-36r,A,Gemini,46,1950,23.59,sì
+cc.16v-36r,B,Claude,0,2000,0,no
+cc.16v-36r,B,Gemini,48,2000,24,sì
 "θ = 5 interventi / 1000 parole. INTERVENTI_OCC = somma delle occorrenze (colonna OCCORRENZE del LOG_ERRORI), stimate dal contenuto di ogni evento; u.1 (162 par.) statisticamente fragile.",,,,,,
+"Blocco cc.16v-36r aggiunto il 2026-09-27: mancava, pur essendo oltre metà del testo trascritto. L'evento A-073 indica due carte in blocchi diversi (c.10r e c.16v) con una occorrenza ciascuna: è ripartito fra cc.6v-11r e cc.16v-36r, non assegnato a uno solo. PAROLE viene dal foglio COPERTURA, dove per questo blocco è un valore stimato e non un conteggio: va ricontato sul testo TEI.",,,,,,
