@@ -1,0 +1,12 @@
+﻿AREA,NORMA,DERIVATA_DA_ERRORI,STATO
+grafia,Conservare la grafia storica del nesso consonantico -tti- (es. «Concettione»): non normalizzare in -zi-.,B-001,attiva
+congiunzioni,Conservare la congiunzione latineggiante «et»: non ridurla a «e/ed».,B-002,attiva
+morfologia,Conservare la forma storica dell'articolo «delli»: non modernizzare in «degli».,B-005,attiva
+morfologia,Conservare l'apocope storica (es. «venerabil»): non integrare in «venerabile».,B-007,attiva
+scioglimenti,"«di» è scritto per esteso: non è abbreviazione, non sciogliere con (i).",A-015; A-019,attiva
+grafia,"Conservare la forma volgare a testo (esemplare, Essaudilla): non introdurre latinismi (exemplare, Exaudilla).",A-022; A-034,attiva
+impaginazione,Cambio riga segnalato con «/»; i due punti del ms. a fine parola spezzata non si riproducono come marcatore.,A-020,attiva
+maiuscole,Conservare la maiuscola reverenziale «La» quando riferita alla Madre.,A-018,attiva
+grafia,"Conservare la h etimologica (havea, huomo, hebbe, honore, humiltà, Christiana): non eliminarla.",B-009,attiva
+onomastica,"Il toponimo del monastero si legge «Riglione» (prima lettera R, verificata): non «Giglione» né «Biglione». L’identificazione «San Giovanni dell’Origlione» va solo in apparato, non a testo.",A-010; A-017; A-052,attiva
+materiale/impaginazione,"Al confine di carta il richiamo (custos) completa la parola spezzata e la carta successiva la RIPETE per intero: a inizio carta va trascritta la parola piena, non il solo compimento del richiamo.",A-056; A-057,attiva

@@ -1,0 +1,23 @@
+﻿TESTIMONE,UNITA,CARTE,PAROLE,DATA,MODELLO,NOTE
+BCP 2 Qq A 31,,,,,,Campione: rodaggio u.1–10 · regime u.~40–47 · 2 casi-limite
+BCP 3 Qq B 49,,,,,,Campione: rodaggio u.1–10 · regime 1ª parte u.~30–35 · 2ª parte (6 u) · 2 casi-limite
+BCP 2 Qq A 31,u.1 (frontespizio + c.1r),2,162,2026-08-24,Claude,Passata A (diplomatica); denominatore per densità D
+BCP 2 Qq A 31,u.1 (frontespizio + c.1r),2,157,2026-08-24,Claude,Passata B (interpretativa); denominatore per densità D livello B
+BCP 2 Qq A 31,u.1 (frontespizio + c.1r),2,162,2026-08-24,Gemini,Passata A (diplomatica)
+BCP 2 Qq A 31,u.1 (frontespizio + c.1r),2,157,2026-08-24,Gemini,Passata B (interpretativa)
+BCP 2 Qq A 31,cc. 1v-6r (u.2-6),10,1000,2026-08-24,Claude,Passata A (diplomatica); rodaggio
+BCP 2 Qq A 31,cc. 1v-6r (u.2-6),10,1000,2026-08-24,Gemini,Passata A (diplomatica); rodaggio
+BCP 2 Qq A 31,cc. 1v-6r (u.2-6),10,1010,2026-08-24,Claude,Passata B (interpretativa)
+BCP 2 Qq A 31,cc. 1v-6r (u.2-6),10,1005,2026-08-24,Gemini,Passata B (interpretativa)
+BCP 2 Qq A 31,cc. 6v-11r,10,946,2026-08-24,Claude,Passata A (diplomatica); rodaggio
+BCP 2 Qq A 31,cc. 6v-11r,10,946,2026-08-24,Gemini,Passata A (diplomatica); rodaggio · degrado marcato su stesura lunga
+BCP 2 Qq A 31,cc. 6v-11r,10,946,2026-08-25,Claude,Passata B (interpretativa); livello B validato
+BCP 2 Qq A 31,cc. 6v-11r,10,946,2026-08-25,Gemini,Passata B (interpretativa); degrado marcato + falso non-delegabile
+BCP 2 Qq A 31,cc. 11v-16r,10,980,2026-08-25,Claude,Passata A (diplomatica); rodaggio (campione ampio)
+BCP 2 Qq A 31,cc. 11v-16r,10,980,2026-08-25,Gemini,Passata A (diplomatica); token «me» spuri + degrado onomastico
+BCP 2 Qq A 31,cc. 11v-16r,10,1000,2026-08-25,Claude,Passata B (interpretativa); livello B validato
+BCP 2 Qq A 31,cc. 11v-16r,10,1000,2026-08-25,Gemini,"Passata B (interpretativa); no token «me» (a differenza di A), ma forte normalizzazione"
+BCP 2 Qq A 31,cc. 16v-36r,20,1950,2026-08-25,Claude,Passata A (diplomatica); cap. II fine – cap. V inizio
+BCP 2 Qq A 31,cc. 16v-36r,20,1950,2026-08-25,Gemini,Passata A (diplomatica); misletture + token «me» + Arcinescouo/Biglione
+BCP 2 Qq A 31,cc. 16v-36r,20,2000,2026-08-25,Claude,Passata B (interpretativa); livello B validato senza interventi
+BCP 2 Qq A 31,cc. 16v-36r,20,2000,2026-08-25,Gemini,Passata B (interpretativa); divergenze B-040→B-048; omesse cc.21v-22r

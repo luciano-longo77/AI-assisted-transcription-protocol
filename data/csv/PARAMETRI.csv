@@ -1,0 +1,8 @@
+﻿PARAMETRO,VALORE,DEFINIZIONE
+θ (soglia),5 interventi / 1000 parole,Soglia di stabilizzazione: sotto questo valore la densità di intervento è considerata stabilizzata.
+N (finestra),10 carte consecutive,Ampiezza su cui la densità deve restare ≤ θ perché una classe sia dichiarata stabilizzata.
+K (loop),3 ripetizioni,"Numero di esecuzioni della stessa unità per modello, per misurare il non-determinismo e prendere la forma di consenso."
+Modelli,Gemini; Claude,"I due modelli confrontati, ai livelli A e B."
+Skill,Prompt A v1.3; Prompt B v1.2,"I prompt incapsulati come skill/Gem versionate, identiche a ogni run."
+Protocollo,v1.0 (congelato),Versione normativa di riferimento dichiarata.
+Decodifica,deterministica ove possibile (temperatura minima),Da interfaccia chat spesso non impostabile: in quel caso il controllo è affidato al loop K.

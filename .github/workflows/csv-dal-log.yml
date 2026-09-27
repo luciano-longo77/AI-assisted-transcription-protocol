@@ -1,0 +1,58 @@
+# Controlla che i CSV leggibili in data/csv/ corrispondano al log editoriale.
+#
+# Questo workflow NON scrive mai nel repository: si limita a guardare. A ogni
+# caricamento del log confronta i sette CSV con i fogli dell'xlsx e, se non
+# corrispondono più, segnala l'esecuzione con una X rossa nella scheda Actions.
+#
+# Per riavere i CSV aggiornati senza installare nulla: scheda Actions -> «CSV dal
+# log» -> «Run workflow». In quel caso il workflow li rigenera e li allega
+# all'esecuzione come archivio scaricabile, che poi si carica a mano in data/csv/.
+#
+# Il file data/LOG_editoriale_AI.xlsx resta l'unico da aggiornare a mano: conserva
+# i menu a tendina che vincolano i campi a vocabolario chiuso.
+
+name: CSV dal log
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/*.xlsx'
+      - 'data/csv/*.csv'
+      - 'scripts/xlsx_to_csv.py'
+      - '.github/workflows/csv-dal-log.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installa la libreria per leggere l'xlsx
+        run: pip install --quiet openpyxl
+
+      - name: Controlla che i CSV corrispondano al log
+        if: github.event_name == 'push'
+        run: python3 scripts/xlsx_to_csv.py --verifica
+
+      - name: Rigenera i CSV (solo se lanciato a mano)
+        if: github.event_name == 'workflow_dispatch'
+        run: python3 scripts/xlsx_to_csv.py
+
+      - name: Allega i CSV rigenerati, da scaricare
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: csv-dal-log
+          path: data/csv/*.csv
+          if-no-files-found: error

@@ -1,0 +1,18 @@
+﻿BLOCCO,LIVELLO,MODELLO,INTERVENTI_OCC,PAROLE,D_per_1000,SOPRA_THETA
+u.1,A,Claude,13,162,80.2,sì
+u.1,A,Gemini,4,162,24.7,sì
+u.1,B,Claude,3,157,19.1,sì
+u.1,B,Gemini,6,157,38.2,sì
+cc.1v-6r,A,Claude,8,1000,8,sì
+cc.1v-6r,A,Gemini,50,1000,50,sì
+cc.1v-6r,B,Claude,1,1010,1,no
+cc.1v-6r,B,Gemini,27,1005,26.9,sì
+cc.6v-11r,A,Claude,9,946,9.5,sì
+cc.6v-11r,A,Gemini,13,946,13.7,sì
+cc.6v-11r,B,Claude,0,946,0,no
+cc.6v-11r,B,Gemini,38,946,40.2,sì
+cc.11v-16r,A,Claude,5,980,5.1,sì
+cc.11v-16r,A,Gemini,43,980,43.9,sì
+cc.11v-16r,B,Claude,1,1000,1,no
+cc.11v-16r,B,Gemini,45,1000,45,sì
+"θ = 5 interventi / 1000 parole. INTERVENTI_OCC = somma delle occorrenze (colonna OCCORRENZE del LOG_ERRORI), stimate dal contenuto di ogni evento; u.1 (162 par.) statisticamente fragile.",,,,,,

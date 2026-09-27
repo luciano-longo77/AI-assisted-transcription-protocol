@@ -1,0 +1,5 @@
+﻿UNITA,MODELLO,K,PAROLE~,LOCI_VAR_SOSTANZIALI,LOCI_VAR_FORMATTAZIONE,TASSO_ND_x1000,"ERRORI_STABILI (3/3, non corretti dalla ripetizione)",CONSENSO / NOTE
+c.16r,Claude,3,90,Suor/Suoro; cioè/ciè; nuouo/nùouo,a-capo (‑ / = / ø); articolo la/La,33,"Righione (‑ghi‑, errato); confaendo (per confacendo); Aglata (per Agliata)",Consenso 2/3 risolve i loci variabili; NON corregge gli errori stabili
+cc.9v-10r,Gemini,3,190,deligente/megentil,Gesù/Gesu; Hauen: / Hauen,5,"Biglione (toponimo, errato); 1576 (per 1556); essiendo ×2 (per essendo); Fu piu",Consenso 2/3 «megentil» SCARTA la lettura corretta prodotta da 1 run; errori stabili non corretti
+cc.9v-10r,Claude,3,190,(in attesa immagine folio 10),—,,—,Da eseguire: ricaricare lo spread cc.9v-10r
+SINTESI,,,,,,,,"Il loop K misura la STABILITÀ (non-determinismo), non l'ACCURATEZZA. Entrambi i modelli hanno basso non-determinismo ma errori stabili che la ripetizione conferma (e che il consenso a maggioranza può perfino imporre, cfr. «megentil»/«1576»/«Biglione»). Solo la validazione umana intercetta gli errori stabili. Toponimo confermato «Riglione» (‑gli‑): «Righione» (Claude) e «Biglione» (Gemini) sono errori stabili."
