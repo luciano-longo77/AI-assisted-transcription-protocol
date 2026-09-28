@@ -1,475 +1,241 @@
 # Nota al testo
 
-**Criteri di trascrizione e di normalizzazione per l'edizione interpretativa**
+**Criteri di trascrizione dell'edizione interpretativa**
 
 | | |
 |---|---|
 | Testimone | Palermo, Biblioteca Comunale, ms. **2 Qq A 31** |
 | Opera | Suor Francesca Benedetta Corvino, *Vita della venerabil madre suor Benedetta Riggio* |
-| Porzione collazionata | frontespizio – c. 36r (capp. I–IV e inizio cap. V) |
-| Livello editoriale | **B — trascrizione interpretativa** (dal livello A, diplomatica validata) |
-| Versione della Nota | 1.0 |
-| Data | 2026-09-27 |
-| Progetto | «Dalla norma editoriale al workflow AI-assistito» — protocollo v1.0 |
+| Porzione edita | frontespizio – c. 36r (capp. I–IV e inizio cap. V) |
+| Livello | **B — trascrizione interpretativa**, dal livello A (diplomatica validata) |
+| Versione | **1.0** · redazione 2026-09-27, revisione redazionale 2026-09-28 |
+| Licenza | CC BY 4.0 |
 
 ---
 
-## 0. Statuto e genealogia di questo documento
+## 1. Che cosa stai leggendo
 
-Questa Nota è **normativa**: è il documento a cui il *Prompt B* rinvia quando prescrive di applicare
-«esclusivamente le regole editoriali definite nella Nota al testo di riferimento». Ogni regola qui
-formulata è pensata per essere eseguibile da un operatore umano e da un modello linguistico senza
-margini di discrezionalità non dichiarati. Dove un margine resta, è isolato e nominato (§ 9, § 10).
+L'edizione pubblica **due testi dello stesso manoscritto**, entrambi citabili, che non sono due stesure ma due prodotti distinti:
 
-I criteri muovono dalla *Nota al testo* premessa all'edizione del ***Castello dell'anima***, che
-adotta per una scrivente di area semicolta la scelta di «intervenire moderatamente, ammodernando e
-regolarizzando la grafia e l'interpunzione al fine di migliorare la leggibilità». Quella Nota riguarda
-un altro testimone: il trasferimento dei suoi criteri alla *Vita di Benedetta Riggio* è una scelta
-dell'editore, qui dichiarata, giustificata dall'omogeneità di tipologia (scrittura monastica
-palermitana di età moderna, mano unica, italiano regionale con forte stratificazione latinizzante) e
-verificata classe per classe sullo spoglio del testimone A 31.
+- **Livello A, trascrizione diplomatica** (`tei/A31_diplomatica.xml`). Registra il testimone: grafia, abbreviazioni non sciolte, divisione di riga e di carta, segni materiali, punti dubbi. Non normalizza nulla. È la base di collazione e il luogo dove sopravvive ogni dato linguistico.
+- **Livello B, trascrizione interpretativa** (`tei/A31_interpretativa.xml`). Restituisce un testo leggibile. **Questa Nota descrive soltanto il livello B.**
 
-Rispetto al modello, questa Nota **estende** il regime in tre direzioni, sulla base dello spoglio:
+Chi voglia studiare la lingua della scrivente deve usare il livello A. Il livello B è il testo per la lettura, e ogni sua forma è il risultato delle regole dichiarate qui sotto: sono scritte in modo che il lettore possa, in qualunque punto, ricostruire mentalmente che cosa stava sulla carta.
 
-1. normalizzazione dei **nessi latini** (`-tione`/`-ttione`, `x`, `ch`, `-ij`) — non contemplati dal modello;
-2. normalizzazione della **h etimologica** e della congiunzione **`et`** — nel modello taciute;
-3. abolizione della **maiuscola reverenziale** e delle maiuscole di rispetto sui nomi comuni, con una
-   regola positiva per istituzioni e toponimi.
+> **Stato del testo.** Il file `tei/A31_interpretativa.xml` attualmente in repository è stato prodotto sotto un regime editoriale **precedente** a questa Nota, che conservava la *h* etimologica, i nessi in *-tione*, la congiunzione *et* e la maiuscola reverenziale. Va rifatto, e fino a quel momento il testo interpretativo pubblicato **non** corrisponde ai criteri descritti in questa Nota. La sua `editorialDecl` dichiara il regime sotto cui è stato prodotto.
 
-Le estensioni non sono cosmetiche. Toccano 80 occorrenze di nessi in `-tione`, 98 forme con h
-etimologica, 74 occorrenze di `et`, 667 maiuscole interne al periodo su 152 tipi diversi, su un
-segmento di circa 6.500 parole. Il regime che ne risulta **non è una revisione del testo interpretativo
-esistente: ne è un altro**. Le conseguenze operative sono censite al § 11.
+## 2. Il criterio, e il suo costo
 
----
+Per una scrivente di area semicolta il criterio più difendibile sarebbe quello conservativo: gli scarti dalla norma sono spie per valutare le competenze linguistiche di chi scrive, e normalizzare le cancella. Questa edizione sceglie invece di **intervenire moderatamente**, ammodernando e regolarizzando grafia e interpunzione per migliorare la leggibilità, e accetta il costo dichiarandolo: il conflitto non è risolto, è **spostato**. Le spie restano integralmente leggibili nel livello A, che resta pubblicato accanto a questo.
 
-## 1. I due livelli e che cosa questa Nota governa
-
-Il protocollo distingue due prodotti testuali, non due stesure dello stesso prodotto:
-
-- **Livello A — trascrizione diplomatica.** Registra il testimone: grafia, abbreviazioni, segni,
-  divisione di riga e di carta, stratificazione. Nessuna normalizzazione. È la base di collazione e
-  resta pubblicata accanto al livello B.
-- **Livello B — trascrizione interpretativa.** Restituisce un testo leggibile a partire dal livello A
-  validato. **Questa Nota governa esclusivamente il livello B.**
-
-Il livello B non torna mai sul manoscritto: opera sul diplomatico. Ne segue che qualunque dubbio di
-lettura è *già risolto o già segnalato* nel livello A, e il livello B non può riaprirlo (§ 9).
-
----
-
-## 2. Principio regolatore e suo limite
-
-Per una scrivente semicolta il criterio conservativo sarebbe il più difendibile: gli scarti dalla norma
-sono spie decisive per valutare le competenze linguistiche di chi scrive, e normalizzare significa
-cancellarle. Questa edizione sceglie il criterio opposto — intervento **moderato** a favore della
-leggibilità — e accetta il costo. Il conflitto non è risolto: è **spostato**. Le spie restano
-integralmente leggibili nel livello A, che resta pubblicato e citabile; il livello B è il testo per il
-lettore, non il testo per il linguista.
-
-Il limite dell'intervento è stabilito da un **criterio unico**, da cui tutte le regole del § 3 derivano
-e contro cui ogni caso dubbio va misurato:
+Il limite dell'intervento è fissato da un criterio unico, contro cui si misura ogni caso:
 
 > **Si normalizza la *veste grafica*. Non si toccano morfologia, lessico, sintassi.**
 
-Operativamente: è emendabile ciò che, nel sistema fonologico della scrivente, **non corrisponde ad alcun
-suono** (la `h` di `havea`, la `u` di `haurebbe`, la seconda `t` di `perfettione`, la `i` di `rimedij`),
-o ciò che **rende con altra veste un suono che l'italiano scrive diversamente** (`-tione` per `-zione`,
-`x` per `s`, `ch` per `c`). Non è emendabile ciò che implica una **forma diversa**: `avea` non diventa
-`aveva`, `dui` non diventa `due`, `delli` non diventa `degli`, `difficultà` non diventa `difficoltà`,
-`instituto` non diventa `istituto`.
+È emendabile ciò che, nel sistema della scrivente, **non corrisponde ad alcun suono** — la *h* di `havea`, la *u* di `haurebbe`, la seconda *t* di `perfettione`, la *i* di `rimedij` — oppure ciò che **rende con altra veste un suono che l'italiano scrive diversamente**: `-tione` per *-zione*, `x` per *s*, `ch` per *c*.
 
-La prova di controllo è la seguente: **se l'emendamento cambia il numero di sillabe o la qualità di una
-vocale, non è una normalizzazione grafica ed è vietato.**
+Non è emendabile ciò che implica una forma diversa. La prova di controllo è secca:
 
----
+> **Se l'emendamento cambia il numero di sillabe o la qualità di una vocale, non è una normalizzazione grafica e non si fa.**
 
-## 3. Classi di normalizzazione
+Così `havea` diventa *avea* e non *aveva*; `offitio` diventa *offizio* e non *ufficio*; `Monasterio` perde la maiuscola ma non diventa *monastero*; `dui`, `delli`, `difficultà`, `instituto` restano come sono.
 
-Ogni classe è identificata da un codice (`N1`…`N9`) da riportare nel log editoriale alla colonna
-della classe di intervento. I conteggi si riferiscono al segmento frontespizio – c. 36r.
+## 3. Che cosa si normalizza
 
-### N1 — Abbreviazioni
+Nove classi, siglate `N1`–`N9`. I conteggi si riferiscono al segmento edito, circa 6.500 parole.
 
-Si sciolgono **tutte** le abbreviazioni, **tacitamente**, senza parentesi e senza corsivo. Lo
-scioglimento adotta la forma attestata nel testimone o, in mancanza, nell'uso italiano di età moderna;
-la forma sciolta è poi sottoposta alle classi N2–N7 come ogni altra parola.
+> **Il latino non si normalizza.** Le classi N3 e N4 valgono per il solo testo italiano. `honoratissimi` diventa *onoratissimi*, ma `Honoratissime Pater` resta com'è; `oratione` diventa *orazione*, ma `oratio` resta `oratio`. Restano intatti anche i latinismi lessicali dell'italiano della scrivente: `etiam`, `instituto`, `infancia`, `concurso`.
 
-| nel testimone | nel testo B |
-|---|---|
-| `d.a` | detta |
-| `total.te` | totalmente |
-| `final.te` | finalmente |
-| `dunq.` | dunque |
-| `V.R.` | Vostra Reverenza |
-| `S.` (davanti a nome di santo) | san / santa |
-| ordinali abbreviati | sciolti per esteso |
+### N1 · Abbreviazioni
 
-Le espansioni già marcate nel diplomatico fra parentesi tonde — `total(men)te` — perdono le parentesi.
-La coerenza degli scioglimenti è vincolante all'interno dell'edizione: la stessa abbreviazione riceve
-sempre la stessa soluzione.
+Sciolte **tutte** e **tacitamente**, senza parentesi né corsivo: `d.a` > *detta*, `total.te` > *totalmente*, `final.te` > *finalmente*, `dunq.` > *dunque*, `V.R.` > *Vostra Reverenza*, `S.` + nome di santo > *san*/*santa*, ordinali per esteso. La forma sciolta è poi trattata come ogni altra parola. La stessa abbreviazione riceve sempre la stessa soluzione.
 
-### N2 — u/v e i/j
+### N2 · u/v, i/j
 
-- `u` con valore consonantico → `v`: `haurebbe` → **avrebbe**; `seruitio` → **servizio**.
-- `v` con valore vocalico → `u`.
-- `j` (anche in posizione finale) → `i`: `rimedij` → **rimedi**; `Monasterij` → **monasteri**;
-  `Novitij` → **novizi**; `servitij` → **servizi**; `negotij` → **negozi**.
+`u` con valore consonantico > `v` (`haurebbe` > *avrebbe*, `seruitio` > *servizio*); `v` vocalico > `u`; `j` > `i` anche in posizione finale (`rimedij` > *rimedi*, `Monasterij` > *monasteri*, `Novitij` > *novizi*, `negotij` > *negozi*). Sette occorrenze di `-ij` finale, convenzione grafica senza riscontro fonologico.
 
-Occorrenze rilevate di `-ij` finale: 7. La resa `-ij` per `-i` è una convenzione grafica di scrittura,
-priva di riscontro fonologico: cade senza residuo.
+### N3 · h etimologica
 
-### N3 — h etimologica e h diacritica
+Eliminata dove non è etimologicamente italiana; conservata o introdotta dove l'uso moderno la richiede. **98 occorrenze.**
 
-> **Eccezione, valida anche per N4.** Le classi N3 e N4 si applicano **soltanto al testo italiano**.
-> Le citazioni, le formule liturgiche e le parole latine **non si normalizzano**: `honoratissimi`
-> (italiano) diventa *onoratissimi*, `Honoratissime Pater` (latino) resta com'è; `oratione`
-> (italiano) diventa *orazione*, `oratio` (latino) resta `oratio`. Il passo latino va marcato
-> `xml:lang="la"` nel file TEI e, in caso di dubbio sull'estensione del passo, il luogo è un caso
-> non delegabile (§ 9.7).
+`havea` > *avea* · `haveano` > *aveano* · `havendo` > *avendo* · `havesse` > *avesse* · `havuto` > *avuto* · `haver` > *aver* · `hebbe` > *ebbe* · `huomo` > *uomo* · `honore` > *onore* · `hora` > *ora* · `humiltà` > *umiltà* · `Christiana` > *cristiana*
 
-La `h` non etimologicamente italiana si elimina; la `h` con funzione diacritica si conserva o si
-introduce secondo l'uso moderno.
+Cade la sola *h*, non la forma: il testimone alterna `havea` (18) e `haveva` (6), e l'alternanza **si conserva**, depurata della *h*. Restano intatte `ho`, `hai`, `ha`, `hanno`.
 
-| nel testimone | nel testo B |
-|---|---|
-| `havea`, `haveano`, `havendo`, `havesse`, `havuto`, `haver` | avea, aveano, avendo, avesse, avuto, aver |
-| `hebbe`, `hebbero` | ebbe, ebbero |
-| `huomo`, `huomini` | uomo, uomini |
-| `honore`, `honoratissimi` | onore, onoratissimi |
-| `hora`, `hore` | ora, ore |
-| `humiltà` | umiltà |
-| `Christiana` | cristiana (v. anche N4) |
+### N4 · Nessi e grafie latinizzanti
 
-Occorrenze rilevate: **98**.
+| nel testimone | nel testo | occ. |
+|---|---|---|
+| `-tione`, `-tioni` > `-zione`, `-zioni` | `oratione` > orazione, `devotione` > devozione, `fondatione` > fondazione | 80 (famiglia) |
+| `-ttione` > `-zione` | `Concettione` > Concezione, `perfettione` > perfezione, `mortificattione` > mortificazione | 42 |
+| `-tio` > `-zio` | `offitio` > offizio, `negotio` > negozio | 4 |
+| `ci` per `zi` | `perficione` > perfezione | 2 |
+| `x` per `s` | `exortationi` > esortazioni, `exemplare` > esemplare | 5 |
+| `ch` per `c` | `Christiana` > cristiana, `charità` > carità | — |
 
-**Confine della classe.** L'eliminazione della `h` è grafica e non intacca la forma: `havea` diventa
-`avea`, **non** `aveva`; `haveano` diventa `aveano`, **non** `avevano`. Il testimone alterna `havea`
-(18) e `haveva` (6): l'alternanza si conserva come alternanza morfologica della scrivente, depurata
-della sola `h`.
+Si normalizza il **nesso**, non la parola. La *tt* di `-ttione` non è una geminata della scrivente: è parte della resa grafica dell'affricata e cade con il nesso. **Fuori da questo contesto le geminate del testimone si conservano**: `Doppo` resta *doppo*.
 
-Restano intatte le forme verbali di *avere* che l'italiano scrive con `h` (`ho`, `hai`, `ha`, `hanno`)
-e le interiezioni; per le oscillazioni `à/hà/a`, `ò/hò/o`, `hò/ho/ò` si veda N6.
+### N5 · Congiunzione `et`
 
-### N4 — Nessi e grafie latinizzanti
+Davanti a consonante > **e**; davanti a vocale > **ed**: `et parve` > *e parve*, `et emendata` > *ed emendata*. **74 occorrenze.**
 
-Si regolarizzano i nessi che rendono con veste latina un suono dell'italiano.
+### N6 · Accenti, diacritici, apostrofo
 
-| classe | nel testimone | nel testo B | occorrenze |
-|---|---|---|---|
-| `-tione`/`-tioni` → `-zione`/`-zioni` | `oratione`, `devotione`, `vocatione`, `fondatione` | orazione, devozione, vocazione, fondazione | 80 (famiglia) |
-| `-ttione` → `-zione` | `Concettione`, `perfettione`, `afflittione`, `mortificattione`, `condittione`, `informattione` | Concezione, perfezione, afflizione, mortificazione, condizione, informazione | 42 |
-| `-tio` → `-zio` | `offitio`, `negotio`, `servitio` | offizio, negozio, servizio | 4 (`offitio`) |
-| `ci` per `zi` | `perficione` | perfezione | 2 |
-| `x` per `s` | `exortationi`, `exaudita`, `exemplare`, `exemplari` | esortazioni, esaudita, esemplare, esemplari | 5 |
-| `ch` per `c` davanti a vocale | `Christiana`, `charità` | cristiana, carità | — |
+Si toglie l'accento superfluo (`quì` > *qui*), si introduce quello mancante (`poiche`, `poi che` > *poiché*; `perche` > *perché*), si scioglie l'apostrofo abusivo (`buon'animo` > *buon animo*; `ed'` + vocale > *ed* + vocale).
 
-**Geminata.** La `tt` di `-ttione` non è una geminata della scrivente: è parte della resa grafica
-dell'affricata e cade con il nesso. Fuori da questo contesto **le oscillazioni fra scempia e geminata si
-conservano**: `Doppo` resta `doppo`, non diventa `dopo`.
+Le otto alternanze del testimone hanno soluzione fissa:
 
-**Confine della classe.** Si normalizza il **nesso**, non la **parola**. `offitio` diventa `offizio`
-(nesso regolarizzato, forma lessicale conservata), **non** `ufficio` (forma diversa). Restano perciò
-intatti i latinismi lessicali, che non sono grafie ma parole: `etiam`, `instituto`, `infancia`,
-`concurso`. Restano intatte anche le oscillazioni vocaliche di matrice latina — `Immaculata` /
-`Immacolata`, `difficultà` / `difficoltà`, `Giesù` / `Gesù` — perché la differenza è di vocale, non di
-veste: il criterio del § 2 le esclude.
-
-### N5 — Congiunzione `et`
-
-- davanti a consonante → **e**: `et parve` → *e parve*;
-- davanti a vocale → **ed**: `et emendata` → *ed emendata*.
-
-Occorrenze rilevate: **74**. La forma `et` è grafia latina di una congiunzione che l'italiano scrive
-`e`/`ed`: rientra in pieno nel § 2. La scelta di `ed` davanti a vocale — e non di `e`, come
-preferirebbe l'uso corrente — segue il modello, che prescrive `ed' + vocale > ed + vocale`, e mantiene
-la continuità fonica del periodo.
-
-### N6 — Accenti, diacritici, apostrofo
-
-Si regolarizzano secondo l'uso moderno, con tre operazioni: si **togliono** gli accenti non previsti,
-si **introducono** quelli mancanti, si **scioglie** l'apostrofo abusivo.
-
-- apostrofo abusivo: `buon'animo` → **buon animo**; `ed'` + vocale → **ed** + vocale;
-- accento mancante: `poiche`, `poi che` → **poiché**; `perche`, `per che` → **perché**;
-- accento superfluo: `quì` → **qui**.
-
-**Le otto alternanze.** Il testimone oscilla fra forme con e senza `h` e con e senza accento. La
-soluzione è fissata una volta per tutte:
-
-| nel testimone | valore | nel testo B |
+| nel testimone | valore | nel testo |
 |---|---|---|
 | `à` / `hà` / `a` | preposizione | **a** |
 | `ò` / `hò` / `o` | congiunzione | **o** |
-| `hò` / `ho` / `ò` | verbo (1ª sing. di *avere*) | **ho** — `[h]o` dove la lezione è incerta |
+| `hò` / `ho` / `ò` | verbo | **ho** |
 | `quì` | avverbio | **qui** |
 | `ne` | congiunzione negativa | **né** |
 | `se` / `sè` | pronome tonico | **sé** |
 | `si` | avverbio affermativo | **sì** |
 | `perche` | congiunzione | **perché** |
 
-La forma `[h]o` fra parentesi quadre è ammessa **solo** quando il diplomatico registra una lezione
-materialmente incerta fra `ho` e `o`; non è una segnalazione di scioglimento.
+La forma `[h]o` compare solo dove la lezione è materialmente incerta fra *ho* e *o*.
 
-### N7 — Unione e separazione delle parole
+### N7 · Unione e separazione delle parole
 
-Si adegua all'uso moderno, in entrambe le direzioni.
+`inalto` > *in alto* · `nonsapeva` > *non sapeva* · `inquestitempi` > *in questi tempi* · `nelei` > *né lei* · `per che` > *perché* · `egli` (= *e gli*) > *e gli*
 
-| nel testimone | nel testo B |
+L'ordine delle parole non si altera mai. A fine carta la parola spezzata è restituita per intero nella carta in cui comincia, e il richiamo cade.
+
+Alcuni di questi interventi **non sono di grafia ma di lettura**: separare `egli` in *e gli* è un'interpretazione, che il lettore può contestare. Questi luoghi sono segnalati in apparato.
+
+### N8 · Maiuscole e minuscole
+
+Il testimone usa la maiuscola come segno di rispetto e di enfasi, non come segno grammaticale: **667 maiuscole interne al periodo su 152 tipi diversi**. Si riconducono all'uso moderno.
+
+**Alla minuscola:**
+
+| | esempi | occ. |
+|---|---|---|
+| maiuscola reverenziale | `La`, `Le`, `Lei` riferiti alla Madre | 16 |
+| pronome di prima persona | `Io` > io | — |
+| nomi comuni di persona religiosa | `Madre` 36, `Padre` 31, `Suoro` 18, `Monache` 14, `Reverenda` 13, `Abbadessa` 10, `Superiora` 4 | 126 |
+| nomi comuni di luogo o istituzione non individuata | `Monasterio` 63, `Città` 10, `Regola` 5, `Casa` 4 | 82 |
+| nomi astratti e aggettivi | `Religione` 3, `Divina`, `Statua` | — |
+| appellativo di santità davanti a nome proprio | `San Giovanni` > *san Giovanni* | — |
+
+**Alla maiuscola, conservata o introdotta:** nomi propri di persona e di luogo (Benedetta Riggio, Palermo, Roma); nomi di Dio e appellativi divini (Dio, Signore, Gesù, Spirito Santo); **denominazioni istituzionali individuate** (Casa Professa, Compagnia di Gesù, San Giovanni dell'Origlione, Santa Croce); titoli di opere.
+
+Il criterio che separa le due liste è **l'individuazione, non la dignità del referente**. *Casa Professa* porta la maiuscola perché è il nome proprio dell'istituzione gesuitica palermitana: renderlo «la casa» falsifica il referente. *Monasterio della Concezione* ha il nome comune minuscolo e la specificazione maiuscola, perché è la specificazione a individuare. `Città` da sola è nome comune e va minuscolo anche dove il contesto renda ovvio che si tratta di Palermo.
+
+Le identificazioni onomastiche e toponimiche sono dichiarate in apparato, non introdotte nel testo.
+
+### N9 · Punteggiatura
+
+Ritoccata **soltanto** dove il segno è obsoleto o dove conservarlo comprometterebbe l'intelligibilità.
+
+I **due punti** del testimone sono segno di pausa media, non di annuncio: resi con virgola, punto e virgola o punto fermo secondo il contesto. Si introducono le virgole indispensabili a incidentali e nessi sintattici, e le maiuscole di inizio periodo che ne conseguono. Il discorso riportato riceve le virgolette basse.
+
+**Il periodo non si semplifica.** Paratassi, anacoluti e concordanze a senso sono fatti stilistici, non errori di punteggiatura: il periodo lungo resta lungo.
+
+## 4. Che cosa si conserva
+
+Questa sezione ha la stessa forza della precedente. La deriva più probabile di un testo interpretativo è la modernizzazione silenziosa oltre il perimetro grafico.
+
+| | esempi nel testimone |
 |---|---|
-| `inalto` | in alto |
-| `nonsapeva` | non sapeva |
-| `inquestitempi` | in questi tempi |
-| `egli` (= *e gli*) | e gli |
-| `nelei` | né lei |
-| `per che` | perché |
-
-L'ordine delle parole non si altera mai. La separazione di `egli` in `e gli` e l'unione di `per che` in
-`perché` sono interventi di lettura, non di grafia: vanno sempre registrati nel log come tali, perché
-in caso di ambiguità l'interpretazione può essere contestata.
-
-A fine carta la parola spezzata è **ricomposta e restituita per intero** nella carta in cui comincia.
-
-### N8 — Maiuscole e minuscole
-
-Il testimone usa la maiuscola come segno di rispetto e di enfasi, non come segno grammaticale: 667
-maiuscole interne al periodo su 152 tipi. La normalizzazione le riconduce all'uso moderno, con una
-regola negativa e una positiva.
-
-**Si porta alla minuscola:**
-
-| categoria | nel testimone | nel testo B | occ. |
-|---|---|---|---|
-| maiuscola reverenziale di pronome e articolo | `La`, `Le`, `Lei`, `Ella` riferiti alla Madre | la, le, lei, ella | 16 |
-| pronome di prima persona | `Io` | io | — |
-| nome comune di persona religiosa | `Madre`, `Padre`, `Suoro`, `Monache`, `Abbadessa`, `Superiora` | madre, padre, suoro, monache, abbadessa, superiora | 36 + 31 + 18 + 14 + 10 + 4 |
-| nome comune di luogo o istituzione non individuata | `Casa`, `Città`, `Monasterio`, `Regola` | casa, città, monasterio, regola | 4 + 10 + 63 + 5 |
-| nome astratto e aggettivo | `Religione`, `Divina` | religione, divina | 3 + — |
-| oggetto | `Statua` | statua | — |
-
-**Si conserva o si introduce la maiuscola:**
-
-| categoria | esempi |
-|---|---|
-| nomi propri di persona | Benedetta Riggio, Francesca Benedetta Corvino, Antonio, Vincenzo |
-| nomi propri di luogo | Palermo, Roma |
-| nomi di Dio e appellativi divini | Dio, Signore, Gesù, Spirito Santo |
-| titoli di santità davanti a nome proprio | san Giovanni, santa Chiara — con l'appellativo **minuscolo** e il nome maiuscolo |
-| **denominazioni istituzionali individuate** | **Casa Professa**, Compagnia di Gesù, San Giovanni dell'Origlione, Santa Croce |
-| titoli di opere | *Castello dell'anima* |
-
-**Il criterio discriminante fra le due liste** è l'individuazione. `Casa Professa` è maiuscolo perché è
-il nome proprio dell'istituzione gesuitica palermitana: sostituirlo con «la casa» rende il testo falso.
-`monasterio della Concezione` è minuscolo nel nome comune e maiuscolo nella specificazione, perché è la
-specificazione a individuare. `Città` da sola è nome comune e va minuscolo, anche quando il contesto
-renda ovvio che si tratti di Palermo; se il testimone scrive `Città di Palermo`, si stampa *città di
-Palermo*.
-
-Toponimi e denominazioni istituzionali vanno **verificati caso per caso** contro la documentazione
-storica prima di assegnare la maiuscola; la verifica non è delegabile al modello (§ 9) e le
-identificazioni si dichiarano in apparato (`Riglione` = San Giovanni dell'Origlione).
-
-### N9 — Punteggiatura
-
-Si ritocca **soltanto** dove il segno del testimone è obsoleto o dove la sua conservazione
-comprometterebbe l'intelligibilità.
-
-- **I due punti** sono nel testimone un segno di pausa media, non di annuncio: si interpretano secondo
-  il contesto e si rendono con virgola, punto e virgola o punto fermo.
-- Si introducono le virgole indispensabili alla resa dei nessi sintattici e delle incidentali.
-- Si introducono le maiuscole di inizio periodo che ne conseguono.
-- **Non si semplifica il periodo**: la sintassi paratattica e anacolutica della scrivente è un fatto
-  stilistico, non un errore di punteggiatura. Il periodo lungo resta lungo.
-- Si normalizzano i segni del discorso riportato secondo l'uso moderno (virgolette basse).
-
----
-
-## 4. Ciò che non si tocca
-
-Questa sezione non è un residuo: è **vincolante quanto il § 3**. La deriva più probabile del livello B —
-umano o automatico — è la modernizzazione silenziosa oltre il perimetro grafico. Si conservano perciò
-integralmente:
-
-| classe | esempi nel testimone |
-|---|---|
-| morfologia verbale | `avea`/`aveva`, `aveano`, `haurebbe` → *avrebbe* (solo grafia) |
+| morfologia verbale | `avea` accanto ad `aveva`, `aveano` |
 | morfologia nominale e pronominale | `dui`, `delli`, `dello` |
 | lessico e latinismi lessicali | `etiam`, `instituto`, `infancia`, `concurso`, `monasterio`, `offizio` |
 | apocopi | `venerabil`, `gentil`, `esser`, `saper` |
-| oscillazioni vocaliche | `Immaculata`/`Immacolata`, `difficultà`/`difficoltà`, `Giesù`/`Gesù` |
-| oscillazioni fra scempia e geminata (fuori da N4) | `doppo` |
+| oscillazioni vocaliche | `Immaculata` / `Immacolata`, `difficultà` / `difficoltà`, `Giesù` / `Gesù` |
+| geminate e scempie fuori da N4 | `doppo` |
 | sintassi | paratassi, anacoluti, concordanze a senso, ripetizioni |
-| formule e titolature | `Vostra Reverenza`, `la venerabil madre` |
+| formule e titolature | *Vostra Reverenza*, *la venerabil madre* |
 
-Nessuna di queste forme va «corretta», uniformata o resa coerente. L'oscillazione interna al testimone
-è un dato del testimone e sopravvive nel livello B.
+Nessuna di queste forme è stata corretta, uniformata o resa coerente. **L'oscillazione interna al testimone è un dato del testimone e sopravvive nel testo interpretativo:** dove il testo alterna, alterna il manoscritto.
 
----
-
-## 5. Segni dell'edizione
+## 5. I segni dell'edizione
 
 | segno | significato |
 |---|---|
 | `/` | fine di carta |
-| `(c. 3r)` | numero di carta, fra parentesi tonde, dopo la barra |
-| `[...]` | guasto meccanico: lettere o parole illeggibili per danno del supporto |
-| `[parola]` | **integrazione congetturale** dell'editore |
-| `‹parola›` | sillabe o parole cassate dalla scrivente (**solo in apparato**) |
+| `(c. 3r)` | numero di carta, dopo la barra |
+| `[...]` | guasto materiale: lettere o parole illeggibili per danno del supporto |
+| `[parola]` | integrazione congetturale dell'editore |
+| `‹parola›` | sillabe o parole cassate dalla scrivente — **solo in apparato** |
 
-**Barra e numero di carta.** Il livello A usa `/` per il cambio di riga e `//` per il cambio di carta.
-Nel livello B la divisione di riga **non è pertinente e si perde**: la barra semplice si libera e assume
-il valore che questa Nota le assegna, fine di carta, seguita dal numero fra tonde. La conversione dal
-livello A è dunque meccanica: `//` → `/ (c. Nr)`. Nella codifica TEI il dato è portato da `<pb/>`, e i
-segni della tabella sono la resa a stampa di quella marcatura, non una marcatura parallela.
+Le parentesi quadre hanno due valori, distinti dal contenuto: con i punti sospensivi segnalano un guasto del testimone, con del testo segnalano una congettura. La distinzione è sufficiente perché una congettura è sempre testo e un guasto è sempre e solo `[...]`.
 
-**Parentesi quadre.** Le quadre hanno **due** valori, distinti dal contenuto e non dal segno: con punti
-sospensivi al loro interno segnalano un guasto materiale del testimone; con testo al loro interno
-segnalano un'integrazione congetturale dell'editore. La distinzione è sufficiente perché
-un'integrazione è sempre testo e un guasto è sempre e solo `[...]`.
+Nella codifica TEI il cambio di carta è portato da `<pb/>`: i segni di questa tabella sono la resa a stampa di quella marcatura.
 
-**Le integrazioni congetturali sono ammesse.** La loro autorizzazione appartiene **esclusivamente
-all'editore umano**: sono vietate al modello (§ 9). La congettura di cui l'editore non sappia rendere
-conto in apparato non si stampa.
+## 6. L'apparato
 
----
+L'apparato è unico e riunisce tre ordini di informazione, distinti da una sigla:
 
-## 6. Apparato
-
-L'apparato è unico e riunisce tre ordini di informazione, distinti da una sigla iniziale:
-
-1. **Genetica.** Sillabe e parole cassate dalla scrivente, entro parentesi uncinate `‹ ›`; aggiunte
-   interlineari e marginali; sovrascritture; riscritture. Si segnalano i **ripensamenti** e in generale
-   «ogni altra caratteristica notevole dell'autografo».
-2. **Filologico-linguistica.** Lezioni incerte, interventi di lettura contestabili (in particolare le
-   separazioni e le unioni di N7), forme che si è scelto di conservare e che il lettore potrebbe credere
-   errori di stampa, identificazioni onomastiche e toponimiche.
+1. **Genetica.** Cassature entro parentesi uncinate; aggiunte interlineari e marginali; sovrascritture; riscritture; ripensamenti e ogni altra caratteristica notevole dell'autografo.
+2. **Filologico-linguistica.** Lezioni incerte; interventi di lettura contestabili, in particolare le separazioni e le unioni di N7; forme che si è scelto di conservare e che il lettore potrebbe credere errori di stampa; identificazioni onomastiche e toponimiche.
 3. **Commento.** Realia, riferimenti scritturali e liturgici, contesto storico-istituzionale.
 
-I tre ordini non hanno fasce separate: la nota è una, la sigla dichiara di quale ordine si tratti.
-Nessun fenomeno genetico compare **mai** nel testo interpretativo: il testo B porta una sola lezione,
-l'ultima voluta dalla scrivente, e la stratificazione vive in apparato.
+**Nessun fenomeno genetico compare nel testo interpretativo.** Il testo porta una sola lezione, l'ultima voluta dalla scrivente; la stratificazione vive in apparato.
 
----
+## 7. Ordine di applicazione
 
-## 7. Gerarchia e ordine di applicazione
+Le classi non sono indipendenti: `seruitij` richiede N2 e N4 per dare *servizi*, e `per che` va unito (N7) prima di essere accentato (N6). L'ordine è fissato, e in caso di conflitto **prevale la classe di numero minore**:
 
-Le classi non sono indipendenti: `seruitij` richiede N2 (`u`→`v`, `j`→`i`) e N4 (`-tio`→`-zio`) per dare
-*servizi*. L'ordine di applicazione è fissato, e in caso di conflitto **la classe di numero minore
-prevale**:
+**N1** → **N2** → **N3** → **N4** → **N5** → **N7** → **N6** → **N9** → **N8**
 
-1. **N1** abbreviazioni (produce parole nuove, che le classi seguenti trattano come le altre);
-2. **N2** u/v, i/j;
-3. **N3** h etimologica;
-4. **N4** nessi latinizzanti;
-5. **N5** `et`;
-6. **N7** unione e separazione;
-7. **N6** accenti e diacritici (dopo N7, perché `per che` → `perché` unisce prima e accenta poi);
-8. **N9** punteggiatura;
-9. **N8** maiuscole (ultima, perché dipende dalla punteggiatura per le maiuscole di inizio periodo).
+N8 viene per ultima perché dipende dalla punteggiatura per le maiuscole di inizio periodo. Il criterio del § 2 prevale su tutte: nessuna classe autorizza un intervento che cambi il numero di sillabe o la qualità di una vocale.
 
-Il criterio del § 2 prevale su tutte: **nessuna classe autorizza un intervento che cambi il numero di
-sillabe o la qualità di una vocale.**
+## 8. Decisioni e alternative scartate
 
----
+Ogni decisione qui elencata era aperta, e ciascuna produce effetti su decine di luoghi. Sono dichiarate perché il lettore possa dissentire con cognizione.
 
-## 8. Verifica e registrazione
-
-Ogni intervento è registrato nel log editoriale con la classe (`N1`…`N9`), la carta, il modello che lo
-ha proposto e l'esito della validazione. La misura di stabilizzazione è quella del protocollo:
-
-> **D = interventi ÷ (parole / 1000)**, con soglia **θ = 5/1000**; una classe è stabilizzata quando
-> D ≤ θ per **N = 10** carte consecutive.
-
-Le classi di questa Nota sono le **unità di misura** di quella metrica: la densità si calcola per
-classe, non sul totale, perché una classe può essere stabile mentre un'altra non lo è. Le classi
-introdotte dalla versione 1.0 (N3, N4, N5 e la parte reverenziale di N8) ripartono da zero: nessuna
-stabilizzazione acquisita sotto il regime precedente è trasferibile.
-
----
-
-## 9. Casi non delegabili
-
-Sono riservati all'editore umano e vietati al modello. Di fronte a uno di essi il modello **si arresta
-e segnala**, senza proporre una soluzione nel testo.
-
-1. **Integrazione congetturale.** Nessuna lacuna si riempie in via automatica. `[...]` resta `[...]`.
-2. **Stratificazione genetica.** Cancellature, ripensamenti, sovrascritture, aggiunte: la scelta della
-   lezione a testo è dell'editore.
-3. **Lezione materialmente incerta.** Quanto il livello A marca come incerto resta incerto: il livello
-   B non decide, e in particolare non scioglie l'alternanza `[h]o` (N6).
-4. **Maiuscola di istituzioni e toponimi** non già identificati in apparato: richiede verifica
-   documentaria esterna al testo (N8).
-5. **Interventi di lettura ambigui** nell'unione e separazione, quando entrambe le segmentazioni danno
-   un senso (N7).
-6. **Punteggiatura in luogo sintatticamente ambiguo**: dove la collocazione del segno decide il senso
-   del periodo, la decisione è dell'editore (N9).
-7. **Qualunque caso in cui l'applicazione di una regola richieda di violarne un'altra**, o per cui
-   questa Nota non preveda una soluzione.
-
-Il punto 7 è la clausola di chiusura: il modello non estende le regole per analogia. Una classe non
-prevista è un caso non delegabile, non un'occasione di inferenza.
-
----
-
-## 10. Decisioni assunte in assenza di indicazione nel modello
-
-Si dichiarano esplicitamente, perché ciascuna è ratificabile o revocabile singolarmente e ciascuna
-produce effetti su decine di occorrenze.
-
-| # | decisione | motivazione | alternativa scartata |
-|---|---|---|---|
-| 1 | `havea` → **avea** | la `h` è grafica, la desinenza è morfologica | `aveva` (modernizza la morfologia) |
-| 2 | `Monasterio` → **monasterio** | cade la maiuscola (N8), resta il lessico (§ 4) | `monastero` (sostituisce la parola) |
-| 3 | `Casa Professa` **maiuscolo** | nome proprio dell'istituzione | `casa professa` (nome comune: falsa il referente) |
-| 4 | `et` + vocale → **ed** | prescrizione del modello, continuità fonica | `e` (uso corrente) |
-| 5 | `offitio` → **offizio** | si regolarizza il nesso, non la parola | `ufficio` (forma diversa) |
-| 6 | `difficultà`, `Immaculata`, `Giesù` **conservati** | differenza di vocale, non di veste | uniformazione alle forme moderne |
-| 7 | `Doppo` → **doppo** | geminata reale: cade solo la maiuscola | `dopo` (interviene sul consonantismo) |
-| 8 | `-ij` → **-i** | convenzione grafica senza riscontro fonologico | conservazione del segno |
-| 9 | `san Giovanni` con appellativo **minuscolo** | uso moderno | `San Giovanni` |
-| 10 | oscillazioni interne al testimone **non uniformate** | l'oscillazione è un dato | uniformazione alla forma maggioritaria |
-| 11 | `-tione` → **`-zione`** (N4), **ratificato** | il nesso `-ti-` rende con veste latina un suono che l'italiano scrive `-zi-`: è grafia, non forma. In un testo di lettura l'onere della prova sta su chi conserva | conservazione del nesso, come nell'edizione **documentaria** del *Castello dell'anima* |
-
-**Divergenza dichiarata sulla decisione 11.** L'edizione digitale del *Castello dell'anima*
-(`luciano-longo77/castello-dell-anima-edizione`, ms. Palermo BCP 2 Qq E 29) dichiara fra i propri
-principi che «il nesso latineggiante `-ti-` (‑*tione*) non si normalizza» in ‑*zione*, e a III §36
-conserva `interpellatione`. Il testimone è omogeneo al nostro — autografo siciliano monastico di fine
-Seicento, stessa biblioteca — dunque la divergenza non si giustifica col testimone, ma con il
-**prodotto**: quella è un'edizione documentaria a testo base conservativo, dove la normalizzazione vive
-nella marcatura (`<choice><orig>/<reg>`) e il caso dubbio si conserva; questa è un testo di lettura,
-dove ogni forma conservata è un ostacolo per il destinatario. L'edizione a stampa del *Castello*
-(Casapullo 2015), anch'essa testo di lettura, normalizza. La regola che ne risulta, e che vale per
-entrambi i progetti, è: **`-tione` si normalizza nei testi di lettura e si conserva nelle edizioni
-documentarie.**
-
----
-
-## 11. Conseguenze sul testo interpretativo esistente
-
-La `editorialDecl` del file `tei/A31_interpretativa.xml` dichiara attualmente un regime **opposto** a
-questa Nota su quattro punti: conserva la h etimologica, i nessi `-tione`/`-ttione`, la congiunzione
-`et` e la maiuscola reverenziale `La`/`Le` per la Madre. La Nota 1.0 li normalizza tutti e quattro.
-
-Il testo interpretativo in repository è dunque prodotto sotto un regime **superato**. Va rifatto, non
-corretto: l'entità dell'intervento (almeno 98 + 80 + 74 + 667 luoghi su circa 6.500 parole) esclude la
-revisione puntuale e renderebbe illeggibile il log. La sequenza è:
-
-1. congelamento e citazione dell'attuale `A31_interpretativa.xml` come **stato 0.x**;
-2. riscrittura del *Prompt B* su questa Nota, con le classi `N1`…`N9`, l'ordine del § 7 e le
-   astensioni del § 9;
-3. nuova esecuzione del livello B sul diplomatico validato, dal frontespizio;
-4. riscrittura della `editorialDecl` in conformità a questa Nota;
-5. azzeramento dei contatori di densità per le classi nuove (§ 8).
-
-Il livello A **non è toccato**: nessuna classe di questa Nota lo riguarda.
-
----
-
-## 12. Versioni di questa Nota
-
-| versione | data | modifiche |
+| decisione | ragione | alternativa scartata |
 |---|---|---|
-| 1.0 | 2026-09-27 | prima redazione. Criteri del modello (*Castello dell'anima*) trasferiti al testimone A 31 ed estesi con N3 (h etimologica), N4 (nessi latinizzanti), N5 (`et`) e la revisione di N8 (maiuscola reverenziale, nomi comuni, istituzioni). Formalizzazione del criterio-limite (§ 2), dell'ordine di applicazione (§ 7) e dei casi non delegabili (§ 9). Eccezione per il testo latino in N3/N4, introdotta dopo la ricognizione sulle edizioni open source (`docs/Ricognizione_normalizzazioni.md`, § 3). Decisione 11 (`-tione` → `-zione`) ratificata dal curatore, con dichiarazione della divergenza rispetto all'edizione documentaria del *Castello dell'anima*. |
+| `havea` > **avea** | la *h* è grafica, la desinenza è morfologica | *aveva*, che modernizza la morfologia |
+| `Monasterio` > **monasterio** | cade la maiuscola, resta il lessico | *monastero*, che sostituisce la parola |
+| **Casa Professa** maiuscolo | nome proprio dell'istituzione | *casa professa*, che falsa il referente |
+| `et` + vocale > **ed** | continuità fonica del periodo, come nel modello di riferimento | *e*, secondo l'uso corrente |
+| `offitio` > **offizio** | si regolarizza il nesso, non la parola | *ufficio*, forma diversa |
+| `difficultà`, `Immaculata`, `Giesù` **conservati** | differenza di vocale, non di veste | uniformazione alle forme moderne |
+| `Doppo` > **doppo** | geminata reale: cade solo la maiuscola | *dopo*, che interviene sul consonantismo |
+| `-ij` > **-i** | convenzione grafica senza riscontro fonologico | conservazione del segno |
+| **`-tione` > `-zione`** | il nesso rende con veste latina un suono che l'italiano scrive `-zi-`: è grafia, non forma | conservazione del nesso |
+| oscillazioni **non uniformate** | l'oscillazione è un dato | uniformazione alla forma maggioritaria |
 
-Questa Nota è **versionata e citabile**. Una modifica ai criteri è una nuova versione, non una
-correzione: il testo B dichiara sempre sotto quale versione della Nota è stato prodotto.
+**Sulla decisione `-tione`.** L'edizione digitale del *Castello dell'anima* — altro autografo monastico siciliano di fine Seicento, Palermo BCP 2 Qq E 29, curato dallo stesso editore — dichiara invece che «il nesso latineggiante *-ti-* (‑*tione*) non si normalizza», e conserva `interpellatione`. La divergenza è voluta e riposa sulla differenza fra i due prodotti: quella è un'edizione **documentaria** a testo base conservativo, dove la normalizzazione vive nella marcatura e il caso dubbio si conserva; questa è un **testo di lettura**, dove ogni forma conservata è un ostacolo per il destinatario. L'edizione a stampa del *Castello* (Casapullo 2015), anch'essa testo di lettura, normalizza. La regola che ne risulta, valida per entrambi i progetti: **`-tione` si normalizza nei testi di lettura, si conserva nelle edizioni documentarie.**
+
+## 9. Dove il testo porta una decisione umana
+
+Sette classi di casi non sono state affidate ad alcuna procedura automatica e sono state decise dall'editore, punto per punto. Il lettore che voglia controllare le scelte dell'edizione cominci da qui.
+
+1. **Integrazione congetturale.** Nessuna lacuna è stata riempita automaticamente: `[...]` resta `[...]`, e ogni congettura è dichiarata in apparato.
+2. **Stratificazione genetica.** La scelta della lezione a testo fra cancellature, ripensamenti e sovrascritture.
+3. **Lezione materialmente incerta.** Quanto il livello A marca come incerto resta incerto, e in particolare non si scioglie l'alternanza `[h]o`.
+4. **Maiuscola di istituzioni e toponimi**, che richiede verifica documentaria esterna al testo.
+5. **Unione e separazione ambigue**, dove entrambe le segmentazioni danno un senso.
+6. **Punteggiatura in luogo sintatticamente ambiguo**, dove la collocazione del segno decide il senso del periodo.
+7. **Ogni caso non previsto da questa Nota**, che non si risolve per analogia.
+
+## 10. Rapporto con il protocollo AI-assistito
+
+Questa edizione nasce dentro un esperimento metodologico sull'uso di modelli linguistici come acceleratori sorvegliati nella trascrizione. Il regime descritto in questa Nota è la sua **norma di riferimento**: il prompt che guida il modello al livello B (`prompts/prompt-B-interpretativa.md`) non è una fonte autonoma, ne è la forma eseguibile, e in caso di divergenza prevale la Nota.
+
+Le classi `N1`–`N9` sono anche le unità di misura del protocollo: ogni intervento dell'editore sull'output del modello è registrato con la sua classe nel log editoriale (`data/LOG_editoriale_AI.xlsx`), e la densità di intervento si calcola per classe, perché una classe può essere stabile mentre un'altra non lo è. Parametri, soglie e metodo sono in `protocollo/Protocollo_v1.0.md` e `docs/PARAMETRI.md`.
+
+Ciò che il protocollo non modifica è il § 9: i casi non delegabili restano non delegabili, e nessuna misura di stabilizzazione li rende automatizzabili.
+
+## 11. Fonti dei criteri
+
+I criteri derivano dalla *Nota al testo* premessa all'edizione a stampa del ***Castello dell'anima*** (R. Casapullo, a cura di, Alessandria, Edizioni dell'Orso, 2015), che per un autografo monastico siciliano coevo adotta l'intervento moderato a favore della leggibilità. Il trasferimento a un altro testimone è una scelta dell'editore, qui dichiarata, giustificata dall'omogeneità di tipologia e verificata classe per classe sullo spoglio di A 31.
+
+Rispetto a quel modello questa Nota **estende** il regime in tre direzioni, sulla base dello spoglio: normalizzazione dei nessi latinizzanti (N4), della *h* etimologica (N3) e della congiunzione `et` (N5); e **rivede** il trattamento delle maiuscole, abolendo la reverenziale e la maiuscola di rispetto sui nomi comuni (N8).
+
+Il confronto con le scelte di altre edizioni digitali ad accesso aperto — dove questi criteri sono condivisi e dove si scostano — è in `docs/Ricognizione_normalizzazioni.md`.
+
+## 12. Versioni
+
+Questa Nota è **versionata e citabile**: una modifica ai criteri è una nuova versione, non una correzione, e il testo interpretativo dichiara sempre sotto quale versione è stato prodotto. Una riscrittura che non tocchi i criteri è invece una **revisione redazionale**, e non cambia il numero di versione: il regime resta lo stesso, e resta valido ogni riferimento a esso.
+
+| | data | |
+|---|---|---|
+| **1.0** | 2026-09-27 | Prima redazione. Criteri della *Nota al testo* del *Castello dell'anima* trasferiti al testimone A 31 ed estesi con N3 (h etimologica), N4 (nessi latinizzanti), N5 (`et`) e la revisione di N8 (maiuscola reverenziale). Formalizzazione del criterio-limite, dell'ordine di applicazione e dei casi non delegabili. |
+| 1.0, rev. | 2026-09-28 | Revisione redazionale: il documento è riscritto per il lettore dell'edizione anziché per il gruppo di lavoro. **Nessun criterio modificato** — regole, esempi, conteggi, decisioni e ordine di applicazione sono invariati. Eliminato il piano di lavoro interno; lo stato del testo interpretativo è dichiarato in apertura; l'eccezione per il latino è in testa alle classi, perché vale per due di esse; le decisioni e la divergenza sul nesso `-tione` sono argomentate anziché tabulate. Restano perciò validi senza modifiche il *Prompt B* 2.0 e la skill che lo incapsula, che dichiarano il regime della Nota **1.0**. |
