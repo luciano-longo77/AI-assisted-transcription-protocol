@@ -229,7 +229,7 @@ I criteri derivano dalla *Nota al testo* premessa all'edizione a stampa del ***C
 
 Rispetto a quel modello questa Nota **estende** il regime in tre direzioni, sulla base dello spoglio: normalizzazione dei nessi latinizzanti (N4), della *h* etimologica (N3) e della congiunzione `et` (N5); e **rivede** il trattamento delle maiuscole, abolendo la reverenziale e la maiuscola di rispetto sui nomi comuni (N8).
 
-Il confronto con le scelte di altre edizioni digitali ad accesso aperto — dove questi criteri sono condivisi e dove si scostano — è in [`docs/Confronto_con_altre_edizioni.md`](Confronto_con_altre_edizioni.md).
+Il fondamento di questi criteri nella pratica delle edizioni digitali ad accesso aperto — che cosa condividono, su che cosa si scostano e con quale argomento — è in [`docs/Ricognizione_normalizzazioni.md`](Ricognizione_normalizzazioni.md).
 
 ## 12. Versioni
 
