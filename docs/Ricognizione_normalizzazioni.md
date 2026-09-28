@@ -1,4 +1,4 @@
-# Da dove vengono questi criteri
+# Ricognizione: da dove vengono questi criteri
 
 **Il fondamento delle scelte editoriali di A 31 nella pratica delle edizioni digitali**
 
