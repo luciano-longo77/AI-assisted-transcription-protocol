@@ -37,9 +37,10 @@ TESTIMONE · UNITA · CARTE · PAROLE · DATA · MODELLO · NOTE — una riga pe
 
 ## Foglio `PARAMETRI` (dichiarati a priori)
 - **θ (soglia)** = 5 interventi / 1000 parole
-- **N (finestra)** = 10 carte consecutive
+- **N (finestra)** = 10 facciate consecutive
+- **Unità** = immagine (coppia di facciate affacciate); misura per facciata
 - **K (loop)** = 3 ripetizioni per modello
-- Modelli = Gemini; Claude · Protocollo = v1.0 (congelato) · Decodifica = deterministica ove possibile
+- Modelli = Gemini; Claude · Skill = Prompt A v1.3; Prompt B v2.0 · Protocollo = v1.2 · Decodifica = deterministica ove possibile
 
 ## Foglio `NORME_EMERGENTI`
 AREA · NORMA (impersonale, generale) · DERIVATA_DA_ERRORI (ID esistenti nel log) · STATO.
@@ -58,4 +59,4 @@ abbreviazione_non_riconosciuta, abbreviazione_espansione_errata, grafia_errata, 
 **MODELLO:** Gemini, Claude
 
 ## Metrica
-Densità di intervento **D = interventi ÷ (parole/1000)**, calcolata sul totale, per classe TIPO_ERRORE e per modello. Una classe è **stabilizzata** quando D ≤ θ per N carte consecutive.
+Densità di intervento **D = interventi ÷ (parole/1000)**, calcolata sul totale, per classe TIPO_ERRORE e per modello. Una classe è **stabilizzata** quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente.
