@@ -47,6 +47,8 @@ An operational editorial model to make **interpretive transcription scalable** f
 
 Il repository distingue il **protocollo** dalla sua **prima applicazione**. Fuori da `Archive/` stanno metodo, norma, strumenti e vocabolari: è l'insieme che si può trasferire a un altro testimone e a un altro ricercatore. Dentro `Archive/` stanno i dati prodotti su A 31 fra agosto e settembre 2026 — 135 eventi di log, 368 occorrenze, 72 carte in TEI ai due livelli — conservati e citabili, ma non necessari a chi voglia riapplicare il metodo.
 
+> **Avvertenza sul livello B archiviato.** La trascrizione interpretativa `Archive/tei/A31_interpretativa.xml` è stata prodotta sotto un regime editoriale **superato**, anteriore alla [*Nota al testo*](docs/Nota_al_testo.md) 1.0, che non conosceva le classi N3 (*h* etimologica), N4 (nessi latinizzanti) e N5 (congiunzione `et`). È conservata come documento della prima applicazione e **non è conforme alla norma vigente**: va rifatta sotto il regime corrente. La diplomatica `Archive/tei/A31_diplomatica.xml` non è interessata, perché il livello A non normalizza. Per la stessa ragione gli eventi di log archiviati non alimentano la misura della nuova applicazione: i contatori di densità ripartono da zero.
+
 ## La norma editoriale
 
 Il regime del livello B è fissato in [`docs/Nota_al_testo.md`](docs/Nota_al_testo.md): criterio-limite, nove classi di normalizzazione con il loro ordine di applicazione, forme che si conservano, casi riservati all'editore. I prompt ne sono la forma eseguibile; in caso di divergenza prevale la norma. Il fondamento comparativo dei criteri, rispetto ad altre edizioni digitali ad accesso aperto, è in [`docs/Ricognizione_normalizzazioni.md`](docs/Ricognizione_normalizzazioni.md).
