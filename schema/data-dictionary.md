@@ -40,7 +40,8 @@ TESTIMONE · UNITA · CARTE · PAROLE · DATA · MODELLO · NOTE — una riga pe
 - **θ (soglia)** = 5 interventi / 1000 parole
 - **N (finestra)** = 10 facciate consecutive
 - **Unità** = immagine (coppia di facciate affacciate); misura per facciata
-- **K (loop)** = 3 ripetizioni per modello
+- **K (loop)** = 3 ripetizioni per modello — valore dichiarato del protocollo
+- **K applicato** = passate effettivamente eseguite, se diverse dal K dichiarato; lo scostamento è motivato in [`docs/PARAMETRI.md`](../docs/PARAMETRI.md)
 - Modelli = Gemini; Claude · Skill = Prompt A v1.4; Prompt B v2.1 · Protocollo = v1.2 · Decodifica = deterministica ove possibile
 
 ## Foglio `NORME_EMERGENTI`
