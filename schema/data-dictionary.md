@@ -12,6 +12,7 @@ Il log registra **ogni intervento** dell'editore sull'output di un modello; il f
 - [Foglio `NORME_EMERGENTI`](#foglio-norme_emergenti)
 - [Vocabolari controllati (`LISTE`)](#vocabolari-controllati-liste)
 - [Metrica](#metrica)
+- [Nota sul nome del campo `TIPO_ERRORE`](#nota-sul-nome-del-campo-tipo_errore)
 
 ---
 
@@ -59,4 +60,7 @@ abbreviazione_non_riconosciuta, abbreviazione_espansione_errata, grafia_errata, 
 **MODELLO:** Gemini, Claude
 
 ## Metrica
-Densità di intervento **D = interventi ÷ (parole/1000)**, calcolata sul totale, per classe TIPO_ERRORE e per modello. Una classe è **stabilizzata** quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente.
+Densità di intervento **D = interventi ÷ (parole/1000)**, calcolata sul totale, per classe TIPO_ERRORE e per modello. Una classe è **stabilizzata** quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente. È **sistematico** l'intervento che ricorre nella finestra su più unità con la stessa causa e la stessa correzione; un'occorrenza isolata non lo è. Le due condizioni sono congiuntive: finché un intervento sistematico persiste, la classe resta ricorrente anche con D sotto soglia.
+
+## Nota sul nome del campo `TIPO_ERRORE`
+`TIPO_ERRORE` è un nome **convenzionale**, conservato per continuità dello strumento e dei dati già registrati. Al livello A designa effettivamente un errore di lettura, verificabile sull'immagine. Al livello B designa invece uno **scostamento dall'esito atteso secondo la norma editoriale vigente**, non un errore filologico oggettivo: la garanzia V5 del protocollo stabilisce che al livello interpretativo si registra un intervento dell'editore, non il fallimento di una verità. Il campo dice dunque in che modo l'output del modello ha mancato l'esito atteso, e la sua classificazione è subordinata alla norma dichiarata per il testimone.
