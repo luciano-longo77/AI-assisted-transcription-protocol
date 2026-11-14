@@ -2,7 +2,7 @@
 
 **Scopo:** guidare l'AI nella trascrizione diplomatica pura, livello di base e verificabile su cui si fonda la successiva trascrizione interpretativa (Prompt B).
 
-**Versione:** 1.4 (2026-11-14). Aggiorna la v1.3 chiudendo i due punti aperti del passaggio al livello B: la **notazione dei fenomeni materiali** (regola 6), che la v1.3 prescriveva di conservare senza dire con quali segni scriverli, e il **numero di carta** (regola 7), che il livello B deve ricevere e non poteva dedurre. Nessuna regola di trascrizione è cambiata. La v1.3 (2026-08-25) aveva aggiunto il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): l'unica variabile controllata è la versione del prompt.
+**Versione:** 1.4 (2026-11-14). Aggiorna la v1.3 chiudendo i due punti aperti del passaggio al livello B: la **notazione dei fenomeni materiali** (regola 6), che la v1.3 prescriveva di conservare senza dire con quali segni scriverli, e il **numero di carta** (regola 7), che il livello B deve ricevere e non poteva dedurre. Nessuna regola di trascrizione è cambiata. La v1.3 (2026-08-25) aveva aggiunto il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): la versione del prompt è tenuta costante, così che l'unica differenza fra le esecuzioni confrontate sia il modello.
 
 Stai assistendo una TRASCRIZIONE DIPLOMATICA PURA di un manoscritto italiano di età moderna.
 
