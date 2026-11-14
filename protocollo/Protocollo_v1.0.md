@@ -2,7 +2,31 @@
 
 **Un modello operativo e replicabile per scalare la trascrizione interpretativa di manoscritti omogenei**
 
-*Protocollo di trascrizione automatizzata · versione consolidata, agosto 2026*
+*Protocollo di trascrizione automatizzata · versione 1.2, novembre 2026*
+
+---
+
+## Indice
+
+- [Abstract](#abstract)
+- [1. Introduzione. Trascrizione interpretativa: un problema pratico, metodologico e scalare](#1-introduzione-trascrizione-interpretativa-un-problema-pratico-metodologico-e-scalare)
+- [2. Dall'editing assistito al modello editoriale operativo](#2-dallediting-assistito-al-modello-editoriale-operativo)
+- [3. Il protocollo](#3-il-protocollo)
+  - [Principi](#principi)
+  - [Modalità e procedura](#modalità-e-procedura)
+  - [Componenti](#componenti)
+  - [Controllo del non-determinismo (loop)](#controllo-del-non-determinismo-loop)
+  - [Metrica e criterio di stabilizzazione](#metrica-e-criterio-di-stabilizzazione)
+  - [Garanzie di validità e affidabilità](#garanzie-di-validità-e-affidabilità)
+  - [Riproducibilità (FAIR)](#riproducibilità-fair)
+- [4. Il perimetro sperimentale: campioni di due manoscritti](#4-il-perimetro-sperimentale-campioni-di-due-manoscritti)
+- [5. Osservazioni dai campioni](#5-osservazioni-dai-campioni)
+- [6. Il guadagno rispetto ai protocolli tradizionali](#6-il-guadagno-rispetto-ai-protocolli-tradizionali)
+- [7. LLM e HTR: due livelli diversi del processo editoriale](#7-llm-e-htr-due-livelli-diversi-del-processo-editoriale)
+- [8. Integrazione con AURORA](#8-integrazione-con-aurora)
+- [Conclusioni](#conclusioni)
+
+---
 
 ## Abstract
 
@@ -30,7 +54,9 @@ Ciò che rimane fuori campo è la norma editoriale stessa, che continua a operar
 
 ## 3. Il protocollo
 
-Protocollo **versione 1.0 — congelata** (agosto 2026). Riferimento normativo fisso: ogni applicazione dichiara questa versione. Le modifiche a principi, vocabolari, metrica o procedura incrementano la versione e sono tracciate in un changelog. Un'applicazione è conforme se e solo se rispetta i punti seguenti.
+Protocollo **versione 1.2** (novembre 2026). Riferimento normativo fisso: ogni applicazione dichiara questa versione. Le modifiche a principi, vocabolari, metrica o procedura incrementano la versione e sono tracciate in un changelog. Un'applicazione è conforme se e solo se rispetta i punti seguenti.
+
+La v1.2 non modifica principi, metrica, garanzie né lo schema del log rispetto alla v1.0 (agosto 2026). Introduce due sole precisazioni: la **definizione dell'unità digitale**, che era presupposta e non dichiarata, e il rinvio del regime editoriale del livello B alla **norma editoriale del testimone**, che il protocollo non ripete più. Le applicazioni condotte sotto la v1.0 restano conformi.
 
 ### Principi
 
@@ -46,6 +72,10 @@ Protocollo **versione 1.0 — congelata** (agosto 2026). Riferimento normativo f
 - **Modalità generativa da zero.** Il protocollo si esegue come se non esistessero trascrizioni pregresse: i modelli producono la trascrizione. Una trascrizione preesistente può solo accelerare la validazione umana, senza sostituire o saltare alcuno step.
 - **Disegno comparativo a due modelli.** Ogni unità è processata da due modelli distinti (Gemini e Claude), ai due livelli A e B, in modo da osservare e confrontare il comportamento di ciascuno.
 
+**Unità digitale.** L'unità di lavorazione è l'**immagine**, cioè la coppia di facciate affacciate del manoscritto aperto — per esempio `cc. 9v-10r`, che insiste su due carte. È l'unità che si dà in pasto al modello, quella su cui si ripete il loop K e quella che si registra in COPERTURA.
+
+L'unità di **misura** è invece la **facciata**, perché due immagini contigue condividono una carta (`cc. 9v-10r` e `cc. 10v-11r` hanno in comune la carta 10) e il conteggio per carta si sovrapporrebbe. Il denominatore in parole si conta per facciata, e la finestra di stabilizzazione si esprime in facciate: **N = 10 facciate consecutive**, cioè cinque unità.
+
 Procedura, per ogni unità digitale:
 
 1. Prompt A (skill) su Gemini → registrazione dell'evento nel log (MODELLO = Gemini, LIVELLO = A).
@@ -57,9 +87,10 @@ Procedura, per ogni unità digitale:
 
 ### Componenti
 
+- **Norma editoriale (Nota al testo).** Documento versionato che fissa, per il testimone, il regime del livello B: classi di normalizzazione, criterio-limite, forme che si conservano, casi riservati all'editore. È esplicitata prima dell'automazione (P2) e dichiarata con la sua versione da ogni applicazione. I prompt ne sono la forma eseguibile: in caso di divergenza prevale la norma.
 - **Prompt A e Prompt B come skill versionate.** I due prompt sono incapsulati come skill (istruzioni persistenti e versionate) in ciascun ambiente-modello (Gemini, Claude), identiche a ogni esecuzione: elimina la deriva del prompt come fonte di variabilità e rende l'ambiente riproducibile.
 - **Prompt A (diplomatica).** Fedeltà grafica; abbreviazioni sciolte solo fra parentesi tonde; punteggiatura, maiuscole e unione/separazione originali; lacune con […]; segni materiali conservati.
-- **Prompt B (interpretativa).** Scioglimento silenzioso; normalizzazione di grafia, diacritici, maiuscole e unione/separazione; punteggiatura minima; lingua e sintassi storiche conservate; fenomeni genetici riservati all'apparato.
+- **Prompt B (interpretativa).** Applica la norma editoriale dichiarata per il testimone, nell'ordine di classi da essa fissato; non è fonte autonoma del regime. Si arresta e marca `non_delegabile` nei casi che la norma riserva all'editore.
 - **Log a 12 campi.** ID_ERRORE, LIVELLO, TESTIMONE, SEGMENTO, TIPO_ERRORE, FORMA_AI, CORREZIONE_UMANA, AZIONE_UMANA, DECISIONE_EDITORIALE, ESITO, MODELLO (Gemini/Claude), NOTE. I campi a vocabolario chiuso sono vincolati da menu.
 - **Foglio NORME_EMERGENTI.** AREA, NORMA (impersonale e generale), DERIVATA_DA_ERRORI (ID che devono esistere nel log), STATO.
 
@@ -73,7 +104,7 @@ Procedura, per ogni unità digitale:
 - **M1 — Denominatore obbligatorio.** Foglio COPERTURA con testimone, riferimento, numero di parole/token e data per ogni unità.
 - **M2 — Densità di intervento.** D = interventi ÷ (parole/1000), sul totale, per classe di TIPO_ERRORE e per modello, su finestre progressive.
 - **M3 — Soglia dichiarata a priori.** La soglia θ (es. 5 interventi/1000 parole) è fissata prima della sperimentazione.
-- **M4 — Criterio.** Una classe è stabilizzata quando D ≤ θ per N carte consecutive senza intervento sistematico; altrimenti è ricorrente.
+- **M4 — Criterio.** Una classe è stabilizzata quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente.
 
 ### Garanzie di validità e affidabilità
 
