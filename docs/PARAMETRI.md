@@ -16,7 +16,7 @@ Questi parametri sono dichiarati **prima** dell'avvio della Fase 1 (verifica sul
 - [Modelli confrontati](#modelli-confrontati)
 - [Dove sono registrati anche](#dove-sono-registrati-anche)
 - [Regola di modifica](#regola-di-modifica)
-- [Stato operativo — rodaggio u.1–5 (2026-08-24)](#stato-operativo--rodaggio-u15-2026-08-24)
+- [Stato operativo](#stato-operativo)
 
 ---
 
@@ -68,8 +68,12 @@ I parametri sono **congelati**. Qualsiasi cambiamento di θ, N o K non è una mo
 
 Le **versioni dei prompt e della Nota al testo non sono parametri**: si aggiornano senza aprire una versione del protocollo, ma ogni aggiornamento è datato qui e nel [CHANGELOG](../CHANGELOG.md), e comporta le conseguenze sui contatori dichiarate sopra.
 
-## Stato operativo — rodaggio u.1–5 (2026-08-24)
+## Stato operativo
 
-Il rodaggio di **BCP 2 Qq A 31**, unità 1–5 (carte 1–5, oltre a frontespizio e c. 6r), è stato eseguito con **una passata per modello (K=1)**: Prompt A e Prompt B su Gemini e Claude, con validazione umana ai due livelli e log popolato (49 eventi, 9 norme emergenti). I denominatori sono registrati nel foglio COPERTURA.
+**Prima applicazione (agosto–settembre 2026): archiviata.** L'applicazione su **BCP 2 Qq A 31**, tratto frontespizio–c. 36r, è stata condotta ai due livelli e con entrambi i modelli sotto le versioni allora vigenti dei prompt, e con **una passata per modello (K = 1)**. I suoi dati — log popolato, denominatori, norme emergenti, trascrizioni TEI — sono conservati e citabili in `Archive/`.
 
-Il **loop K=3** — ripetizioni per modello per misurare il non-determinismo e assumere la forma di consenso — è **rinviato (backlog)** e sarà eseguito in una fase successiva. Poiché **K=3 resta il valore dichiarato** del protocollo, questo è uno **scostamento operativo tracciato**, non una modifica del parametro.
+Quei dati **non alimentano la misura della nuova applicazione**. Il livello B è stato prodotto sotto un regime editoriale anteriore alla *Nota al testo* 1.0, che non conosceva le classi `N3`, `N4` e `N5`: non misurava gli stessi fenomeni, e una stabilizzazione acquisita allora non è trasferibile. I contatori di densità **ripartono da zero**; il livello A, che non normalizza, resta valido come trascrizione ma non come misura del regime corrente.
+
+**Nuova applicazione: non ancora avviata.** Alla data di questa revisione nessuna unità è stata processata sotto il protocollo v1.2 e la *Nota al testo* 1.0. All'avvio si dichiarano nel foglio PARAMETRI dello strumento di log, come prescrive la garanzia V1: nome e versione esatta di ciascun modello, skill e Gem versionati, parametri di decodifica, data di inizio.
+
+**Valore di K per la nuova applicazione.** **K = 3 resta il valore dichiarato** del protocollo. Ogni esecuzione che adotti un K inferiore lo dichiara qui come **scostamento operativo tracciato**, con la sua motivazione e la sua estensione: è ciò che è stato fatto per il rodaggio di agosto, eseguito a K = 1. Uno scostamento lascia non misurata la garanzia V7 (controllo del non-determinismo) per il tratto interessato.
