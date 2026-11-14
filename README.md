@@ -4,12 +4,6 @@
 
 [![protocollo: v1.2](https://img.shields.io/badge/protocollo-v1.2-1f4e79)](protocollo/Protocollo_v1.2.md) [![Nota al testo: v1.0](https://img.shields.io/badge/Nota%20al%20testo-v1.0-2e6da4)](docs/Nota_al_testo.md) [![Prompt A: v1.3](https://img.shields.io/badge/Prompt%20A-v1.3-5b9bd5)](prompts/prompt-A-diplomatica.md) [![Prompt B: v2.0](https://img.shields.io/badge/Prompt%20B-v2.0-5b9bd5)](prompts/prompt-B-interpretativa.md)
 
-[![θ: 5 interventi / 1000 parole](https://img.shields.io/badge/%CE%B8-5%20interventi%20%2F%201000%20parole-6c757d)](docs/PARAMETRI.md) [![N: 10 facciate](https://img.shields.io/badge/N-10%20facciate-6c757d)](docs/PARAMETRI.md) [![K: 3 ripetizioni](https://img.shields.io/badge/K-3%20ripetizioni-6c757d)](docs/PARAMETRI.md)
-
-![testimone: BCP 2 Qq A 31](https://img.shields.io/badge/testimone-BCP%202%20Qq%20A%2031-8b5e3c) ![modelli: Gemini + Claude](https://img.shields.io/badge/modelli-Gemini%20%2B%20Claude-495057) ![lingua: italiano](https://img.shields.io/badge/lingua-italiano-495057)
-
-[![documenti: CC BY 4.0](https://img.shields.io/badge/documenti-CC%20BY%204.0-blue)](LICENSE) [![prompt: MIT](https://img.shields.io/badge/prompt-MIT-yellow)](prompts/LICENSE)
-
 ---
 
 ## Indice
