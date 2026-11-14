@@ -2,7 +2,7 @@
 
 ## Indice
 
-- [0.8.2-preparazione-run · 2026-11-14](#081-preparazione-run--2026-11-14)
+- [0.8.2-preparazione-run · 2026-11-14](#081-preparazione--2026-11-14)
 - [0.8.1-chiarimenti · 2026-11-14](#081-chiarimenti--2026-11-14)
 - [0.8.0-protocollo-v1.2 · 2026-11-14](#080-protocollo-v12--2026-11-14)
 - [0.7.0-riordino · 2026-11-01](#070-riordino--2026-11-01)
