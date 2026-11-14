@@ -13,6 +13,34 @@
 
 ---
 
+---
+
+## Indice
+
+- [1. Che cosa stai leggendo](#1-che-cosa-stai-leggendo)
+- [2. Il criterio, e il suo costo](#2-il-criterio-e-il-suo-costo)
+- [3. Che cosa si normalizza](#3-che-cosa-si-normalizza)
+  - [N1 · Abbreviazioni](#n1--abbreviazioni)
+  - [N2 · u/v, i/j](#n2--uv-ij)
+  - [N3 · h etimologica](#n3--h-etimologica)
+  - [N4 · Nessi e grafie latinizzanti](#n4--nessi-e-grafie-latinizzanti)
+  - [N5 · Congiunzione `et`](#n5--congiunzione-et)
+  - [N6 · Accenti, diacritici, apostrofo](#n6--accenti-diacritici-apostrofo)
+  - [N7 · Unione e separazione delle parole](#n7--unione-e-separazione-delle-parole)
+  - [N8 · Maiuscole e minuscole](#n8--maiuscole-e-minuscole)
+  - [N9 · Punteggiatura](#n9--punteggiatura)
+- [4. Che cosa si conserva](#4-che-cosa-si-conserva)
+- [5. I segni dell'edizione](#5-i-segni-delledizione)
+- [6. L'apparato](#6-lapparato)
+- [7. Ordine di applicazione](#7-ordine-di-applicazione)
+- [8. Decisioni e alternative scartate](#8-decisioni-e-alternative-scartate)
+- [9. Dove il testo porta una decisione umana](#9-dove-il-testo-porta-una-decisione-umana)
+- [10. Rapporto con il protocollo AI-assistito](#10-rapporto-con-il-protocollo-ai-assistito)
+- [11. Fonti dei criteri](#11-fonti-dei-criteri)
+- [12. Versioni](#12-versioni)
+
+---
+
 ## 1. Che cosa stai leggendo
 
 L'edizione pubblica **due testi dello stesso manoscritto**, entrambi citabili, che non sono due stesure ma due prodotti distinti:
@@ -219,7 +247,7 @@ Sette classi di casi non sono state affidate ad alcuna procedura automatica e so
 
 Questa edizione nasce dentro un esperimento metodologico sull'uso di modelli linguistici come acceleratori sorvegliati nella trascrizione. Il regime descritto in questa Nota è la sua **norma di riferimento**: il prompt che guida il modello al livello B (`prompts/prompt-B-interpretativa.md`) non è una fonte autonoma, ne è la forma eseguibile, e in caso di divergenza prevale la Nota.
 
-Le classi `N1`–`N9` sono anche le unità di misura del protocollo: ogni intervento dell'editore sull'output del modello è registrato con la sua classe nel log editoriale (`data/LOG_editoriale_AI.xlsx`), e la densità di intervento si calcola per classe, perché una classe può essere stabile mentre un'altra non lo è. Parametri, soglie e metodo sono in `protocollo/Protocollo_v1.0.md` e `docs/PARAMETRI.md`.
+Ogni intervento dell'editore sull'output del modello è registrato nel log editoriale, il cui strumento vuoto è `data/LOG_editoriale_AI_template.xlsx`; la densità di intervento si calcola per tipo di errore e per modello, su una finestra di dieci facciate consecutive. Le classi `N1`–`N9` restano il vocabolario con cui si nomina e si motiva ciascun intervento in sede di validazione, non un asse della misura. Parametri, soglie e metodo sono in [`protocollo/Protocollo_v1.2.md`](../protocollo/Protocollo_v1.2.md) e [`docs/PARAMETRI.md`](PARAMETRI.md).
 
 Ciò che il protocollo non modifica è il § 9: i casi non delegabili restano non delegabili, e nessuna misura di stabilizzazione li rende automatizzabili.
 
@@ -238,4 +266,5 @@ Questa Nota è **versionata e citabile**: una modifica ai criteri è una nuova v
 | | data | |
 |---|---|---|
 | **1.0** | 2026-09-27 | Prima redazione. Criteri della *Nota al testo* del *Castello dell'anima* trasferiti al testimone A 31 ed estesi con N3 (h etimologica), N4 (nessi latinizzanti), N5 (`et`) e la revisione di N8 (maiuscola reverenziale). Formalizzazione del criterio-limite, dell'ordine di applicazione e dei casi non delegabili. |
+| 1.0, rev. | 2026-11-14 | Aggiornati i rimandi del § 10 allo stato del repository: il protocollo è alla v1.2, il log della prima applicazione è in `Archive/` e in `data/` resta lo strumento vuoto. Precisato che la densità si calcola per tipo di errore e per modello, su finestre di dieci facciate, e che le classi `N1`–`N9` sono il vocabolario della validazione e non un asse della misura. **Nessun criterio modificato.** |
 | 1.0, rev. | 2026-09-28 | Revisione redazionale: il documento è riscritto per il lettore dell'edizione anziché per il gruppo di lavoro. **Nessun criterio modificato** — regole, esempi, conteggi, decisioni e ordine di applicazione sono invariati. Eliminato il piano di lavoro interno; lo stato del testo interpretativo è dichiarato in apertura; l'eccezione per il latino è in testa alle classi, perché vale per due di esse; le decisioni e la divergenza sul nesso `-tione` sono argomentate anziché tabulate. Restano perciò validi senza modifiche il *Prompt B* 2.0 e la skill che lo incapsula, che dichiarano il regime della Nota **1.0**. |
