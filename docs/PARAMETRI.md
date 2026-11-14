@@ -42,13 +42,15 @@ Le nove classi di normalizzazione della [*Nota al testo*](Nota_al_testo.md) — 
 
 Una **classe** è **stabilizzata** quando **D ≤ θ per N facciate consecutive** senza intervento sistematico; altrimenti è ricorrente. La classe di riferimento è il valore di `TIPO_ERRORE`: la stabilizzazione si dichiara per tipo di errore e per modello, non sul solo totale, perché un tipo può essere assestato mentre un altro non lo è.
 
+È **sistematico** l'intervento che ricorre nella finestra su più unità con la stessa causa e la stessa correzione; un'occorrenza isolata non lo è, quale che ne sia la gravità. Le due condizioni sono congiuntive: finché un intervento sistematico persiste, la classe resta ricorrente anche con D sotto soglia (protocollo, M4).
+
 ## Ruolo del loop K
 
 In interfaccia chat la temperatura di decodifica spesso non è impostabile. Il controllo della variabilità (non-determinismo del modello) non è quindi affidato alla temperatura ma al **loop K = 3**: tre passate della stessa unità per modello, dalle quali si ricava la forma di consenso. K non elimina la variabilità: la rende **misurabile**.
 
 ## Modelli confrontati
 
-Gemini e Claude, ai livelli A (diplomatico) e B (interpretativo), con gli stessi prompt incapsulati come skill/Gem versionate — **Prompt A v1.4, Prompt B v2.1** — identiche a ogni esecuzione. La versione del prompt è l'unica variabile controllata dell'esperimento.
+Gemini e Claude, ai livelli A (diplomatico) e B (interpretativo), con gli stessi prompt incapsulati come skill/Gem versionate — **Prompt A v1.4, Prompt B v2.1** — identiche a ogni esecuzione. La versione del prompt è **tenuta costante**, così che l'unica differenza fra le esecuzioni confrontate sia il modello: il prompt è la variabile controllata dell'esperimento, il modello la variabile indipendente.
 
 Il livello B è governato dalla **[*Nota al testo*](Nota_al_testo.md) v1.0**, che è la norma editoriale dell'esperimento: il Prompt B non è una fonte autonoma ma la sua forma eseguibile, e in caso di divergenza prevale la Nota.
 
