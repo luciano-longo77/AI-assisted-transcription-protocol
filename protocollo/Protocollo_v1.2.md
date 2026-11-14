@@ -1,222 +1,156 @@
-Sì. Esaminando la versione attualmente pubblicata su GitHub, ho individuato alcune incoerenze effettive. Non sono tutte dello stesso tipo: alcune sono contraddizioni documentali, altre riguardano la corrispondenza tra metodo dichiarato e applicazione sperimentale.
+# Dalla norma editoriale al workflow AI-assistito
 
-La distinzione è importante: non considero contraddittorio un esperimento incompleto quando è dichiarato come tale. Considero invece incoerente una documentazione che attribuisce versioni o condizioni diverse allo stesso elemento.
+**Un modello operativo e replicabile per scalare la trascrizione interpretativa di manoscritti omogenei**
 
-## 1. Incoerenze accertabili
+*Protocollo di trascrizione automatizzata · versione 1.2, novembre 2026*
 
-### 1.1 Versione del Prompt A
+---
 
-Contraddizione documentaleNel README, nella descrizione della struttura, si legge:
+## Indice
 
-- Prompt A v1.3.
-- Prompt B v2.1.
+- [Abstract](#abstract)
+- [1. Introduzione. Trascrizione interpretativa: un problema pratico, metodologico e scalare](#1-introduzione-trascrizione-interpretativa-un-problema-pratico-metodologico-e-scalare)
+- [2. Dall'editing assistito al modello editoriale operativo](#2-dallediting-assistito-al-modello-editoriale-operativo)
+- [3. Il protocollo](#3-il-protocollo)
+  - [Principi](#principi)
+  - [Modalità e procedura](#modalità-e-procedura)
+  - [Componenti](#componenti)
+  - [Controllo del non-determinismo (loop)](#controllo-del-non-determinismo-loop)
+  - [Metrica e criterio di stabilizzazione](#metrica-e-criterio-di-stabilizzazione)
+  - [Garanzie di validità e affidabilità](#garanzie-di-validità-e-affidabilità)
+  - [Riproducibilità (FAIR)](#riproducibilità-fair)
+- [4. Il perimetro sperimentale: campioni di due manoscritti](#4-il-perimetro-sperimentale-campioni-di-due-manoscritti)
+- [5. Ipotesi da verificare sui campioni](#5-ipotesi-da-verificare-sui-campioni)
+- [6. Il guadagno rispetto ai protocolli tradizionali](#6-il-guadagno-rispetto-ai-protocolli-tradizionali)
+- [7. LLM e HTR: due livelli diversi del processo editoriale](#7-llm-e-htr-due-livelli-diversi-del-processo-editoriale)
+- [8. Integrazione con AURORA](#8-integrazione-con-aurora)
+- [Conclusioni](#conclusioni)
 
-In `docs/PARAMETRI.md`, invece, nella sezione dei modelli confrontati:
+---
 
-- Prompt A v1.4.
-- Prompt B v2.1.
+## Abstract
 
-La versione di Prompt A è quindi discordante tra due documenti che descrivono la configurazione sperimentale corrente.
+La trascrizione interpretativa dei manoscritti costituisce una delle fasi più onerose e meno formalizzate della pratica filologica, soprattutto quando applicata a corpora ampi, storicamente coerenti e testualmente complessi. Questo contributo propone un modello editoriale operativo AI-assistito concepito per rendere scalabile la trascrizione interpretativa di manoscritti omogenei per periodo e funzione, preservando al contempo il controllo umano sulle decisioni normative, la tracciabilità del processo e la validità filologica dei risultati.
 
-Non è una differenza interpretativa: è una discrepanza oggettiva.
+L'obiettivo del lavoro non è dimostrare che l'intelligenza artificiale possa "aiutare" la trascrizione in senso generico, né produrre testi automaticamente normalizzati, ma formalizzare un workflow filologico controllato in cui uno o più Large Language Model operano come acceleratori e stabilizzatori delle decisioni editoriali ricorrenti, sotto supervisione umana esplicita. Il modello si fonda sulla distinzione tra trascrizione diplomatica e interpretativa, sull'esplicitazione preventiva del regime editoriale e su una procedura iterativa che consente di osservare quando e in che misura tali decisioni risultano delegabili.
 
-GitHub
+Applicato in via sperimentale a campioni di manoscritti omogenei ma materialmente differenziati, e confrontando il comportamento di due modelli distinti, il workflow mostra come sia possibile ridurre la ridondanza decisionale e i costi cognitivi dell'editing, senza trasferire l'autorità editoriale alla macchina. Il risultato non è un testo finale né un gold standard, ma un protocollo replicabile, verificabile e trasferibile, pensato come fase preparatoria alla codifica TEI e come fondamento metodologico per progetti di ampia scala, come AURORA.
 
-+1
+## 1. Introduzione. Trascrizione interpretativa: un problema pratico, metodologico e scalare
 
-### 1.2 Stato della trascrizione interpretativa
+Nel lavoro filologico sui manoscritti, la trascrizione interpretativa rappresenta un momento cruciale e al tempo stesso fragile. A differenza della trascrizione diplomatica, che mira a riprodurre il dato grafico con il massimo grado di fedeltà possibile, la trascrizione interpretativa comporta una serie continua di decisioni normative: scioglimento delle abbreviazioni, gestione delle oscillazioni grafiche, normalizzazione selettiva, trattamento dell'ambiguità, equilibrio tra leggibilità e rispetto della testualità storica.
 
-Disallineamento di statoLa Nota al testo, §1, dichiara esplicitamente che `A31_interpretativa.xml` è stato prodotto con un regime editoriale precedente e deve essere rifatto.
+Queste decisioni sono spesso consolidate nella pratica individuale dell'editore, ma raramente vengono rese completamente esplicite, formalizzate o documentate in modo sistematico. Di conseguenza, la trascrizione interpretativa rimane una pratica ad alta intensità cognitiva, difficilmente trasferibile, poco replicabile e scarsamente compatibile con progetti di larga scala.
 
-Il README, invece, presenta le 72 carte in TEI ai due livelli come parte della prima applicazione archiviata.
+Negli ultimi anni, lo sviluppo delle tecnologie di Handwritten Text Recognition (HTR) ha permesso di automatizzare con successo il riconoscimento grafico del manoscritto, contribuendo in modo significativo alla trascrizione diplomatica su grandi volumi di dati. Tuttavia, queste tecnologie non affrontano il problema centrale della trascrizione interpretativa: non decidono come il testo debba essere scritto, ma soltanto come venga letto a livello grafico.
 
-Le due affermazioni non sono propriamente incompatibili: le trascrizioni esistono, ma quella interpretativa non è conforme alla Nota attuale.
+Il presente lavoro nasce da una constatazione pratica: in contesti in cui è necessario trascrivere centinaia di pagine manoscritte in forma interpretativa, il vero collo di bottiglia non è la lettura della grafia, ma la ripetizione non strutturata delle stesse decisioni editoriali. Questa esigenza pratica diventa qui il punto di partenza per una proposta metodologica: come rendere scalabile la trascrizione interpretativa senza rinunciare al controllo filologico.
 
-Il problema è che questa distinzione non è sufficientemente evidente nella presentazione generale dei dati.
+## 2. Dall'editing assistito al modello editoriale operativo
 
-Il repository contiene quindi una trascrizione interpretativa che non rappresenta l'applicazione della norma editoriale attualmente vigente.
+Le pratiche di editing assistito attualmente diffuse nelle Digital Humanities — inclusi ambienti di trascrizione, strumenti HTR e supporti alla marcatura TEI — condividono un presupposto implicito: il regime editoriale è già noto, stabilizzato e condiviso. L'assistenza tecnologica interviene per accelerare l'esecuzione di tale regime, non per metterlo in discussione o verificarne la coerenza. In questo quadro la tecnologia riduce il tempo di digitazione, segnala incongruenze formali e applica normalizzazioni predefinite.
 
-GitHub
+Ciò che rimane fuori campo è la norma editoriale stessa, che continua a operare come sapere tacito e personale. Il contributo di questo lavoro consiste nello spostare il focus: non l'AI che trascrive, ma il metodo editoriale che governa l'uso dell'AI. In questa prospettiva, il regime editoriale non è il punto di partenza non problematizzato, ma l'oggetto da formalizzare, trasferire e testare. L'intelligenza artificiale viene utilizzata non come soggetto decisionale, ma come strumento di stress test epistemico, capace di rendere visibili incoerenze, limiti e zone di stabilità del metodo umano.
 
-+1
+## 3. Il protocollo
 
-### 1.3 Parametri dichiarati e sperimentazione effettiva
+Protocollo **versione 1.2** (novembre 2026). Riferimento normativo fisso: ogni applicazione dichiara questa versione. Le modifiche a principi, vocabolari, metrica o procedura incrementano la versione e sono tracciate in un changelog. Un'applicazione è conforme se e solo se rispetta i punti seguenti.
 
-Scostamento operativo dichiarato`PARAMETRI.md` stabilisce:
+La v1.2 non modifica principi, metrica, garanzie né lo schema del log rispetto alla v1.0 (agosto 2026). Introduce due sole precisazioni: la **definizione dell'unità digitale**, che era presupposta e non dichiarata, e il rinvio del regime editoriale del livello B alla **norma editoriale del testimone**, che il protocollo non ripete più. Le applicazioni condotte sotto la v1.0 restano conformi. Il § 4 dichiara inoltre lo **stato di applicazione di ciascun testimone**, e il § 5 è riformulato come insieme di ipotesi: nella v1.0 entrambi descrivevano al presente un confronto fra i due manoscritti che non è stato eseguito.
 
-- θ = 5 interventi per 1000 parole.
-- N = 10 facciate consecutive.
-- K = 3 ripetizioni.
+### Principi
 
-Lo stesso documento dichiara però che il rodaggio delle unità 1–5 è stato eseguito con K=1 e che K=3 è rinviato.
+- **P1 — Separazione dei livelli.** Diplomatica (A) e interpretativa (B) tenute distinte; ogni evento è attribuito a un livello.
+- **P2 — Norma prima dell'automazione.** Il regime editoriale è esplicitato prima dell'AI e tradotto in prompt.
+- **P3 — Autorità umana sulla norma.** Le decisioni del livello B restano all'editore; l'AI propone, l'editore dispone.
+- **P4 — Ogni intervento è un dato.** Ogni scostamento tra output di un modello e forma accolta è registrato nel log, per ciascun modello, non assorbito.
+- **P5 — AI come stress-test, non decisore.** I modelli servono a rendere visibili incoerenze, limiti e zone di stabilità del metodo umano.
+- **P6 — Tracciabilità e reversibilità.** Ogni trasformazione è documentata e, ove possibile, reversibile (es. scioglimento diplomatico fra parentesi tonde).
 
-Non considero questo una contraddizione interna, perché lo scostamento è esplicitamente documentato.
+### Modalità e procedura
 
-È però importante non descrivere i risultati del rodaggio come risultati ottenuti con il protocollo K=3.
+- **Modalità generativa da zero.** Il protocollo si esegue come se non esistessero trascrizioni pregresse: i modelli producono la trascrizione. Una trascrizione preesistente può solo accelerare la validazione umana, senza sostituire o saltare alcuno step.
+- **Disegno comparativo a due modelli.** Ogni unità è processata da due modelli distinti (Gemini e Claude), ai due livelli A e B, in modo da osservare e confrontare il comportamento di ciascuno.
 
-GitHub
+**Unità digitale.** L'unità di lavorazione è l'**immagine**, cioè la coppia di facciate affacciate del manoscritto aperto — per esempio `cc. 9v-10r`, che insiste su due carte. È l'unità che si dà in pasto al modello, quella su cui si ripete il loop K e quella che si registra in COPERTURA.
 
-## 2. Incoerenze tra protocollo e perimetro sperimentale
+L'unità di **misura** è invece la **facciata**, perché due immagini contigue condividono una carta (`cc. 9v-10r` e `cc. 10v-11r` hanno in comune la carta 10) e il conteggio per carta si sovrapporrebbe. Il denominatore in parole si conta per facciata, e la finestra di stabilizzazione si esprime in facciate: **N = 10 facciate consecutive**, cioè cinque unità.
 
-### 2.1 Il caso BCP 3 Qq B 49
+Procedura, per ogni unità digitale:
 
-Incoerenza sostanzialeQuesta è più importante della precedente.
+1. Prompt A (skill) su Gemini → registrazione dell'evento nel log (MODELLO = Gemini, LIVELLO = A).
+2. Prompt A (skill) su Claude → registrazione dell'evento (MODELLO = Claude, LIVELLO = A).
+3. Validazione umana del livello A.
+4. Prompt B (skill) su Gemini e su Claude → registrazione degli eventi (LIVELLO = B) per ciascun modello.
+5. Validazione umana del livello B (autorità dell'editore).
+6. Arresto e marcatura `non_delegabile` in presenza di ambiguità irriducibile o stratificazione genetica.
 
-Il protocollo v1.2, §4, afferma:
+### Componenti
 
-> Il workflow è testato su campioni di due manoscritti.
+- **Norma editoriale (Nota al testo).** Documento versionato che fissa, per il testimone, il regime del livello B: classi di normalizzazione, criterio-limite, forme che si conservano, casi riservati all'editore. È esplicitata prima dell'automazione (P2) e dichiarata con la sua versione da ogni applicazione. I prompt ne sono la forma eseguibile: in caso di divergenza prevale la norma.
+- **Prompt A e Prompt B come skill versionate.** I due prompt sono incapsulati come skill (istruzioni persistenti e versionate) in ciascun ambiente-modello (Gemini, Claude), identiche a ogni esecuzione: elimina la deriva del prompt come fonte di variabilità e rende l'ambiente riproducibile.
+- **Prompt A (diplomatica).** Fedeltà grafica; abbreviazioni sciolte solo fra parentesi tonde; punteggiatura, maiuscole e unione/separazione originali; lacune con […]; segni materiali conservati.
+- **Prompt B (interpretativa).** Applica la norma editoriale dichiarata per il testimone, nell'ordine di classi da essa fissato; non è fonte autonoma del regime. Si arresta e marca `non_delegabile` nei casi che la norma riserva all'editore.
+- **Log a 12 campi.** ID_ERRORE, LIVELLO, TESTIMONE, SEGMENTO, TIPO_ERRORE, FORMA_AI, CORREZIONE_UMANA, AZIONE_UMANA, DECISIONE_EDITORIALE, ESITO, MODELLO (Gemini/Claude), NOTE. I campi a vocabolario chiuso sono vincolati da menu.
+- **Foglio NORME_EMERGENTI.** AREA, NORMA (impersonale e generale), DERIVATA_DA_ERRORI (ID che devono esistere nel log), STATO.
 
-Descrive B49 come secondo testimone impiegato per verificare la trasferibilità delle norme.
+### Controllo del non-determinismo (loop)
 
-Anche il §5 parla del confronto A31 → B49 come misura della riduzione degli interventi.
+- **Esecuzione in loop.** Ogni unità è processata in loop (K ripetizioni per modello) tramite la skill. Se gli output coincidono, l'esecuzione è deterministica per quell'unità; se divergono, si registra la variabilità e si assume la forma di consenso come FORMA_AI.
+- **Decodifica deterministica ove possibile.** Dove l'interfaccia o l'API lo consente, si adotta una decodifica a bassa/nulla temperatura. Il non-determinismo residuo è così misurato e documentato, non rimosso per assunzione.
 
-Il README, invece, descrive B49 come banco di trasferibilità in fase successiva e identifica A31 come caso di applicazione principale.
+### Metrica e criterio di stabilizzazione
 
-Il changelog documenta inoltre l'archiviazione della prima applicazione su A31, senza documentare una corrispondente applicazione su B49.
+- **M1 — Denominatore obbligatorio.** Foglio COPERTURA con testimone, riferimento, numero di parole/token e data per ogni unità.
+- **M2 — Densità di intervento.** D = interventi ÷ (parole/1000), sul totale, per classe di TIPO_ERRORE e per modello, su finestre progressive.
+- **M3 — Soglia dichiarata a priori.** La soglia θ (es. 5 interventi/1000 parole) è fissata prima della sperimentazione.
+- **M4 — Criterio.** Una classe è stabilizzata quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente.
 
-Quindi esiste una discrepanza tra:
+### Garanzie di validità e affidabilità
 
-- La descrizione dello stato sperimentale nel protocollo.
-- Lo stato dichiarato nel README.
-- I materiali di applicazione effettivamente descritti nell'archivio.
+- **V1 — Dichiarazione dell'ambiente.** Per ciascun modello: nome, versione, skill/prompt versionati e parametri di decodifica usati, con data.
+- **V2 — Affidabilità inter-annotatore.** Un campione è codificato in cieco da un secondo occhio, con misura di accordo.
+- **V3 — Controllo della vigilanza calante.** Un tratto dichiarato stabilizzato è ri-validato a freddo.
+- **V4 — Baseline.** Un sotto-campione è trascritto in condizione di controllo (manuale, o HTR + manuale) per quantificare il guadagno.
+- **V5 — Terminologia dell'evento.** A livello B si registra 'intervento' (scostamento dalla norma), non 'errore' oggettivo; a livello A l'errore paleografico resta oggettivo.
+- **V6 — Non-delegabilità come esito valido.** I casi che eccedono la delega si marcano `non_delegabile`: risultati positivi che mappano il confine del metodo.
+- **V7 — Controllo del non-determinismo del modello.** Il loop di ripetizioni e la forma di consenso quantificano la variabilità di ciascun modello, rendendola un dato dichiarato.
 
-Non posso concludere, sulla sola base di questi documenti, che non esistano prove esterne dell'esperimento B49. Posso però affermare che il repository non documenta in modo coerente il suo stato.
+### Riproducibilità (FAIR)
 
-GitHub
+Rilascio di skill (prompt incapsulati e versionati), schema del log, log popolato, norme, metrica e soglie; identificatori persistenti (DOI), licenze e metadati leggibili dalla macchina; immagini con segnature/rimandi se coperte da diritti; versionamento del protocollo con changelog.
 
-+2
+## 4. Il perimetro sperimentale: campioni di due manoscritti
 
-### 2.2 Protocollo sperimentale e risultati presentati
+Il perimetro sperimentale di questo studio è volutamente ristretto. Il workflow è **progettato per essere applicato** a campioni di due manoscritti dell'archivio BCP, scelti per rappresentare un gradiente di complessità controllato e per verificare la trasferibilità del regime editoriale da un testimone all'altro. Lo stato di ciascuno è dichiarato qui di seguito e aggiornato a ogni versione del protocollo.
 
-Disallineamento espositivoNel protocollo, §5, alcune formulazioni sono assertive:
+- **BCP, 2Qq A 31** – *Vita della ven. madre suor Benedetta Riggio*: testo regolare, caso di applicazione principale e sede della prima formalizzazione delle norme. **Stato: applicato.** Una prima applicazione è stata condotta fra agosto e settembre 2026 sul tratto frontespizio–c. 36r, ai due livelli e con entrambi i modelli, sotto le versioni allora vigenti dei prompt; i suoi dati sono conservati e citabili in `Archive/`. Il livello B va rifatto sotto il regime della norma editoriale corrente.
+- **BCP, 3Qq B 49** – *Giardino d'alcune relationi della vita della venerabile madre Anna di S. Agostino… tradotte dallo spagnuolo*, anonimo, ms. sec. XVII. Secondo testimone del medesimo corpus, materialmente e formalmente differenziato, impiegato come banco di trasferibilità delle norme emerse su A 31: non autografo ma **copia di una traduzione dallo spagnolo**, condizione che mette alla prova le norme su un testo di mano e di genesi diverse. Un'altra copia è conservata presso la BCRS con segnatura VI.A.20. **Stato: non ancora applicato.** Nessun dato su questo testimone è stato prodotto: il confronto A 31 → B 49 è previsto dal disegno sperimentale e non è stato eseguito.
 
-- Il workflow mostra una riduzione della ridondanza decisionale.
-- I modelli segnalano le ambiguità.
-- Il confronto tra manoscritti misura la trasferibilità.
+Su ciascun manoscritto la sperimentazione non procede in modo integrale, ma su un campione stratificato — un tratto iniziale di rodaggio, un tratto a regime e alcune carte-limite — sufficiente a osservare la curva di stabilizzazione e i suoi eventuali punti di arresto. L'estensione al resto del corpus omogeneo — tra cui *Il Castello dell'Anima* (2Qq E 29), gli *Effetti del divino amore* (2Qq F 25), il *Dialogo fra l'Anima e l'Angelo Custode* (3Qq B 151) e il quaderno a stratificazione genetica BCRS 3Qq D 69 — è demandata a una fase successiva.
 
-Tuttavia, la stessa sezione introduce risultati che dovrebbero derivare da un confronto sperimentale sui due testimoni.
+## 5. Ipotesi da verificare sui campioni
 
-Dato che la documentazione generale dichiara ancora B49 in fase successiva, queste affermazioni non sono adeguatamente distinguibili da risultati già ottenuti.
+Questa sezione registra le **previsioni formulate prima dei dati**, non risultati già ottenuti: è la loro dichiarazione anticipata a renderle falsificabili. L'analisi del log sui campioni è disegnata per metterne alla prova tre, distinte per modello. Dove una previsione riguarda il confronto fra i due testimoni, la verifica resta subordinata all'applicazione su B 49, non ancora eseguita (§ 4).
 
-Il problema non è la formulazione dell'ipotesi scientifica: è la sovrapposizione fra risultati osservati, risultati attesi e obiettivi dell'esperimento.
+Primo, nei tratti più regolari — segnatamente in A 31 — ci si attende una riduzione rapida della ridondanza decisionale: abbreviazioni e oscillazioni già chiarite tendono a stabilizzarsi dopo poche iterazioni, riducendo l'intervento umano sistematico.
 
-GitHub
+Secondo, dove il testo è strutturalmente più complesso, ci si attende che i modelli non "risolvano" l'ambiguità ma la segnalino. Questo comportamento è coerente con l'obiettivo del modello: l'AI non sostituisce il giudizio filologico, ma ne evidenzia i punti critici.
 
-+1
+Terzo, nelle carte a stratificazione genetica ci si attende un punto di arresto osservabile: la norma editoriale non sarebbe più trasferibile perché il testo richiede interpretazione genetica. Il confronto A 31 → B 49, quando sarà eseguito, misurerà quanto le norme formalizzate sul primo testimone riducano l'intervento sul secondo; il confronto Gemini/Claude, già possibile sui dati di A 31, misura quanto il comportamento sia dipendente dal modello.
 
-## 3. Incoerenze nella norma editoriale
+## 6. Il guadagno rispetto ai protocolli tradizionali
 
-Qui ho esaminato anche il testo della Nota al testo, non soltanto la descrizione generale.
+Il guadagno principale del modello non consiste nell'eliminare il lavoro umano, ma nel ridistribuirlo. L'editore non ripete più continuamente le stesse decisioni, ma governa il sistema che le applica. Ciò comporta una riduzione del tempo di lavoro sulle decisioni ricorrenti, un aumento della tracciabilità del processo editoriale e la possibilità di trasferire il metodo a collaboratori o a nuovi corpora omogenei. Questo rende la trascrizione interpretativa scalabile senza impoverimento.
 
-### 3.1 Il criterio delle vocali e la normalizzazione
+## 7. LLM e HTR: due livelli diversi del processo editoriale
 
-La Nota stabilisce al §2 che non si interviene quando la modifica cambia la qualità di una vocale.
+Il workflow qui proposto non sostituisce i sistemi HTR, ma si colloca a un livello differente. Se l'HTR risponde alla domanda *che cosa è scritto*, il modello editoriale AI-assistito risponde alla domanda *come deve essere scritto*. I due approcci sono complementari e integrabili.
 
-Al §4 dichiara di conservare:
+## 8. Integrazione con AURORA
 
-- `Immaculata` / `Immacolata`
-- `difficultà` / `difficoltà`
-- `Giesù` / `Gesù`
+Questo lavoro costituisce una fase preliminare abilitante per il progetto AURORA, poiché stabilizza il passaggio critico dalla trascrizione diplomatica a quella interpretativa, rendendo possibile la codifica TEI multilivello e le analisi comparabili su larga scala.
 
-La regola è coerente con gli esempi.
+## Conclusioni
 
-Non rilevo quindi una contraddizione in questo punto.
-
-### 3.2 La distinzione tra normalizzazione grafica e interpretazione
-
-Qui esiste invece una tensione interna, ma dichiarata.
-
-Il §2 definisce il perimetro come normalizzazione della veste grafica, senza interventi su morfologia, lessico e sintassi.
-
-Il §7 include però tra le operazioni N7 la separazione di `egli` in `e gli`, riconoscendo esplicitamente che si tratta di un'interpretazione e non di una semplice normalizzazione grafica.
-
-La Nota risolve la questione segnalando questi casi in apparato.
-
-Non è una contraddizione irrisolta: è una deroga consapevole al criterio generale, esplicitamente circoscritta.
-
-### 3.3 L'ordine delle classi N1–N9
-
-La Nota stabilisce:
-
-N1 → N2 → N3 → N4 → N5 → N7 → N6 → N9 → N8.
-
-L'ordine è motivato da dipendenze tra trasformazioni.
-
-Non ho individuato una contraddizione evidente tra questa sequenza e la spiegazione delle singole classi.
-
-Anche la distinzione tra latino e italiano è esplicita e coerente con gli esempi riportati.
-
-GitHub
-
-## 4. Incoerenze tra strumenti e documentazione
-
-### 4.1 Data dictionary e parametri
-
-Ho verificato anche direttamente `schema/data-dictionary.md`.
-
-Qui i valori riportati sono:
-
-- θ = 5.
-- N = 10.
-- K = 3.
-- Prompt A v1.4.
-- Prompt B v2.1.
-- Protocollo v1.2.
-
-Questi dati sono coerenti con `PARAMETRI.md`.
-
-La discrepanza della versione A è quindi circoscritta al README, non all'intera documentazione.
-
-GitHub
-
-+1
-
-### 4.2 Automazione e archivio
-
-Il changelog dichiara che lo spostamento del workflow in `Archive/` ha disattivato il controllo automatico di allineamento dei CSV.
-
-Questo non è contraddittorio con il protocollo: è una conseguenza del riordino documentata esplicitamente.
-
-Anche qui distinguerei un'incoerenza da una funzionalità momentaneamente non attiva.
-
-GitHub
-
-## 5. Quadro riepilogativo
-
-Questa è la classificazione delle discrepanze che ho effettivamente riscontrato.
-
-| Elemento | Tipo | Rilevanza |
-| --- | --- | --- |
-| Prompt A v1.3 / v1.4 | Contraddizione | Alta |
-| Stato della TEI interpretativa | Disallineamento | Alta |
-| Stato sperimentale B49 | Contraddizione tra documenti | Molto alta |
-| Risultati del §5 del protocollo | Ambiguità espositiva | Alta |
-| K=1 rispetto a K=3 | Scostamento dichiarato | Media |
-| Criterio grafico e N7 | Deroga dichiarata | Bassa |
-| Workflow archiviato | Stato operativo dichiarato | Bassa |
-
-## 6. Giudizio conclusivo
-
-La mia impressione, dopo questa verifica, è che il problema principale del repository non sia la coerenza della sua impostazione filologica.
-
-La Nota al testo è complessivamente coerente e il rapporto tra i due livelli è ben definito.
-
-Le criticità maggiori si trovano nel rapporto tra tre piani:
-
-1. Il protocollo metodologico v1.2.
-2. La prima applicazione effettivamente documentata.
-3. Lo stato attuale degli strumenti e dei risultati.
-
-In particolare, il caso B49 e la versione di Prompt A sono le due discrepanze documentali che considero più nette.
-
-Non rilevo, invece, una contraddizione fondamentale nei principi scientifici del metodo.
-
-Il punto che merita maggiore attenzione è che il protocollo v1.2, nella sua formulazione attuale, presenta come sperimentato su due manoscritti un workflow che il README descrive ancora come applicato principalmente ad A31, con B49 destinato alla fase successiva.
-
-Questa è la discrepanza scientificamente più importante tra quelle individuate.
-
-Ho limitato la verifica ai documenti accessibili e confrontabili nel repository; non considero verificati i contenuti interni di ogni singolo file TEI e workbook Excel.
-
-GitHub
-
-+3
+Il lavoro mostra che la trascrizione interpretativa può essere trasformata da pratica tacita a processo controllato e scalabile, senza rinunciare alla responsabilità filologica. L'intelligenza artificiale, utilizzata come acceleratore sotto controllo umano, consente di affrontare la scala come problema scientifico e operativo, non come compromesso metodologico. Il contributo principale non è tecnologico, ma filologico: aver mostrato che la norma editoriale può essere resa operativa, verificabile e trasferibile, aprendo la strada a progetti di ampia dimensione senza perdita di rigore.
