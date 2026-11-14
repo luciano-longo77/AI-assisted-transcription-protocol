@@ -4,6 +4,18 @@
 
 ---
 
+## Indice
+
+- [IT - Che cos'è](#it---che-cosè)
+- [EN - What it is](#en---what-it-is)
+- [Struttura / Layout](#struttura--layout)
+- [La norma editoriale](#la-norma-editoriale)
+- [Parametri dichiarati (a priori)](#parametri-dichiarati-a-priori)
+- [Dati](#dati)
+- [Licenza / License](#licenza--license)
+
+---
+
 ## IT - Che cos'è
 
 Modello editoriale operativo per rendere **scalabile la trascrizione interpretativa** di manoscritti omogenei, mantenendo il controllo umano sulle decisioni normative. Un LLM opera come **acceleratore sotto supervisione**, non come decisore. Il protocollo distingue trascrizione **diplomatica (A)** e **interpretativa (B)**, registra ogni intervento in un **log** e ne astrae le **norme emergenti**.
