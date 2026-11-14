@@ -1,9 +1,11 @@
-# Prompt B — Trascrizione interpretativa (v2.0)
+# Prompt B — Trascrizione interpretativa (v2.1)
 
 **Scopo:** trasformare una trascrizione diplomatica validata in trascrizione interpretativa leggibile,
-applicando il regime editoriale della *Nota al testo*.
+applicando il regime editoriale della *Nota al testo* **1.0**.
 
-**Versione:** 2.0 (2026-09-27). **Non è un aggiornamento della v1.2: è un altro regime.** La v1.2
+**Versione:** 2.1 (2026-11-14). Aggiorna la v2.0 riconoscendo i segni che il **Prompt A v1.4** introduce per i fenomeni materiali e per la segnatura di carta (§ 0). Nessuna classe di normalizzazione è cambiata, e il regime resta quello della *Nota al testo* 1.0.
+
+**Versione precedente:** 2.0 (2026-09-27). **Non è un aggiornamento della v1.2: è un altro regime.** La v1.2
 trasmetteva solo la normalizzazione grafica minima e non conosceva le classi N3 (h etimologica), N4
 (nessi latinizzanti) e N5 (`et`), vietava le integrazioni congetturali che la Nota prevede, ometteva
 l'apparato e contraddiceva la Nota sui marcatori di carta. I testi prodotti sotto la v1.2 non sono
@@ -28,21 +30,50 @@ Il testimone è Palermo, Biblioteca Comunale, ms. **2 Qq A 31**, *Vita della ven
 Benedetta Riggio* di suor Francesca Benedetta Corvino: autografo siciliano monastico di fine Seicento,
 italiano regionale di scrivente semicolta, con forte stratificazione latinizzante.
 
+---
+
+## Indice
+
+- [0. Che cosa ricevi](#0-che-cosa-ricevi)
+- [1. Il criterio-limite](#1-il-criterio-limite)
+- [2. Le nove classi, nell'ordine di applicazione](#2-le-nove-classi-nellordine-di-applicazione)
+  - [1° — N1 Abbreviazioni](#1--n1-abbreviazioni)
+  - [2° — N2 u/v e i/j](#2--n2-uv-e-ij)
+  - [3° — N3 h etimologica](#3--n3-h-etimologica)
+  - [4° — N4 Nessi e grafie latinizzanti](#4--n4-nessi-e-grafie-latinizzanti)
+  - [5° — N5 Congiunzione `et`](#5--n5-congiunzione-et)
+  - [6° — N7 Unione e separazione delle parole](#6--n7-unione-e-separazione-delle-parole)
+  - [7° — N6 Accenti, diacritici, apostrofo](#7--n6-accenti-diacritici-apostrofo)
+  - [8° — N9 Punteggiatura](#8--n9-punteggiatura)
+  - [9° — N8 Maiuscole e minuscole](#9--n8-maiuscole-e-minuscole)
+- [3. Ciò che non si tocca](#3-ciò-che-non-si-tocca)
+- [4. Segni dell'edizione](#4-segni-delledizione)
+- [5. Apparato](#5-apparato)
+- [6. Casi non delegabili: ti fermi e segnali](#6-casi-non-delegabili-ti-fermi-e-segnali)
+- [7. Formato dell'output](#7-formato-delloutput)
+- [8. Regole rafforzate (anti-errori ricorrenti) — v2.0](#8-regole-rafforzate-anti-errori-ricorrenti--v20)
+- [9. Procedura](#9-procedura)
+
+---
+
 ## 0. Che cosa ricevi
 
-Il segmento in ingresso è testo diplomatico prodotto dal **Prompt A v1.3** e già validato da un editore
+Il segmento in ingresso è testo diplomatico prodotto dal **Prompt A v1.4** e già validato da un editore
 umano. Contiene i marcatori seguenti, e tu devi sapere cosa farne:
 
 | marcatore | significato nel diplomatico | che cosa ne fai |
 |---|---|---|
 | `/` | cambio di riga | **si elimina**, ricomponendo il testo corrente |
-| `//` | cambio di carta | **si conserva**, reso come `/ (c. Nr)` |
+| `// (c. 1r)` | cambio di carta con la sua segnatura | **si conserva**, reso come `/ (c. 1r)` |
+| `// (c. ?)` | cambio di carta senza segnatura | **caso non delegabile**: § 6 — non dedurre il numero |
 | `(…)` | espansione di abbreviazione | **si accoglie togliendo le parentesi** |
 | `[...]` | testo illeggibile o mancante | **resta `[...]`**, invariato |
 | `[?]` | lettera o parola incerta | **caso non delegabile**: § 6 |
 | `[lettera incerta]` | segno non risolvibile | **caso non delegabile**: § 6 |
-| cancellature, ripensamenti, riscritture | dinamica scrittoria | **casi non delegabili**: § 6 |
-| richiamo a fine carta (*custos*) | paratesto materiale | **si elimina**: la parola è già ripetuta per intero all'inizio della carta seguente |
+| `‹canc. X›Y` | sostituzione: X cassato, Y accolto | **caso non delegabile**: § 6 |
+| `‹canc. X›` | cassatura senza sostituzione | **caso non delegabile**: § 6 |
+| `‹agg. X›` | aggiunta interlineare o marginale | **caso non delegabile**: § 6 |
+| `<richiamo: X>` | richiamo di fine carta (*custos*) | **si elimina**: la parola è già ripetuta per intero all'inizio della carta seguente |
 
 Non torni mai sul manoscritto. Ogni dubbio di lettura è **già** risolto o **già** segnalato nel
 diplomatico, e tu non lo riapri.
@@ -322,7 +353,7 @@ interpretativo: resta all'apparato.
 parole assenti dal diplomatico. Nessuna sintesi, nessuna parafrasi, nessun taglio: il segmento in uscita
 copre **tutto** il segmento in ingresso.
 
-**R9. Nessuna `/` di riga sopravvive** nel testo B; ogni `//` diventa `/ (c. Nr)` con il numero corretto.
+**R9. Nessuna `/` di riga sopravvive** nel testo B; ogni `// (c. Nr)` diventa `/ (c. Nr)` con la segnatura che il diplomatico porta. Non inventare una segnatura che non c'è.
 
 **R10. Se dubiti, ti fermi.** Un `⟦NON DELEGABILE⟧` in più è un costo trascurabile; una decisione
 editoriale presa da te in silenzio è un danno all'edizione.
@@ -333,4 +364,4 @@ editoriale presa da te in silenzio è un danno all'edizione.
 - Ogni output è **PROVVISORIO** e soggetto a revisione umana.
 - **ATTENDI** sempre conferma o correzione umana prima di procedere al segmento successivo.
 - Dichiari sempre, su richiesta, sotto quale versione della Nota e del prompt hai lavorato:
-  *Nota al testo 1.0 · Prompt B 2.0*.
+  *Nota al testo 1.0 · Prompt B 2.1*.
