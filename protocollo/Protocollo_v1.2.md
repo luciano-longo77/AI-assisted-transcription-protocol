@@ -34,7 +34,7 @@ La trascrizione interpretativa dei manoscritti costituisce una delle fasi più o
 
 L'obiettivo del lavoro non è dimostrare che l'intelligenza artificiale possa "aiutare" la trascrizione in senso generico, né produrre testi automaticamente normalizzati, ma formalizzare un workflow filologico controllato in cui uno o più Large Language Model operano come acceleratori e stabilizzatori delle decisioni editoriali ricorrenti, sotto supervisione umana esplicita. Il modello si fonda sulla distinzione tra trascrizione diplomatica e interpretativa, sull'esplicitazione preventiva del regime editoriale e su una procedura iterativa che consente di osservare quando e in che misura tali decisioni risultano delegabili.
 
-Applicato in via sperimentale a campioni di manoscritti omogenei ma materialmente differenziati, e confrontando il comportamento di due modelli distinti, il workflow mostra come sia possibile ridurre la ridondanza decisionale e i costi cognitivi dell'editing, senza trasferire l'autorità editoriale alla macchina. Il risultato non è un testo finale né un gold standard, ma un protocollo replicabile, verificabile e trasferibile, pensato come fase preparatoria alla codifica TEI e come fondamento metodologico per progetti di ampia scala, come AURORA.
+Il modello è stato applicato in via sperimentale a un primo campione — un manoscritto omogeneo per periodo e funzione, trascritto ai due livelli e con due modelli distinti — sotto un regime editoriale che la norma oggi vigente ha successivamente precisato; il disegno prevede l'estensione a un secondo testimone, materialmente differenziato, come banco di trasferibilità. Quella prima applicazione indica che è possibile ridurre la ridondanza decisionale e i costi cognitivi dell'editing senza trasferire l'autorità editoriale alla macchina, e ha prodotto il risultato che qui si consegna: non un testo finale né un gold standard, ma un protocollo replicabile, verificabile e trasferibile, pensato come fase preparatoria alla codifica TEI e come fondamento metodologico per progetti di ampia scala, come AURORA.
 
 ## 1. Introduzione. Trascrizione interpretativa: un problema pratico, metodologico e scalare
 
@@ -89,14 +89,16 @@ Procedura, per ogni unità digitale:
 
 - **Norma editoriale (Nota al testo).** Documento versionato che fissa, per il testimone, il regime del livello B: classi di normalizzazione, criterio-limite, forme che si conservano, casi riservati all'editore. È esplicitata prima dell'automazione (P2) e dichiarata con la sua versione da ogni applicazione. I prompt ne sono la forma eseguibile: in caso di divergenza prevale la norma.
 - **Prompt A e Prompt B come skill versionate.** I due prompt sono incapsulati come skill (istruzioni persistenti e versionate) in ciascun ambiente-modello (Gemini, Claude), identiche a ogni esecuzione: elimina la deriva del prompt come fonte di variabilità e rende l'ambiente riproducibile.
-- **Prompt A (diplomatica).** Fedeltà grafica; abbreviazioni sciolte solo fra parentesi tonde; punteggiatura, maiuscole e unione/separazione originali; lacune con […]; segni materiali conservati.
+- **Prompt A (diplomatica).** Fedeltà grafica; abbreviazioni sciolte solo fra parentesi tonde; punteggiatura, maiuscole e unione/separazione originali; lacune con `[...]`; segni materiali conservati.
 - **Prompt B (interpretativa).** Applica la norma editoriale dichiarata per il testimone, nell'ordine di classi da essa fissato; non è fonte autonoma del regime. Si arresta e marca `non_delegabile` nei casi che la norma riserva all'editore.
 - **Log a 12 campi.** ID_ERRORE, LIVELLO, TESTIMONE, SEGMENTO, TIPO_ERRORE, FORMA_AI, CORREZIONE_UMANA, AZIONE_UMANA, DECISIONE_EDITORIALE, ESITO, MODELLO (Gemini/Claude), NOTE. I campi a vocabolario chiuso sono vincolati da menu.
 - **Foglio NORME_EMERGENTI.** AREA, NORMA (impersonale e generale), DERIVATA_DA_ERRORI (ID che devono esistere nel log), STATO.
 
 ### Controllo del non-determinismo (loop)
 
-- **Esecuzione in loop.** Ogni unità è processata in loop (K ripetizioni per modello) tramite la skill. Se gli output coincidono, l'esecuzione è deterministica per quell'unità; se divergono, si registra la variabilità e si assume la forma di consenso come FORMA_AI.
+- **Esecuzione in loop.** Ogni unità è processata in loop (K ripetizioni per modello) tramite la skill. Se gli output coincidono, l'esecuzione è deterministica per quell'unità; se divergono, si registra la variabilità e si assume come FORMA_AI la **forma di consenso**, cioè la lezione restituita dalla maggioranza delle passate.
+- **Divergenza totale.** Se le K passate divergono tutte, una forma di consenso non esiste: la decisione torna all'editore, il caso si registra con `ESITO = non_delegabile` (V6) e la divergenza entra comunque nella misura della variabilità del modello. La regola vale per qualunque K: con K = 3 è il caso delle tre lezioni distinte.
+- **Che cosa misura il consenso.** Il consenso misura la stabilità del modello, non l'accuratezza della lezione: una forma stabile può essere stabilmente errata, e come ogni FORMA_AI resta soggetta alla validazione umana.
 - **Decodifica deterministica ove possibile.** Dove l'interfaccia o l'API lo consente, si adotta una decodifica a bassa/nulla temperatura. Il non-determinismo residuo è così misurato e documentato, non rimosso per assunzione.
 
 ### Metrica e criterio di stabilizzazione
@@ -104,7 +106,7 @@ Procedura, per ogni unità digitale:
 - **M1 — Denominatore obbligatorio.** Foglio COPERTURA con testimone, riferimento, numero di parole/token e data per ogni unità.
 - **M2 — Densità di intervento.** D = interventi ÷ (parole/1000), sul totale, per classe di TIPO_ERRORE e per modello, su finestre progressive.
 - **M3 — Soglia dichiarata a priori.** La soglia θ (es. 5 interventi/1000 parole) è fissata prima della sperimentazione.
-- **M4 — Criterio.** Una classe è stabilizzata quando D ≤ θ per N facciate consecutive senza intervento sistematico; altrimenti è ricorrente.
+- **M4 — Criterio.** Una classe è stabilizzata quando D ≤ θ per N facciate consecutive **senza intervento sistematico**; altrimenti è ricorrente. È **sistematico** l'intervento che ricorre nella finestra su più unità con la stessa causa e la stessa correzione. Un'occorrenza isolata non lo è, quale che ne sia la gravità: il caso singolo grave si tratta in apparato, non nella misura. Le due condizioni sono congiuntive: finché un intervento sistematico persiste la classe resta ricorrente anche con D sotto soglia, perché una soglia rispettata per accumulo di casi fra loro diversi non equivale a un fenomeno assestato.
 
 ### Garanzie di validità e affidabilità
 
