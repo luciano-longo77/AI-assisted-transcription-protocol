@@ -2,7 +2,7 @@
 ## Protocollo di trascrizione interpretativa AI-assistita
 ### AI-assisted interpretive transcription protocol
 
-[![protocollo: v1.2](https://img.shields.io/badge/protocollo-v1.2-1f4e79)](protocollo/Protocollo_v1.2.md) [![Nota al testo: v1.0](https://img.shields.io/badge/Nota%20al%20testo-v1.0-2e6da4)](docs/Nota_al_testo.md) [![Prompt A: v1.3](https://img.shields.io/badge/Prompt%20A-v1.3-5b9bd5)](prompts/prompt-A-diplomatica.md) [![Prompt B: v2.0](https://img.shields.io/badge/Prompt%20B-v2.0-5b9bd5)](prompts/prompt-B-interpretativa.md)
+[![protocollo: v1.2](https://img.shields.io/badge/protocollo-v1.2-1f4e79)](protocollo/Protocollo_v1.2.md) [![Nota al testo: v1.0](https://img.shields.io/badge/Nota%20al%20testo-v1.0-2e6da4)](docs/Nota_al_testo.md) [![Prompt A: v1.4](https://img.shields.io/badge/Prompt%20A-v1.4-5b9bd5)](prompts/prompt-A-diplomatica.md) [![Prompt B: v2.1](https://img.shields.io/badge/Prompt%20B-v2.1-5b9bd5)](prompts/prompt-B-interpretativa.md)
 
 ---
 
