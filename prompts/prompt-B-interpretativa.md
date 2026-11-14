@@ -10,8 +10,8 @@ trasmetteva solo la normalizzazione grafica minima e non conosceva le classi N3 
 (nessi latinizzanti) e N5 (`et`), vietava le integrazioni congetturali che la Nota prevede, ometteva
 l'apparato e contraddiceva la Nota sui marcatori di carta. I testi prodotti sotto la v1.2 non sono
 confrontabili con quelli prodotti sotto la v2.0, e i contatori di densità delle classi nuove ripartono
-da zero. Le regole valgono per **entrambi i modelli** (Gemini e Claude): l'unica variabile controllata è
-la versione del prompt.
+da zero. Le regole valgono per **entrambi i modelli** (Gemini e Claude): la versione del prompt è tenuta
+costante, così che l'unica differenza fra le esecuzioni confrontate sia il modello.
 
 **Riferimento normativo:** `docs/Nota_al_testo.md`, versione **1.0**. Dove questo prompt e la Nota
 divergano, **prevale la Nota**: questo prompt è la sua forma eseguibile, non una fonte autonoma.
