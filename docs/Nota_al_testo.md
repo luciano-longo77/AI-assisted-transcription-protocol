@@ -45,12 +45,12 @@
 
 L'edizione pubblica **due testi dello stesso manoscritto**, entrambi citabili, che non sono due stesure ma due prodotti distinti:
 
-- **Livello A, trascrizione diplomatica** (`tei/A31_diplomatica.xml`). Registra il testimone: grafia, abbreviazioni non sciolte, divisione di riga e di carta, segni materiali, punti dubbi. Non normalizza nulla. È la base di collazione e il luogo dove sopravvive ogni dato linguistico.
-- **Livello B, trascrizione interpretativa** (`tei/A31_interpretativa.xml`). Restituisce un testo leggibile. **Questa Nota descrive soltanto il livello B.**
+- **Livello A, trascrizione diplomatica** (`Archive/tei/A31_diplomatica.xml`). Registra il testimone: grafia, abbreviazioni non sciolte, divisione di riga e di carta, segni materiali, punti dubbi. Non normalizza nulla. È la base di collazione e il luogo dove sopravvive ogni dato linguistico.
+- **Livello B, trascrizione interpretativa** (`Archive/tei/A31_interpretativa.xml`). Restituisce un testo leggibile. **Questa Nota descrive soltanto il livello B.**
 
 Chi voglia studiare la lingua della scrivente deve usare il livello A. Il livello B è il testo per la lettura, e ogni sua forma è il risultato delle regole dichiarate qui sotto: sono scritte in modo che il lettore possa, in qualunque punto, ricostruire mentalmente che cosa stava sulla carta.
 
-> **Stato del testo.** Il file `tei/A31_interpretativa.xml` attualmente in repository è stato prodotto sotto un regime editoriale **precedente** a questa Nota, che conservava la *h* etimologica, i nessi in *-tione*, la congiunzione *et* e la maiuscola reverenziale. Va rifatto, e fino a quel momento il testo interpretativo pubblicato **non** corrisponde ai criteri descritti in questa Nota. La sua `editorialDecl` dichiara il regime sotto cui è stato prodotto.
+> **Stato del testo.** Il file `Archive/tei/A31_interpretativa.xml` è stato prodotto sotto un regime editoriale **precedente** a questa Nota, che conservava la *h* etimologica, i nessi in *-tione*, la congiunzione *et* e la maiuscola reverenziale. Va rifatto, e fino a quel momento il testo interpretativo pubblicato **non** corrisponde ai criteri descritti in questa Nota. La sua `editorialDecl` dichiara il regime sotto cui è stato prodotto.
 
 ## 2. Il criterio, e il suo costo
 
