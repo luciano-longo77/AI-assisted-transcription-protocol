@@ -48,7 +48,7 @@ In interfaccia chat la temperatura di decodifica spesso non è impostabile. Il c
 
 ## Modelli confrontati
 
-Gemini e Claude, ai livelli A (diplomatico) e B (interpretativo), con gli stessi prompt incapsulati come skill/Gem versionate — **Prompt A v1.3, Prompt B v2.1** — identiche a ogni esecuzione. La versione del prompt è l'unica variabile controllata dell'esperimento.
+Gemini e Claude, ai livelli A (diplomatico) e B (interpretativo), con gli stessi prompt incapsulati come skill/Gem versionate — **Prompt A v1.4, Prompt B v2.1** — identiche a ogni esecuzione. La versione del prompt è l'unica variabile controllata dell'esperimento.
 
 Il livello B è governato dalla **[*Nota al testo*](Nota_al_testo.md) v1.0**, che è la norma editoriale dell'esperimento: il Prompt B non è una fonte autonoma ma la sua forma eseguibile, e in caso di divergenza prevale la Nota.
 
