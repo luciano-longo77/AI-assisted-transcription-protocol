@@ -2,6 +2,7 @@
 
 ## Indice
 
+- [0.8.1-chiarimenti · 2026-11-14](#081-chiarimenti--2026-11-14)
 - [0.8.0-protocollo-v1.2 · 2026-11-14](#080-protocollo-v12--2026-11-14)
 - [0.7.0-riordino · 2026-11-01](#070-riordino--2026-11-01)
 - [0.6.0-norma · 2026-09-28](#060-norma--2026-09-28)
@@ -13,11 +14,23 @@
 
 ---
 
+## [0.8.1-chiarimenti] — 2026-11-14
+### Corretto
+- **Abstract del protocollo**: diceva «applicato a campioni di manoscritti omogenei ma materialmente differenziati», affermando un confronto fra due testimoni che non è stato eseguito. Ora dichiara l'applicazione al primo campione e l'estensione al secondo come prevista dal disegno, in coerenza con il §4.
+- **Notazione della lacuna** uniformata a `[...]` nel protocollo (§3, Componenti), dove figurava `[…]` con il carattere di ellissi: Prompt A, Prompt B e *Nota al testo* usavano già `[...]`, e il marcatore passa da un livello all'altro.
+- Rimossa dalla voce 0.8.0 la menzione di `Casi_dopo_agosto_2026.md`: quel documento separato è stato superato dalla scelta di integrare i casi in questo changelog (voci 0.5.0–0.8.0) e non è mai esistito nel repository.
+- **«Unica variabile controllata»** riformulato in `docs/PARAMETRI.md` e nei due prompt: la versione del prompt è *tenuta costante* e il modello è la variabile indipendente. La formula precedente era tecnicamente corretta ma si leggeva come se il modello non variasse.
+### Precisato
+- **Definizione di intervento sistematico** (protocollo M4, `docs/PARAMETRI.md`, `schema/data-dictionary.md`): è sistematico l'intervento che ricorre nella finestra su più unità con la stessa causa e la stessa correzione; un'occorrenza isolata non lo è. Le due condizioni di M4 sono congiuntive. La condizione qualitativa era richiamata in tre documenti e definita in nessuno.
+- **Loop K, divergenza totale** (protocollo, Controllo del non-determinismo): se le K passate divergono tutte non esiste forma di consenso, la decisione torna all'editore e il caso si registra `non_delegabile` (V6), restando nella misura della variabilità. Il caso non era previsto. Nessun dato ne è toccato: il loop a K = 3 è ancora in backlog.
+- **`TIPO_ERRORE`, nome convenzionale** (`schema/data-dictionary.md`): al livello A designa un errore di lettura, al livello B uno scostamento dall'esito atteso secondo la norma, non un errore filologico oggettivo (V5). Il nome è conservato per continuità dello strumento e dei dati già registrati.
+### Nota
+- Interventi di chiarimento **interni alla v1.2**: nessun parametro, soglia, classe o criterio è cambiato, e nessuna applicazione condotta sotto la v1.2 è da rifare. Le versioni dei prompt restano **A v1.4** e **B v2.1**, perché nessuna regola di trascrizione è cambiata: la riformulazione tocca la sola riga di intestazione sullo stato dell'esperimento.
+
 ## [0.8.0-protocollo-v1.2] — 2026-11-14
 ### Aggiunto
 - **Protocollo v1.2** in `protocollo/Protocollo_v1.2.md`, con indice. Due modifiche sostanziali rispetto alla v1.0: definizione dell'**unità digitale** e rinvio del regime editoriale del livello B alla norma del testimone. Principi P1–P6, metrica M1–M3, garanzie V1–V7, procedura in sei passi e log a 12 campi invariati; le applicazioni condotte sotto la v1.0 restano conformi.
 - **Norma editoriale (Nota al testo)** fra i Componenti del protocollo: documento versionato che fissa il regime del livello B per il testimone, esplicitato prima dell'automazione (P2). I prompt ne sono la forma eseguibile; in caso di divergenza prevale la norma.
-- `Casi_dopo_agosto_2026.md`: registro dei dodici casi da settembre a oggi, con quadro d'insieme e stato dei lavori aperti.
 ### Deciso
 - **Unità digitale** = l'immagine, cioè la coppia di facciate affacciate (es. `cc. 9v-10r`), che insiste su due carte. **Unità di misura** = la facciata, perché due immagini contigue condividono una carta e il conteggio per carta si sovrapporrebbe. La finestra vale quindi **N = 10 facciate consecutive** (cinque unità).
 - **Log a 12 campi**: respinta l'aggiunta del campo `CLASSE_NOTA` introdotta il 2026-09-28 (cfr. 0.6.0). La densità si misura per `TIPO_ERRORE` e per modello; la stabilizzazione si dichiara per tipo di errore, non per classe editoriale.
