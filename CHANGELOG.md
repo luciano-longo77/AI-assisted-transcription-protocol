@@ -2,7 +2,7 @@
 
 ## Indice
 
-- [0.8.2-preparazione-run · 2026-11-14](#081-preparazione--2026-11-14)
+- [0.8.2-preparazione-run · 2026-11-14](#082-preparazione-run--2026-11-14)
 - [0.8.1-chiarimenti · 2026-11-14](#081-chiarimenti--2026-11-14)
 - [0.8.0-protocollo-v1.2 · 2026-11-14](#080-protocollo-v12--2026-11-14)
 - [0.7.0-riordino · 2026-11-01](#070-riordino--2026-11-01)
@@ -25,6 +25,7 @@
 ### Nota
 - **Il consenso richiede K dispari**, esplicitato in «Ruolo del loop K». Con K pari la maggioranza non esiste mai: o le passate coincidono, e l'esecuzione è deterministica per quell'unità, o divergono, e il caso torna all'editore come `non_delegabile`.
 - Nessun parametro, soglia o criterio del protocollo è stato modificato: la v1.2 resta invariata, e con essa le versioni **A v1.4** e **B v2.1** dei prompt.
+  
 ## [0.8.1-chiarimenti] — 2026-11-14
 ### Corretto
 - **Abstract del protocollo**: diceva «applicato a campioni di manoscritti omogenei ma materialmente differenziati», affermando un confronto fra due testimoni che non è stato eseguito. Ora dichiara l'applicazione al primo campione e l'estensione al secondo come prevista dal disegno, in coerenza con il §4.
