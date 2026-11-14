@@ -7,3 +7,4 @@ Modelli,Gemini; Claude,"I due modelli confrontati, ai livelli A e B."
 Skill,Prompt A v1.4; Prompt B v2.1,"I prompt incapsulati come skill/Gem versionate, identiche a ogni run."
 Protocollo,v1.2,Versione normativa di riferimento dichiarata.
 Decodifica,deterministica ove possibile (temperatura minima),Da interfaccia chat spesso non impostabile: in quel caso il controllo è affidato al loop K.
+K applicato,2 ripetizioni (pilota BCP 2 Qq A 31),"Numero di passate effettivamente eseguite, se diverso dal K dichiarato. A K = 2 la maggioranza non esiste: le due passate coincidono (esecuzione deterministica) oppure divergono, e il caso torna all'editore come non_delegabile. Scostamento operativo tracciato, dichiarato in docs/PARAMETRI.md."
