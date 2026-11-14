@@ -2,6 +2,19 @@
 
 Il log registra **ogni intervento** dell'editore sull'output di un modello; il foglio COPERTURA fornisce i **denominatori**; PARAMETRI dichiara le soglie; NORME_EMERGENTI astrae le regole; LISTE contiene i vocabolari controllati.
 
+---
+
+## Indice
+
+- [Foglio `LOG_ERRORI` (una riga per evento, 12 campi)](#foglio-log_errori-una-riga-per-evento-12-campi)
+- [Foglio `COPERTURA` (denominatore)](#foglio-copertura-denominatore)
+- [Foglio `PARAMETRI` (dichiarati a priori)](#foglio-parametri-dichiarati-a-priori)
+- [Foglio `NORME_EMERGENTI`](#foglio-norme_emergenti)
+- [Vocabolari controllati (`LISTE`)](#vocabolari-controllati-liste)
+- [Metrica](#metrica)
+
+---
+
 ## Foglio `LOG_ERRORI` (una riga per evento, 12 campi)
 
 | # | Campo | Descrizione | Vincolo |
@@ -36,7 +49,7 @@ AREA · NORMA (impersonale, generale) · DERIVATA_DA_ERRORI (ID esistenti nel lo
 **LIVELLO:** A, B
 
 **TIPO_ERRORE:**
-abbreviazione_non_riconosciuta, abbreviazione_espansione_errata, grafia_errata, confusione_grafica, segmentazione_riga_errata, omissione_testo, duplicazione_testo, carattere_non_riconosciuto, illeggibile_non_segnalato, normalizzazione_mancata, normalizzazione_indebita, unione_separazione_errata, accentazione_errata, maiuscola_minuscola_errata, punteggiatura_errata, scioglimento_abbreviazione_errato, scioglimento_abbreviazione_mancato, forma_lessicale_incoerente, ambiguità_non_delegabile, stratificazione_genetica, caso_limite_testuale
+abbreviazione_non_riconosciuta, abbreviazione_espansione_errata, grafia_errata, confusione_grafica, segmentazione_riga_errata, omissione_testo, duplicazione_testo, carattere_non_riconosciuto, illeggibile_non_segnalato, normalizzazione_mancata, normalizzazione_indebita, unione_separazione_errata, accentazione_errata, maiuscola_minuscola_errata, punteggiatura_errata, scioglimento_abbreviazione_errato, scioglimento_abbreviazione_mancato, forma_lessicale_incoerente, ambiguità_non_delegabile, stratificazione_genetica, caso_limite_testuale, latino_normalizzato_indebitamente, lacuna_integrata_indebitamente
 
 **AZIONE_UMANA:** scioglimento, normalizzazione, conservazione, correzione, blocco_intervento, segnalazione
 
