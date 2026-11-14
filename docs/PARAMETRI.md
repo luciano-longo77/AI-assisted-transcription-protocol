@@ -26,7 +26,7 @@ Questi parametri sono dichiarati **prima** dell'avvio della Fase 1 (verifica sul
 |-----------|--------|-----------------------|
 | **θ** (soglia) | 5 interventi / 1000 parole | Soglia di stabilizzazione: sotto questo valore la densità di intervento è considerata assestata. |
 | **N** (finestra) | 10 facciate consecutive | Ampiezza su cui la densità deve restare ≤ θ perché una classe sia dichiarata stabilizzata. Si conta in facciate: due immagini contigue condividono una carta. |
-| **K** (loop) | 3 ripetizioni per modello | Numero di esecuzioni della stessa unità per modello, per misurare il non-determinismo e prendere la forma di consenso. |
+| **K** (loop) | 3 ripetizioni per modello | Numero di esecuzioni della stessa unità per modello, per misurare il non-determinismo e prendere la forma di consenso. Valore **dichiarato** del protocollo: un'esecuzione che adotti un K diverso lo dichiara come scostamento tracciato (cfr. *Stato operativo*). |
 
 ## Metrica
 
@@ -46,7 +46,11 @@ Una **classe** è **stabilizzata** quando **D ≤ θ per N facciate consecutive*
 
 ## Ruolo del loop K
 
-In interfaccia chat la temperatura di decodifica spesso non è impostabile. Il controllo della variabilità (non-determinismo del modello) non è quindi affidato alla temperatura ma al **loop K = 3**: tre passate della stessa unità per modello, dalle quali si ricava la forma di consenso. K non elimina la variabilità: la rende **misurabile**.
+In interfaccia chat la temperatura di decodifica spesso non è impostabile. Il controllo della variabilità (non-determinismo del modello) non è quindi affidato alla temperatura ma al **loop K**: K passate della stessa unità per modello, dalle quali si ricava la forma di consenso. K non elimina la variabilità: la rende **misurabile**.
+
+**Il consenso richiede K dispari.** Con K = 3 la lezione di maggioranza è la forma di consenso e va in `FORMA_AI`; se le tre passate divergono tutte, consenso non c'è e il caso torna all'editore come `non_delegabile`. Con un **K pari** la maggioranza non esiste mai: le passate coincidono — e l'esecuzione è deterministica per quell'unità — oppure divergono, e ogni divergenza è `non_delegabile`. Un K pari misura dunque la stabilità senza delegare alcuna lezione a un voto, al prezzo di non sapere quale forma il modello preferisca.
+
+In nessun caso il consenso misura l'accuratezza: passate concordi possono essere concordemente errate, e la forma accolta resta soggetta alla validazione umana.
 
 ## Modelli confrontati
 
@@ -76,4 +80,6 @@ Quei dati **non alimentano la misura della nuova applicazione**. Il livello B è
 
 **Nuova applicazione: non ancora avviata.** Alla data di questa revisione nessuna unità è stata processata sotto il protocollo v1.2 e la *Nota al testo* 1.0. All'avvio si dichiarano nel foglio PARAMETRI dello strumento di log, come prescrive la garanzia V1: nome e versione esatta di ciascun modello, skill e Gem versionati, parametri di decodifica, data di inizio.
 
-**Valore di K per la nuova applicazione.** **K = 3 resta il valore dichiarato** del protocollo. Ogni esecuzione che adotti un K inferiore lo dichiara qui come **scostamento operativo tracciato**, con la sua motivazione e la sua estensione: è ciò che è stato fatto per il rodaggio di agosto, eseguito a K = 1. Uno scostamento lascia non misurata la garanzia V7 (controllo del non-determinismo) per il tratto interessato.
+**Valore di K per la nuova applicazione.** **K = 3 resta il valore dichiarato** del protocollo. Ogni esecuzione che adotti un K diverso lo dichiara qui come **scostamento operativo tracciato**, con la sua motivazione e la sua estensione: è ciò che è stato fatto per il rodaggio di agosto, eseguito a K = 1, che ha lasciato non misurata la garanzia V7 sul tratto interessato.
+
+**Pilota: K = 2, dichiarato prima dell'esecuzione.** Il pilota su **BCP 2 Qq A 31** è eseguito a **due passate per modello e per livello**. La scelta è motivata: due passate bastano a distinguere l'unità stabile dall'unità instabile, e quindi a produrre il dato di V7 che manca dal rodaggio, senza il costo di dodici output per unità. L'assenza di maggioranza è deliberata: il probe di agosto aveva mostrato che il consenso a maggioranza può accogliere un errore stabile, e a K = 2 nessuna lezione viene accolta per voto. Il valore applicato è registrato anche nel foglio PARAMETRI dello strumento di log, alla riga `K applicato`. Il K del tratto lungo sarà deciso sui risultati del pilota e dichiarato qui prima di eseguirlo.
