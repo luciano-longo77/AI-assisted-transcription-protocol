@@ -40,7 +40,7 @@ TESTIMONE · UNITA · CARTE · PAROLE · DATA · MODELLO · NOTE — una riga pe
 - **N (finestra)** = 10 facciate consecutive
 - **Unità** = immagine (coppia di facciate affacciate); misura per facciata
 - **K (loop)** = 3 ripetizioni per modello
-- Modelli = Gemini; Claude · Skill = Prompt A v1.3; Prompt B v2.0 · Protocollo = v1.2 · Decodifica = deterministica ove possibile
+- Modelli = Gemini; Claude · Skill = Prompt A v1.4; Prompt B v2.1 · Protocollo = v1.2 · Decodifica = deterministica ove possibile
 
 ## Foglio `NORME_EMERGENTI`
 AREA · NORMA (impersonale, generale) · DERIVATA_DA_ERRORI (ID esistenti nel log) · STATO.
