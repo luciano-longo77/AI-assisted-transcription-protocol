@@ -2,6 +2,7 @@
 
 ## Indice
 
+- [0.8.2-preparazione-run · 2026-11-14](#081-preparazione-run--2026-11-14)
 - [0.8.1-chiarimenti · 2026-11-14](#081-chiarimenti--2026-11-14)
 - [0.8.0-protocollo-v1.2 · 2026-11-14](#080-protocollo-v12--2026-11-14)
 - [0.7.0-riordino · 2026-11-01](#070-riordino--2026-11-01)
@@ -13,7 +14,17 @@
 - [0.1.0-setup · 2026-08](#010-setup--2026-08)
 
 ---
-
+## [0.8.2-preparazione-run] — 2026-11-14
+### Aggiunto
+- Riga **`K applicato`** nel foglio PARAMETRI di `data/LOG_editoriale_AI_template.xlsx`, propagata in `data/PARAMETRI.csv` e nel blocco parametri di `schema/data-dictionary.md`: registra le passate effettivamente eseguite quando differiscono dal K dichiarato.
+### Deciso
+- **Pilota su BCP 2 Qq A 31 a K = 2**, dichiarato in `docs/PARAMETRI.md` **prima** dell'esecuzione. Due passate per modello e per livello bastano a distinguere l'unità stabile dall'unità instabile, e quindi a produrre il dato della garanzia V7 che manca dal rodaggio di agosto, senza il costo di dodici output per unità. **K = 3 resta il valore dichiarato** del protocollo: questo è uno scostamento operativo tracciato. Il K del tratto lungo sarà deciso sui risultati del pilota e dichiarato prima di eseguirlo.
+- `examples/log_esempio_sintetico.csv` **resta alla sola intestazione**: sarà compilato con righe reali del pilota, non con esempi costruiti.
+### Corretto
+- **«Stato operativo» di `docs/PARAMETRI.md`** riscritto. Riportava i numeri del 24 agosto (49 eventi, 9 norme emergenti, K = 1) come se fossero lo stato corrente. Ora dichiara: prima applicazione archiviata e non conferente alla nuova misura, contatori di densità a zero, nuova applicazione non ancora avviata, dichiarazione dell'ambiente (V1) da compilare all'apertura della prima unità.
+### Nota
+- **Il consenso richiede K dispari**, esplicitato in «Ruolo del loop K». Con K pari la maggioranza non esiste mai: o le passate coincidono, e l'esecuzione è deterministica per quell'unità, o divergono, e il caso torna all'editore come `non_delegabile`.
+- Nessun parametro, soglia o criterio del protocollo è stato modificato: la v1.2 resta invariata, e con essa le versioni **A v1.4** e **B v2.1** dei prompt.
 ## [0.8.1-chiarimenti] — 2026-11-14
 ### Corretto
 - **Abstract del protocollo**: diceva «applicato a campioni di manoscritti omogenei ma materialmente differenziati», affermando un confronto fra due testimoni che non è stato eseguito. Ora dichiara l'applicazione al primo campione e l'estensione al secondo come prevista dal disegno, in coerenza con il §4.
