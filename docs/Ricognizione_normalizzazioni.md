@@ -8,6 +8,20 @@
 
 La [*Nota al testo*](Nota_al_testo.md) dice che cosa è stato fatto al testo. Questa pagina dice **su che cosa poggia**: quali principi l'edizione condivide con la pratica corrente, quali scelte sono sue e su quale argomento si reggono. Serve a chi debba valutare l'edizione, citarla, o riusarne i criteri per un testimone analogo.
 
+---
+
+## Indice
+
+- [1. Normalizzare non è modernizzare](#1-normalizzare-non-è-modernizzare)
+- [2. Perché l'edizione pubblica anche la diplomatica](#2-perché-ledizione-pubblica-anche-la-diplomatica)
+- [3. Le scelte di questa edizione nel quadro delle altre](#3-le-scelte-di-questa-edizione-nel-quadro-delle-altre)
+- [4. Le scelte particolari, e l'argomento su cui si reggono](#4-le-scelte-particolari-e-largomento-su-cui-si-reggono)
+- [5. L'ambito dei criteri](#5-lambito-dei-criteri)
+- [Appendice · Come dichiarare questi criteri in TEI](#appendice--come-dichiarare-questi-criteri-in-tei)
+- [Fonti](#fonti)
+
+---
+
 ## 1. Normalizzare non è modernizzare
 
 Il criterio-limite della Nota — *si normalizza la veste grafica, non si toccano morfologia, lessico, sintassi* — non è una formula d'occasione: è il principio su cui le edizioni documentarie ad accesso aperto convergono, in lingue e tradizioni diverse.
@@ -26,7 +40,7 @@ Le edizioni che normalizzano senza rendere conto della forma originale sono le m
 
 **Presentazioni multiple distinte.** **CHARTA** le rende obbligatorie: *facsímil*, *transcripción paleográfica*, *presentación crítica*, perché nessuna versione singola dà tutta l'informazione che uno studioso richiede.
 
-**Due file, due livelli.** È la soluzione di questa edizione: `tei/A31_diplomatica.xml` e `tei/A31_interpretativa.xml`, entrambi pubblicati e citabili.
+**Due file, due livelli.** È la soluzione di questa edizione: `A31_diplomatica.xml` e `A31_interpretativa.xml`, entrambi pubblicati e citabili; la prima applicazione è conservata in `Archive/tei/`.
 
 Le tre soluzioni condividono il principio — **il livello conservativo non si sopprime** — e si distinguono per dove lo collocano. La scelta dei due file separati risponde a un requisito che le altre non hanno: questa edizione nasce dentro un esperimento sull'uso di modelli linguistici come acceleratori sorvegliati, e separare fisicamente i due livelli è ciò che rende ogni intervento del modello un **evento discreto e contabile**, quindi misurabile. Le architetture a livelli paralleli, che tengono la normalizzazione dentro la marcatura, non permetterebbero quel conteggio.
 
@@ -96,9 +110,9 @@ Per chi voglia riusarli in una codifica propria. TEI P5 prevede per `<editorialD
 
 ## Fonti
 
-**Lette direttamente:** [luciano-longo77/castello-dell-anima-edizione](https://github.com/luciano-longo77/castello-dell-anima-edizione), registro delle decisioni editoriali e criteri ecdotici; i file TEI di questa edizione, per i conteggi.
+**Dirette:** [luciano-longo77/castello-dell-anima-edizione](https://github.com/luciano-longo77/castello-dell-anima-edizione), registro delle decisioni editoriali e criteri ecdotici; i file TEI di questa edizione, per i conteggi.
 
-**Consultate attraverso restituzioni sintetiche di ricerca.** Le righe della tavola che le riguardano orientano il confronto ma non sono citabili come testimonianze puntuali: le pagine dei criteri sono pubbliche e vanno consultate direttamente prima di fondarvi un'argomentazione. Il confronto resta più debole proprio con le tradizioni tipologicamente più vicine a questo testimone — ARTESIA, l'Archivio di scritture popolari siciliane, le norme TLIO.
+**Consultate.** Le righe della tavola che le riguardano orientano il confronto ma non sono citabili come testimonianze puntuali: le pagine dei criteri sono pubbliche e vanno consultate direttamente prima di fondarvi un'argomentazione. Il confronto resta più debole proprio con le tradizioni tipologicamente più vicine a questo testimone — ARTESIA, l'Archivio di scritture popolari siciliane, le norme TLIO.
 
 - [Red CHARTA — Criterios de edición](https://www.redcharta.es/criterios-de-edicion/) · [Criterios CHARTA (PDF)](https://corpora.uah.es/shared/resources/Criterios%20CHARTA%2011abr2013.pdf)
 - [Menota handbook, cap. 4 — Levels of text representation](https://www.menota.org/HB3_ch4.xml) · [Medieval Nordic Text Archive](https://www.menota.org/EN_forside.xhtml)
