@@ -33,7 +33,7 @@ An operational editorial model to make **interpretive transcription scalable** f
 ```
 .
 ├── protocollo/      documento del protocollo (v1.2) + specifica
-├── prompts/         Prompt A v1.3 e Prompt B v2.0 (pronti-skill) — licenza MIT
+├── prompts/         Prompt A v1.3 e Prompt B v2.1 (pronti-skill) — licenza MIT
 ├── docs/            norma editoriale (Nota al testo), suo fondamento comparativo,
 │                    parametri dichiarati a priori
 ├── schema/          data dictionary del log (campi + vocabolari controllati)
