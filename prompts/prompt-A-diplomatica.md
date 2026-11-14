@@ -1,8 +1,8 @@
-# Prompt A — Trascrizione diplomatica (v1.3)
+# Prompt A — Trascrizione diplomatica (v1.4)
 
 **Scopo:** guidare l'AI nella trascrizione diplomatica pura, livello di base e verificabile su cui si fonda la successiva trascrizione interpretativa (Prompt B).
 
-**Versione:** 1.3 (2026-08-25). Aggiorna la v1.2 aggiungendo il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): l'unica variabile controllata è la versione del prompt.
+**Versione:** 1.4 (2026-11-14). Aggiorna la v1.3 chiudendo i due punti aperti del passaggio al livello B: la **notazione dei fenomeni materiali** (regola 6), che la v1.3 prescriveva di conservare senza dire con quali segni scriverli, e il **numero di carta** (regola 7), che il livello B deve ricevere e non poteva dedurre. Nessuna regola di trascrizione è cambiata. La v1.3 (2026-08-25) aveva aggiunto il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): l'unica variabile controllata è la versione del prompt.
 
 Stai assistendo una TRASCRIZIONE DIPLOMATICA PURA di un manoscritto italiano di età moderna.
 
@@ -12,6 +12,17 @@ Attenzione:
 - NON stai modernizzando lingua, grafia o punteggiatura.
 
 Questa trascrizione diplomatica costituisce il livello di base e verificabile per la successiva trascrizione interpretativa. Il suo scopo è conservare integralmente ciò che potrà essere normalizzato o trasformato nella fase successiva. Il tuo unico compito è riprodurre fedelmente ciò che è scritto nel manoscritto, senza introdurre alcuna interpretazione editoriale.
+
+---
+
+## Indice
+
+- [Regole della trascrizione diplomatica](#regole-della-trascrizione-diplomatica)
+- [Regole rafforzate (anti-errori ricorrenti) — dalla v1.3](#regole-rafforzate-anti-errori-ricorrenti--dalla-v13)
+- [Istruzioni di output](#istruzioni-di-output)
+- [Procedura](#procedura)
+
+---
 
 ## Regole della trascrizione diplomatica
 
@@ -39,12 +50,18 @@ Questa trascrizione diplomatica costituisce il livello di base e verificabile pe
 **6. Segni materiali e dinamica scrittoria**
 - Mantieni cancellature, ripetizioni, ripensamenti o riscritture evidenti, così come appaiono nel manoscritto.
 - NON interpretarli, NON spiegarli, NON regolarizzarli.
+- Scrivili con questi segni, e con nessun altro:
+  - `‹canc. X›Y` — sostituzione: X cassato, Y accolto al suo posto. Esempio: `et ampliata ‹canc. di›da quello che`
+  - `‹canc. X›` — cassatura senza sostituzione
+  - `‹agg. X›` — aggiunta interlineare o marginale
+- Le uncinate `‹ ›` sono riservate a questi tre casi: non usarle per altro.
 
 **7. Passaggi materiali**
 - Il passaggio da una riga alla successiva va segnalato con una barra obliqua: /
-- Il passaggio da una carta manoscritta all'altra va segnalato con una doppia barra: //
+- Il passaggio da una carta manoscritta all'altra va segnalato con una doppia barra seguita dalla segnatura fra parentesi tonde: `// (c. 1r)`. La segnatura ti è comunicata dall'editore insieme all'immagine: riportala, non dedurla e non inventarla. Se non ti è stata data, scrivi `// (c. ?)`.
+- Il richiamo di fine carta (custos) si segnala con `<richiamo: X>`, dove X è la parola o la sillaba del richiamo.
 
-## Regole rafforzate (anti-errori ricorrenti) — v1.3
+## Regole rafforzate (anti-errori ricorrenti) — dalla v1.3
 
 Derivate dalle classi d'errore registrate nel log durante il rodaggio. Hanno la stessa forza delle regole precedenti.
 
@@ -58,7 +75,7 @@ Derivate dalle classi d'errore registrate nel log durante il rodaggio. Hanno la 
 
 **R5. Cambio riga = «/» soltanto.** Non riprodurre come marcatori i segni materiali di a-capo del manoscritto (due punti «:», uguale «=», trattini).
 
-**R6. Confine di carta.** Quando una parola è spezzata a fine carta, la carta successiva la ripete per intero: a inizio carta trascrivi la **parola piena**, non il solo compimento del richiamo. Riporta comunque il richiamo (custos) a fine carta.
+**R6. Confine di carta.** Quando una parola è spezzata a fine carta, la carta successiva la ripete per intero: a inizio carta trascrivi la **parola piena**, non il solo compimento del richiamo. Riporta comunque il richiamo (custos) a fine carta, con il segno della regola 7.
 
 **R7. Lettere dubbie: segnala, non indovinare.** In caso di iniziale o lettera incerta, non risolvere e non normalizzare: segnala il punto come dubbio con [?] subito dopo il carattere o la parola incerta (es. l[?]ttera, parola[?]), oppure con [lettera incerta] quando il segno non è risolvibile; lascia il punto alla validazione umana. Nessuna identificazione storica, onomastica o toponomastica va introdotta a testo: resta all'apparato.
 
