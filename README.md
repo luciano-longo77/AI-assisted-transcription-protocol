@@ -32,13 +32,14 @@ An operational editorial model to make **interpretive transcription scalable** f
 
 ```
 .
-├── protocollo/      documento del protocollo (v1.2) + specifica
+├── protocollo/      documento del protocollo (v1.2)
 ├── prompts/         Prompt A v1.4 e Prompt B v2.1 (pronti-skill) — licenza MIT
 ├── docs/            norma editoriale (Nota al testo), suo fondamento comparativo,
 │                    parametri dichiarati a priori
 ├── schema/          data dictionary del log (campi + vocabolari controllati)
 ├── data/            strumento vuoto: template del log (xlsx) + vocabolari e parametri (csv)
-├── examples/        esempi sintetici (non dati reali)
+├── examples/        log di esempio: per ora la sola intestazione,
+│                    da compilare con righe reali del pilota
 ├── Archive/         prima applicazione su A 31: log popolato, trascrizioni TEI,
 │                    viste CSV, automazione, metadati di deposito
 ├── CHANGELOG.md     storia delle versioni
