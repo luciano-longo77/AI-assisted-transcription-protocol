@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vita della venerabil madre suor Benedetta Riggio — trascrizione diplomatica (nuova applicazione, protocollo v1.2; frontespizio–c. 3r)</title>
+        <author>Suor Francesca Benedetta Corvino</author>
+        <respStmt><resp>Bozze diplomatiche (livello A), modelli a confronto</resp><name>Claude (Opus 4.8) e Gemini, sotto Prompt A v1.4</name></respStmt>
+        <respStmt><resp>Validazione editoriale e codifica TEI</resp><name>Luciano Longo</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Progetto «Dalla norma editoriale al workflow AI-assistito»</publisher>
+        <availability status="restricted"><licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</licence></availability>
+        <date when="2026-11-16"/>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier><settlement>Palermo</settlement><repository>Biblioteca Comunale di Palermo</repository><idno>BCP 2 Qq A 31</idno></msIdentifier>
+          <msContents><summary>Vita della ven. madre suor Benedetta Riggio. Nuova applicazione del protocollo v1.2: trascritti il frontespizio (carta preliminare) e le cc. 1r–3r (capitolo I).</summary></msContents>
+          <physDesc><additions>Al piede del frontespizio, mano posteriore: nota di possesso «Ex Libris Sebastiani Basso», segnatura «N.o 10» e timbro «IV». Non inclusi nel testo dell'edizione.</additions></physDesc>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Trascrizione diplomatica (livello A) sotto protocollo v1.2, Prompt A v1.4; pilota a K = 2 su BCP 2 Qq A 31, modelli Claude e Gemini a confronto. Cambio carta con pb; cambio riga con lb; scioglimenti con choice (abbr + expan, ex per le lettere integrate), ordinali inclusi (2°→2<hi>ond</hi>o, ecc.). Grafia (u/v compresi), punteggiatura, maiuscole e unione/separazione conservate; «di» è per esteso. Richiami (custos) con fw type="catch".</p>
+        <p>Confine di carta (norma del testimone, costante su tutte le carte): la parola è spezzata e il richiamo porta il compimento; la carta successiva riprende dal compimento del richiamo e non ripete la parola piena. Questo rovescia la R6 del Prompt A v1.4, da rivedere (v1.5).</p>
+        <p>Le riscritture di lettera in situ (rivergature) non hanno segno proprio nel Prompt A v1.4: la lezione accolta è a testo, il fenomeno è reso con note type="genetica".</p>
+        <p>Esiti validati a confronto di modello: cc. 1v–2r e cc. 2v–3r assumono la lettura Gemini (più fedele sul dettaglio fine di maiuscole/accenti), con le correzioni editoriali puntuali registrate nel log.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc>
+      <change when="2026-11-16">Avvio della nuova applicazione (protocollo v1.2): frontespizio (carta preliminare) e cc. 1r–3r, livello A, pilota K = 2 con Claude e Gemini. Letture fissate: «Riata», «Riglione», «13 di Maggio», «1534» (4 su 9), «Gio(uan)», «fratre», «faceua», «di» (non dà). cc. 1v–2r e cc. 2v–3r = esito Gemini. Confine di carta: norma del richiamo che completa la parola (R6 da rivedere). Contatori di densità ripartiti da zero.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <pb n="frontespizio"/>
+      <div type="frontespizio">
+        <ab>La Vita della<lb/>Venerabil Madre Suoro Bene<lb/>detta Riggio, Fondatrice, e Prima<lb/>Abbadessa del Venerabile Monaste<lb/>rio dell'Immaculata Concettione<lb/>di Nostra Signora nella Città di<lb/>Palermo.<lb/>Scritta di Suoro Francesca Benedetta<lb/>Coruino monaca del detto <choice><abbr>Mon.rio</abbr><expan>Mon<ex>aste</ex>rio</expan></choice><lb/>corretta et emendata dal <choice><abbr>Reu.do</abbr><expan>Reu<ex>eren</ex>do</expan></choice> <choice><abbr>P.re</abbr><expan>P<ex>ad</ex>re</expan></choice><lb/>Ludouico Florio della Compagnia<lb/>di Giesù, et ampliata da<note type="genetica">«da»: la ‑i di «di» è rivergata in ‑a (riscrittura in situ, non cassatura).</note> quello che<lb/>il detto Padre trouò scritto dal <choice><abbr>R.do</abbr><expan>R<ex>eueren</ex>do</expan></choice><lb/>Padre Francesco Riata della Com<lb/>pagnia di Giesù, nelle scritte della<lb/>Casa professa di essa Compagnia<lb/>di Giesù:</ab>
+      </div>
+      <pb n="1r"/>
+      <div type="capitolo" n="1">
+        <head>Vita<lb/>Della Madre Suoro Bene<lb/>detta Riggio.</head>
+        <head type="rubrica">Capitolo primo. Della nascita<lb/>Della Madre Suoro Benedetta, delli<lb/>suoi parenti, e Virtù e come entrò<lb/>à fondare il Monasterio di <choice><abbr>S.</abbr><expan>S<ex>an</ex></expan></choice> <choice><abbr>Giou.</abbr><expan>Gio<ex>uanni</ex></expan></choice><lb/>del Riglione.</head>
+        <p>Nacque questa Venerabil Madre<lb/>nella Città di Palermo in giorno<lb/>di Vennerdì alli 13 di Maggio<lb/>festa di Santa Restituta l'Anno<lb/>1534<note type="genetica">La cifra «4» corregge una «9» precedente (non 1539).</note> suo Padre si chiamò <choice><abbr>Gio:</abbr><expan>Gio<ex>uan</ex></expan></choice><lb/>Luigi Riggio, e fù di nobil sangue,<lb/>come anche la Madre che si chiama<lb/>ua Giouanna d'Afflitto, nel Battesimo</p>
+        <fw type="catch" place="bottom-right">si</fw>
+      </div>
+      <div type="vita">
+        <pb n="1v"/>
+        <p>si chiamò Giulia, e fù alleuata nel<lb/>tempo della sua fanciullezza con<lb/>gran cura del timor di Dio, e si<lb/>uedeua sin dà quella tenera età<lb/>La buona riuscita, che hauea dà<lb/>fare, perche fù sempre notata in<lb/>Lei una grauità senile, et un sen<lb/>no, che s'auanzaua sopra L'ordina<lb/>rio di quell'età fuggiua i giuochi,<lb/>et altri trattenimenti puerili, e<lb/>spesso La trouauano ritirata in<lb/>qualche cantone della Casa, che fa<lb/>ceua oratione, ò uero occupata in<lb/>fare altaretti, ò altre cose di deuo<lb/>tione. Hebbe quattro fratelli, et una<lb/>sorella, li fratelli si chiamarono il<lb/>primo Pietro, il <choice><abbr>2°</abbr><expan>2<ex>ond</ex>o</expan></choice> Carlo, il <choice><abbr>3°</abbr><expan>3<ex>z</ex>o</expan></choice> Vin</p>
+        <fw type="catch" place="bottom">cenzo</fw>
+        <pb n="2r"/>
+        <p>cenzo, et il <choice><abbr>4°</abbr><expan>4<ex>t</ex>o</expan></choice> Stefano. li tre pri<lb/>mi entrarono nella Compagnia di<lb/>Gesù. doue uissero, e morirono con<lb/>fama di molta Santità, e dottrina,<lb/>poiche Li dui primi furono buonis<lb/>simi Predicatori, et il terzo fù dot<lb/>tissimo, di uita innocentissima,<lb/>e nella sua Religione hebbe alcuni<lb/>gouerni de principali. Stefano poi<lb/>si casò; fù gentil'huomo di buone<lb/>e rare uirtù, à cui la Città di Pa<lb/>lermo diede honoratissimi carichi,<lb/>e mentre uisse, fù sempre Protetto<lb/>re del Monasterio dell'Immaculata<lb/>Concettione. La sorella si chiamò<lb/>Laurea, e si maritò con un gentil'huo<lb/>mo par suo chiamato Francesco la</p>
+        <fw type="catch" place="bottom-right">Croce.</fw>
+        <pb n="2v"/>
+        <p>Croce, fù donna di molte uirtù, et<lb/>hebbe tre figli maschi, e due femine,<lb/>il primo fù fratre Cappuccino, chia<lb/>mato frà Vrbano di Palermo famo<lb/>sissimo Predicatore, il quale fece<lb/>una molto aspra, et esemplare uita,<lb/>morì Santamente. il <choice><abbr>2°</abbr><expan>2<ex>ond</ex>o</expan></choice> per nome<lb/><choice><abbr>Gio:</abbr><expan>Gio<ex>uan</ex></expan></choice> Luigi La Croce. entrò nella com<lb/>pagnia di Gesù, fù buon Predicatore,<lb/>gouernò, e seruì à Dio nostro <choice><abbr>Sig.re</abbr><expan>Sig<ex>no</ex>re</expan></choice> sino<lb/>alla morte. il <choice><abbr>3°</abbr><expan>3<ex>z</ex>o</expan></choice> fù Prete secolare,<lb/>di gran bontà, di uita molto ritirata<lb/>e da tutti stimato per un buon seruo<lb/>di Dio chiamato Don francesco La<lb/>Croce. Vna delle dette femine si ma<lb/>ritò, e fù donna molto uirtuosa<lb/>e l'altra si fece monaca nel <choice><abbr>Monast.o</abbr><expan>Monast<ex>eri</ex>o</expan></choice></p>
+        <fw type="catch" place="bottom">dell'</fw>
+        <pb n="3r"/>
+        <p>dell'Immaculata Concettione, e si chia<lb/>mò Suoro Benedetta La Croce, La<lb/>quale stando in compagnia d'una Zia<lb/>tanto Santa, s'inuestì ben presto<lb/>delle sue uirtù, e fù donna di tan<lb/>to Spirito, e prudenza, tant'osser<lb/>uante, e Zelante della disciplina<lb/>Religiosa, che la sua buona Zia se<lb/>nè seruiua spesso per Superiora, se<lb/>ben contra sua uoglia per La sua<lb/>grande humiltà, hauea in quell'of<lb/>fitio sì grande attitudine, e destrez<lb/>za che si faceua amare, e temere<lb/>di tutte Le monache, doppo La morte<lb/>della Zia, fù eletta per Abbadessa<lb/>del detto Monasterio di tutte le<lb/>Monache, e fù La prima Abbadessa</p>
+        <fw type="catch" place="bottom-right">trien</fw>
+      </div>
+    </body>
+  </text>
+</TEI>
