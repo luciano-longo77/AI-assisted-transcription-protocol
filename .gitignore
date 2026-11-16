@@ -15,7 +15,12 @@ __pycache__/
 *-pg-*.jpg
 
 # IMMAGINI DEI MANOSCRITTI (diritti della biblioteca) — non versionare
-# Rimuovere questa riga solo se si ottiene l'autorizzazione al rilascio.
+# Rimuovere queste righe solo se si ottiene l'autorizzazione al rilascio.
+# I formati valgono ovunque nel repository, non solo in data/immagini/:
+# le riproduzioni di biblioteca arrivano di norma in JPG.
 data/immagini/
 *.tif
 *.tiff
+*.jpg
+*.jpeg
+*.png
