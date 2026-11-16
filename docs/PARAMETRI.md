@@ -64,11 +64,11 @@ Il livello B è governato dalla **[*Nota al testo*](Nota_al_testo.md) v1.0**, ch
 
 - Foglio `PARAMETRI` in `data/LOG_editoriale_AI_template.xlsx` (strumento vuoto); il log popolato della prima applicazione è in `Archive/`
 - `schema/data-dictionary.md` (sezione PARAMETRI e Metrica)
-- `.zenodo.json` (metadati di deposito)
+- `Archive/.zenodo.json` (metadati di deposito della prima applicazione; il repository attivo non ha ancora metadati di deposito propri)
 
 ## Regola di modifica
 
-I parametri sono **congelati**. Qualsiasi cambiamento di θ, N o K non è una modifica silenziosa: si apre una nuova versione del protocollo (es. v1.1), si annota nel CHANGELOG la motivazione e la data, e si dichiara da quale unità la nuova soglia si applica.
+I parametri sono **congelati**. Qualsiasi cambiamento di θ, N o K non è una modifica silenziosa: si apre una nuova versione del protocollo (es. v1.3), si annota nel CHANGELOG la motivazione e la data, e si dichiara da quale unità la nuova soglia si applica.
 
 Le **versioni dei prompt e della Nota al testo non sono parametri**: si aggiornano senza aprire una versione del protocollo, ma ogni aggiornamento è datato qui e nel [CHANGELOG](../CHANGELOG.md), e comporta le conseguenze sui contatori dichiarate sopra.
 
