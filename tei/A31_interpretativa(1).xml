@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vita della venerabil madre suor Benedetta Riggio — trascrizione interpretativa (livello B, protocollo v1.2; frontespizio–c. 3r)</title>
+        <author>Suor Francesca Benedetta Corvino</author>
+        <respStmt><resp>Bozze interpretative (livello B), modelli a confronto</resp><name>Claude (Opus 4.8) e Gemini, sotto Prompt B v2.1</name></respStmt>
+        <respStmt><resp>Validazione editoriale e codifica TEI</resp><name>Luciano Longo</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Progetto «Dalla norma editoriale al workflow AI-assistito»</publisher>
+        <availability status="restricted"><licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</licence></availability>
+        <date when="2026-11-17"/>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier><settlement>Palermo</settlement><repository>Biblioteca Comunale di Palermo</repository><idno>BCP 2 Qq A 31</idno></msIdentifier>
+          <msContents><summary>Vita della ven. madre suor Benedetta Riggio, trascrizione interpretativa del frontespizio e delle cc. 1r–3r (capitolo I), dal diplomatico validato.</summary></msContents>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Trascrizione interpretativa (livello B) dal diplomatico validato, regime della <title>Nota al testo</title> 1.0 (Prompt B v2.1). Nove classi di normalizzazione: abbreviazioni sciolte tacitamente (ordinali compresi, 2°→secondo…); u/v e i/j; <hi>h</hi> etimologica eliminata dove non italiana; nessi latinizzanti (<hi>Concettione→Concezione</hi>); <hi>et→e/ed</hi>; unione e separazione (<hi>o vero→overo</hi>, <hi>gentil uomo</hi>); accenti; punteggiatura; maiuscole <hi>senza reverenziale</hi> (la maiuscola reverenziale è abolita dalla Nota 1.0).</p>
+        <p>Conservate le forme del testimone (criterio-limite): <hi>delli, dui, de' principali, avea, Giovan, suoro, doppo, fratre, monasterio, offizio</hi> (non <hi>ufficio</hi>), e le oscillazioni grafiche <hi>Immaculata</hi> (non <hi>Immacolata</hi>) e <hi>Giesù</hi> (frontespizio) / <hi>Gesù</hi> (da c. 2r): non si uniformano.</p>
+        <p>Cambio carta con pb. Al confine di carta la parola spezzata è ricomposta e ripresa per intero, e il richiamo cade (<hi>Vin|cenzo→Vincenzo</hi>; <hi>Francesco la|Croce→Francesco La Croce</hi>). Le identificazioni storiche e le maiuscole istituzionali contestabili sono registrate in <ref target="#registro">registro</ref> e vanno verificate in apparato; «San Giovanni del Riglione» è maiuscolo come denominazione istituzionale individuata (= San Giovanni dell'Origlione).</p>
+      </editorialDecl>
+      <appInfo><application ident="workflow-AI" version="1.2"><label>Protocollo di trascrizione AI-assistito — modelli Gemini e Claude, pilota K=2; livello B validato (Claude) con confronto Gemini.</label></application></appInfo>
+    </encodingDesc>
+    <revisionDesc>
+      <change when="2026-11-17">Livello B del frontespizio e delle cc. 1r–3r, dal diplomatico validato, regime Nota al testo 1.0 (Prompt B v2.1). Esito Claude validato; passata Gemini a confronto (concorde salvo punteggiatura e pochi luoghi: overo, gentil uomo, San Giovanni, ricomposizione «La Croce»).</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <pb n="frontespizio"/>
+      <div type="frontespizio">
+        <p>La Vita della venerabil madre suoro Benedetta Riggio, fondatrice, e prima abbadessa del venerabile monasterio dell'Immaculata Concezione di Nostra Signora nella città di Palermo. Scritta di suoro Francesca Benedetta Corvino monaca del detto monasterio, corretta ed emendata dal reverendo padre Ludovico Florio della Compagnia di Giesù, ed ampliata da quello che il detto padre trovò scritto dal reverendo padre Francesco Riata della Compagnia di Giesù, nelle scritte della Casa Professa di essa Compagnia di Giesù.</p>
+      </div>
+      <pb n="1r"/>
+      <div type="capitolo" n="1">
+        <head>Vita della madre suoro Benedetta Riggio.</head>
+        <head type="rubrica">Capitolo primo. Della nascita della madre suoro Benedetta, delli suoi parenti, e virtù e come entrò a fondare il monasterio di San Giovanni del Riglione.</head>
+        <p>Nacque questa venerabil madre nella città di Palermo in giorno di vennerdì alli 13 di maggio, festa di santa Restituta, l'anno 1534. Suo padre si chiamò Giovan Luigi Riggio, e fu di nobil sangue, come anche la madre che si chiamava Giovanna d'Afflitto; nel battesimo <pb n="1v"/>si chiamò Giulia, e fu allevata nel tempo della sua fanciullezza con gran cura del timor di Dio, e si vedeva sin da quella tenera età la buona riuscita, che avea da fare, perché fu sempre notata in lei una gravità senile, ed un senno, che s'avanzava sopra l'ordinario di quell'età. Fuggiva i giuochi, ed altri trattenimenti puerili, e spesso la trovavano ritirata in qualche cantone della casa, che faceva orazione, overo occupata in fare altaretti, o altre cose di devozione.</p>
+        <p>Ebbe quattro fratelli, ed una sorella. Li fratelli si chiamarono il primo Pietro, il secondo Carlo, il terzo Vincenzo<pb n="2r"/>, ed il quarto Stefano. Li tre primi entrarono nella Compagnia di Gesù, dove vissero, e morirono con fama di molta santità, e dottrina, poiché li dui primi furono buonissimi predicatori, ed il terzo fu dottissimo, di vita innocentissima, e nella sua religione ebbe alcuni governi de principali. Stefano poi si casò; fu gentil uomo di buone e rare virtù, a cui la città di Palermo diede onoratissimi carichi, e mentre visse, fu sempre protettore del monasterio dell'Immaculata Concezione.</p>
+        <p>La sorella si chiamò Laurea, e si maritò con un gentil uomo par suo chiamato Francesco La Croce<pb n="2v"/>, fu donna di molte virtù, ed ebbe tre figli maschi, e due femine, il primo fu fratre cappuccino, chiamato fra Urbano di Palermo famosissimo predicatore, il quale fece una molto aspra, ed esemplare vita, morì santamente. Il secondo per nome Giovan Luigi La Croce entrò nella Compagnia di Gesù, fu buon predicatore, governò, e servì a Dio nostro Signore sino alla morte. Il terzo fu prete secolare, di gran bontà, di vita molto ritirata e da tutti stimato per un buon servo di Dio chiamato don Francesco La Croce. Una delle dette femine si maritò, e fu donna molto virtuosa e l'altra si fece monaca nel monasterio<pb n="3r"/>dell'Immaculata Concezione, e si chiamò suoro Benedetta La Croce, la quale stando in compagnia d'una zia tanto santa, s'investì ben presto delle sue virtù, e fu donna di tanto spirito, e prudenza, tant'osservante, e zelante della disciplina religiosa, che la sua buona zia se ne serviva spesso per superiora, se ben contra sua voglia per la sua grande umiltà, avea in quell'offizio sì grande attitudine, e destrezza che si faceva amare, e temere di tutte le monache, doppo la morte della zia, fu eletta per abbadessa del detto monasterio di tutte le monache, e fu la prima abbadessa.</p>
+      </div>
+      <div type="registro" xml:id="registro">
+        <head>Registro delle classi contestabili (N7, N8) — da verificare in apparato</head>
+        <list type="apparato">
+          <item><label>N7 · cc. 1v–2r</label> «Vin» + richiamo «cenzo» + c. 2r «cenzo» → <hi>Vincenzo</hi>: ricomposizione della parola spezzata al confine di carta, richiamo eliminato.</item>
+          <item><label>N7 · cc. 2r–2v</label> «Francesco la» + richiamo «Croce.» + c. 2v «Croce» → <hi>Francesco La Croce</hi>: ricomposizione al confine di carta; articolo del cognome a maiuscola, coerente con le altre occorrenze del cognome.</item>
+          <item><label>N7 · c. 1v</label> «o vero» → <hi>overo</hi>: univerbazione (intervento di lettura, non di grafia).</item>
+          <item><label>N7 · cc. 2r, 2v</label> «gentil'uomo/gentiluomo» → <hi>gentil uomo</hi>: separazione, apocope <hi>gentil</hi> conservata.</item>
+          <item><label>N8 · c. 1r</label> <hi>monasterio di San Giovanni del Riglione</hi>: nome comune minuscolo; «San Giovanni del Riglione» maiuscolo come denominazione istituzionale individuata (= San Giovanni dell'Origlione).</item>
+          <item><label>N8 · frontespizio, cc. 2r–2v</label> <hi>Compagnia di Giesù / di Gesù</hi>: maiuscola mantenuta (istituzione individuata; soluzione uniforme su tutte le occorrenze).</item>
+          <item><label>N8 · frontespizio, cc. 2r, 3r</label> <hi>monasterio dell'Immaculata Concezione</hi>: nome comune minuscolo; «Immaculata Concezione» maiuscolo nella specificazione che individua l'istituzione.</item>
+          <item><label>N8 · frontespizio</label> «Casa professa» → <hi>Casa Professa</hi>: maiuscola introdotta, nome proprio dell'istituzione gesuitica palermitana.</item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>
