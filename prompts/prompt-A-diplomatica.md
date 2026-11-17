@@ -1,8 +1,8 @@
-# Prompt A — Trascrizione diplomatica (v1.4)
+# Prompt A — Trascrizione diplomatica (v1.5)
 
 **Scopo:** guidare l'AI nella trascrizione diplomatica pura, livello di base e verificabile su cui si fonda la successiva trascrizione interpretativa (Prompt B).
 
-**Versione:** 1.4 (2026-11-14). Aggiorna la v1.3 chiudendo i due punti aperti del passaggio al livello B: la **notazione dei fenomeni materiali** (regola 6), che la v1.3 prescriveva di conservare senza dire con quali segni scriverli, e il **numero di carta** (regola 7), che il livello B deve ricevere e non poteva dedurre. Nessuna regola di trascrizione è cambiata. La v1.3 (2026-08-25) aveva aggiunto il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): la versione del prompt è tenuta costante, così che l'unica differenza fra le esecuzioni confrontate sia il modello.
+**Versione:** 1.5 (2026-11-17). Corregge la **regola 6 (confine di carta)**. Il pilota sul testimone BCP 2 Qq A 31 ha mostrato — in modo costante su tutte le carte — che la parola spezzata a fine carta **non** è ripetuta per intero sulla carta successiva: il richiamo (custos) ne porta il compimento e la carta seguente riprende dal compimento. La v1.4 prescriveva l'opposto. La v1.4 (2026-11-14) aveva chiuso i due punti aperti del passaggio al livello B: la **notazione dei fenomeni materiali** (regola 6) e il **numero di carta** (regola 7). La v1.3 (2026-08-25) aveva aggiunto il blocco «Regole rafforzate (anti-errori ricorrenti)», derivato dalle norme emerse dal log editoriale del rodaggio (BCP 2 Qq A 31, frontespizio–c. 16r). Le regole valgono per **entrambi i modelli** (Gemini e Claude): la versione del prompt è tenuta costante, così che l'unica differenza fra le esecuzioni confrontate sia il modello.
 
 Stai assistendo una TRASCRIZIONE DIPLOMATICA PURA di un manoscritto italiano di età moderna.
 
@@ -75,7 +75,7 @@ Derivate dalle classi d'errore registrate nel log durante il rodaggio. Hanno la 
 
 **R5. Cambio riga = «/» soltanto.** Non riprodurre come marcatori i segni materiali di a-capo del manoscritto (due punti «:», uguale «=», trattini).
 
-**R6. Confine di carta.** Quando una parola è spezzata a fine carta, la carta successiva la ripete per intero: a inizio carta trascrivi la **parola piena**, non il solo compimento del richiamo. Riporta comunque il richiamo (custos) a fine carta, con il segno della regola 7.
+**R6. Confine di carta.** La parola spezzata a fine carta **non** viene ripetuta per intero sulla carta successiva: il richiamo (custos) ne porta il compimento e la carta seguente **riprende dal compimento del richiamo**. Trascrivi fedelmente ciò che è vergato su ciascuna carta — a fine carta la parte scritta più il richiamo (segno della regola 7), a inizio carta il solo compimento — **senza ricomporre la parola piena**: la ricomposizione è compito del livello B. Esempio: «…il 3(z)o Vin» / `<richiamo: cenzo>` / `// (c. 2r)` / «cenzo…» (la parola *Vincenzo* si ricompone solo in B).
 
 **R7. Lettere dubbie: segnala, non indovinare.** In caso di iniziale o lettera incerta, non risolvere e non normalizzare: segnala il punto come dubbio con [?] subito dopo il carattere o la parola incerta (es. l[?]ttera, parola[?]), oppure con [lettera incerta] quando il segno non è risolvibile; lascia il punto alla validazione umana. Nessuna identificazione storica, onomastica o toponomastica va introdotta a testo: resta all'apparato.
 
