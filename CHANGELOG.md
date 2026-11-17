@@ -2,6 +2,7 @@
 
 ## Indice
 
+- [0.9.0-applicazione-A-B · 2026-11-17](#090-applicazione-a-b--2026-11-17)
 - [0.8.2-preparazione-run · 2026-11-14](#082-preparazione-run--2026-11-14)
 - [0.8.1-chiarimenti · 2026-11-14](#081-chiarimenti--2026-11-14)
 - [0.8.0-protocollo-v1.2 · 2026-11-14](#080-protocollo-v12--2026-11-14)
@@ -14,6 +15,26 @@
 - [0.1.0-setup · 2026-08](#010-setup--2026-08)
 
 ---
+## [0.9.0-applicazione-A-B] — 2026-11-17
+### Aggiunto
+- **Nuova applicazione (protocollo v1.2) avviata**: frontespizio e cc. 1r–3r di **BCP 2 Qq A 31**, ai due livelli, pilota a **K = 2**, modelli Claude e Gemini a confronto.
+  - `tei/A31_diplomatica.xml` — livello A (diplomatico), frontespizio–c. 3r, validato e ben formato.
+  - `tei/A31_interpretativa.xml` — livello B (interpretativo) sotto la *Nota al testo* 1.0, con registro N7/N8 dei luoghi contestabili.
+  - `data/trascrizioni/A31_diplomatica.md` e `A31_interpretativa.md` — testi di lettura.
+  - `data/LOG_editoriale_AI.xlsx` — log popolato: **26 eventi A (A-001…A-026) + 6 eventi B (B-001…B-006)**, COPERTURA con le passate A e B, dichiarazione d'ambiente V1 nel foglio PARAMETRI.
+- `examples/log_esempio.csv` — compilato con **righe reali del pilota** (rinominato da `log_esempio_sintetico.csv`).
+### Corretto
+- **Prompt A → v1.5**: corretta la **regola 6 (confine di carta)**. Il pilota ha mostrato, costante su tutte le carte, che la parola spezzata a fine carta **non** è ripetuta per intero sulla carta successiva: il richiamo porta il compimento e la carta seguente riprende dal compimento (la ricomposizione è compito del livello B). La v1.4 prescriveva l'opposto.
+- **`docs/PARAMETRI.md`**, «Stato operativo»: la nuova applicazione è dichiarata **avviata** (prima «non ancora avviata»), con unità, livelli, date e stato della misura.
+- **`README.md`**: *Struttura* e *Dati* aggiornati (nuove cartelle `tei/` e `data/trascrizioni/`, log popolato fuori da `Archive/`, rifazione del livello B avviata); badge Prompt A a v1.5.
+### Deciso
+- Esiti validati del **livello A**: cc. 1v–2r e cc. 2v–3r assumono la lettura **Gemini** (più fedele su maiuscole/accenti); letture fissate: Riata, Riglione, «13 di maggio», «1534» (la 4 corregge una 9), Gio(uan), fratre, faceua.
+- Esiti validati del **livello B**: `overo` (univerbato), `gentil uomo` (separato), `San Giovanni` (denominazione istituzionale, non appellativo di santità), punteggiatura normalizzata.
+### Norme emergenti
+- R6 confine di carta (→ Prompt A v1.5); riscrittura in situ (rivergatura) senza segno proprio, resa come nota genetica; ordinali sciolti `2(ond)o/3(z)o/4(t)o`; «Gio:»→Gio(uan); toponimo «Riglione».
+### Nota
+- Risultato metodologico centrale: **stabilità ≠ accuratezza**. Errori stabili («Biata», «15»→13, iniziale del toponimo) sopravvivono al loop K e perfino all'accordo fra i due modelli; li intercetta solo la validazione umana. I contatori di densità accumulano; la finestra N = 10 facciate non è ancora raggiunta (6 facciate).
+
 ## [0.8.2-preparazione-run] — 2026-11-14
 ### Aggiunto
 - Riga **`K applicato`** nel foglio PARAMETRI di `data/LOG_editoriale_AI_template.xlsx`, propagata in `data/PARAMETRI.csv` e nel blocco parametri di `schema/data-dictionary.md`: registra le passate effettivamente eseguite quando differiscono dal K dichiarato.
