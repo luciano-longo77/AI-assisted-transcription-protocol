@@ -1,0 +1,9 @@
+ID_ERRORE,LIVELLO,TESTIMONE,SEGMENTO,TIPO_ERRORE,FORMA_AI,CORREZIONE_UMANA,AZIONE_UMANA,DECISIONE_EDITORIALE,ESITO,MODELLO,NOTE
+A-001,A,BCP 2 Qq A 31,frontespizio,confusione_grafica,Biata,Riata,correzione,Cognome del gesuita: Riata.,,Claude,Stabile.
+A-003,A,BCP 2 Qq A 31,frontespizio,confusione_grafica,Biata,Riata,correzione,Cognome del gesuita: Riata.,,Gemini,Due passate K=2 coincidenti (stesso errore dei due modelli).
+A-005,A,BCP 2 Qq A 31,c. 1r,confusione_grafica,Giglione,Riglione,correzione,Toponimo: Riglione (iniziale R verificata).,,Claude,Errore stabile sull'iniziale del toponimo.
+A-018,A,BCP 2 Qq A 31,c. 2r,grafia_errata,Monastirio,Monasterio,correzione,Letto giusto su c. 1r: lo stesso modello oscilla sulla parola.,,Claude,
+A-013,A,BCP 2 Qq A 31,c. 1v,confusione_grafica,uare,rare,correzione,rare uirtu.,,Claude,Solo passata K2; K1 giusto -> non-determinismo.
+B-002,B,BCP 2 Qq A 31,c. 1v,unione_separazione_errata,o vero,overo,normalizzazione,N7: univerbazione (overo).,,Claude,
+B-005,B,BCP 2 Qq A 31,c. 1r,maiuscola_minuscola_errata,san Giovanni,San Giovanni,correzione,"N8: denominazione istituzionale (San Giovanni dell'Origlione), non appellativo di santita.",,Gemini,
+B-006,B,BCP 2 Qq A 31,cc. 2r-2v,unione_separazione_errata,Francesco la / (c.2v) Croce,Francesco La Croce,correzione,N7: ricomposizione mancata al confine di carta + articolo del cognome a maiuscola.,,Gemini,Incoerente col proprio Vincenzo ricomposto.
